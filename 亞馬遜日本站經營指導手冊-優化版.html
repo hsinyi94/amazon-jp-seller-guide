@@ -1,0 +1,1022 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>亞馬遜日本站 — 經營指導手冊</title>
+    <style>
+        :root {
+            --primary: #FF9900;
+            --primary-dark: #E88B00;
+            --bg: #FAFAFA;
+            --card: #FFFFFF;
+            --text: #232F3E;
+            --text-light: #545B64;
+            --border: #E3E3E3;
+            --green: #067D62;
+            --blue: #0073BB;
+            --red: #D13212;
+            --purple: #8250DF;
+            --phase-green: #D4EDDA;
+            --phase-blue: #CCE5FF;
+            --phase-yellow: #FFF3CD;
+            --phase-gray: #E9ECEF;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.75;
+        }
+
+        /* Hero */
+        .hero {
+            background: linear-gradient(135deg, #232F3E 0%, #37475A 100%);
+            color: #fff;
+            padding: 40px 24px 32px;
+            text-align: center;
+        }
+        .hero h1 { font-size: 1.8rem; margin-bottom: 6px; }
+        .hero .subtitle { opacity: 0.85; font-size: 0.95rem; }
+        .contact-bar {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 16px;
+            font-size: 0.9rem;
+        }
+        .contact-bar a { color: #FFD580; text-decoration: none; }
+        .contact-bar a:hover { text-decoration: underline; }
+
+        .container { max-width: 980px; margin: 0 auto; padding: 28px 20px 60px; }
+
+        /* Audience Selector */
+        .audience-selector {
+            background: var(--card);
+            border: 2px solid var(--primary);
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 28px;
+        }
+        .audience-selector h2 {
+            font-size: 1.15rem;
+            margin-bottom: 14px;
+            color: var(--primary-dark);
+        }
+        .audience-paths {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+        @media (max-width: 640px) { .audience-paths { grid-template-columns: 1fr; } }
+        .path-card {
+            border-radius: 10px;
+            padding: 16px 18px;
+            font-size: 0.88rem;
+        }
+        .path-new { background: #F0FFF4; border: 1px solid #C3E6CB; }
+        .path-existing { background: #F0F4FF; border: 1px solid #B8DAFF; }
+        .path-card h3 { font-size: 1rem; margin-bottom: 8px; }
+        .path-card ol { padding-left: 18px; }
+        .path-card li { margin-bottom: 3px; }
+        .path-card a { color: var(--blue); text-decoration: none; }
+        .path-card a:hover { text-decoration: underline; }
+
+        /* Checklist Box */
+        .checklist-box {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 28px;
+        }
+        .checklist-box h2 {
+            font-size: 1.15rem;
+            margin-bottom: 4px;
+            color: var(--text);
+        }
+        .checklist-box .pdf-link {
+            font-size: 0.85rem;
+            color: var(--blue);
+            text-decoration: none;
+            display: inline-block;
+            margin-bottom: 14px;
+        }
+        .week-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+        @media (max-width: 640px) { .week-grid { grid-template-columns: 1fr; } }
+        .week-card {
+            background: #F8F9FA;
+            border-radius: 8px;
+            padding: 14px 16px;
+        }
+        .week-card h4 {
+            font-size: 0.9rem;
+            margin-bottom: 8px;
+            color: var(--primary-dark);
+        }
+        .week-card ul { list-style: none; padding: 0; }
+        .week-card li {
+            font-size: 0.85rem;
+            padding: 2px 0;
+            padding-left: 22px;
+            position: relative;
+        }
+        .week-card li::before {
+            content: "☐";
+            position: absolute;
+            left: 0;
+        }
+</style>
+</head>
+<body>
+
+<div class="hero">
+    <h1>亞馬遜日本站 — 經營指導手冊</h1>
+    <div class="subtitle">編輯者：亞馬遜全球開店 台灣資深業務拓展經理 黃馨儀</div>
+    <div class="contact-bar">
+        <span>✉️ <a href="mailto:hsinyih@amazon.com">hsinyih@amazon.com</a></span>
+        <span>📞 +886-2-6631-9471</span>
+        <span>📱 LINE ID: <a href="#">@503udqst</a></span>
+    </div>
+</div>
+
+<div class="container">
+
+    <!-- Audience Selector -->
+    <div class="audience-selector">
+        <h2>📌 你是哪種賣家？選擇你的閱讀路徑</h2>
+        <div class="audience-paths">
+            <div class="path-card path-new">
+                <h3>🆕 新賣家（第一次在亞馬遜上銷售）</h3>
+                <ol>
+                    <li><a href="#sec01">【01】入駐優惠</a> — 領取最高 5 萬美元福利</li>
+                    <li><a href="#sec02">【02】開通帳號</a> — 全新賣家註冊流程</li>
+                    <li><a href="#sec03">【03】成本預估</a> — 了解日本站費用結構</li>
+                    <li><a href="#sec04">【04】產品合規</a> — 確認合規需求</li>
+                    <li><a href="#sec05">【05】金流</a> — 選擇收款方式</li>
+                    <li><a href="#sec06">【06】品牌註冊</a> — 申請商標 + 品牌註冊</li>
+                    <li><a href="#sec07">【07】上架</a> — 建立第一個 Listing</li>
+                    <li><a href="#sec08">【08】物流</a> — 備貨、包裝、FBA 入倉</li>
+                    <li><a href="#sec09">【09】廣告</a> — 啟動第一支廣告</li>
+                    <li><a href="#sec10">【10】促銷</a> — 設定優惠券與積分</li>
+                </ol>
+            </div>
+            <div class="path-card path-existing">
+                <h3>🔄 既有賣家（已有其他站點帳號）</h3>
+                <ol>
+                    <li><a href="#sec01">【01】入駐優惠</a> — 確認日本站新站點優惠</li>
+                    <li><a href="#sec02-existing">【02】開通帳號</a> — 從現有後台切換日本站</li>
+                    <li><a href="#sec04">【04】產品合規</a> — ⚠️ 日本站特有 PSE/Giteki/JFSL</li>
+                    <li><a href="#sec06-auth">【06】品牌授權</a> — 從其他站點授權到日本站</li>
+                    <li><a href="#sec08">【08】物流</a> — 日本 FBA 入倉規範</li>
+                    <li><a href="#sec10">【10】促銷</a> — ⚠️ 日本站獨有積分制度</li>
+                    <li><a href="#sec15">【15】官方消息</a> — 2026 年費用調整</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+
+    <!-- 30-Day Checklist -->
+    <div class="checklist-box">
+        <h2>📋 30 天開賣行動計畫 Checklist</h2>
+        <a class="pdf-link" href="https://m.media-amazon.com/images/G/28/TWGS/OBSS/Seller_ramp-up_JP.pdf" target="_blank">📄 下載完整 PDF 版（必看）</a>
+        <div class="week-grid">
+            <div class="week-card">
+                <h4>Week 1：帳號與準備</h4>
+                <ul>
+                    <li>完成帳號註冊 / 站點開通</li>
+                    <li>維護公司統編（VAT/GST 登記號）</li>
+                    <li>設定存款方式</li>
+                    <li>改用 Google Authenticator</li>
+                    <li>確認產品合規需求</li>
+                </ul>
+            </div>
+            <div class="week-card">
+                <h4>Week 2：品牌與上架</h4>
+                <ul>
+                    <li>申請商標 / 品牌授權</li>
+                    <li>完成亞馬遜品牌註冊</li>
+                    <li>用 FBA 計算機估算成本</li>
+                    <li>準備 Listing 素材</li>
+                    <li>上架第一批商品</li>
+                </ul>
+            </div>
+            <div class="week-card">
+                <h4>Week 3：物流備貨</h4>
+                <ul>
+                    <li>安排頭程物流</li>
+                    <li>包裝產品並貼標</li>
+                    <li>在賣家後台創建貨件</li>
+                    <li>準備合規文件供報關使用</li>
+                </ul>
+            </div>
+            <div class="week-card">
+                <h4>Week 4：廣告與促銷</h4>
+                <ul>
+                    <li>啟動 Sponsored Products 廣告</li>
+                    <li>設定優惠券</li>
+                    <li>設定積分（日本站獨有）</li>
+                    <li>加入 VINE 計畫獲取評論</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        /* Phase Headers */
+        .phase {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 20px;
+            border-radius: 10px;
+            margin: 32px 0 18px;
+            font-size: 1.1rem;
+            font-weight: 700;
+        }
+        .phase-1 { background: var(--phase-green); color: #155724; }
+        .phase-2 { background: var(--phase-blue); color: #004085; }
+        .phase-3 { background: var(--phase-yellow); color: #856404; }
+        .phase-4 { background: var(--phase-gray); color: #383D41; }
+
+        /* Section Card */
+        .section {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            margin-bottom: 22px;
+            overflow: hidden;
+        }
+        .section-head {
+            padding: 14px 22px;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: #F7F8FA;
+        }
+        .section-head h3 { font-size: 1.08rem; }
+        .sec-num {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 28px; height: 28px;
+            border-radius: 50%;
+            background: var(--primary);
+            color: #fff;
+            font-weight: 700;
+            font-size: 0.8rem;
+            flex-shrink: 0;
+        }
+        .section-body { padding: 18px 22px; }
+
+        .key-point {
+            background: #FFF8E1;
+            border-left: 4px solid var(--primary);
+            padding: 10px 16px;
+            border-radius: 0 8px 8px 0;
+            margin-bottom: 16px;
+            font-size: 0.9rem;
+        }
+        .key-point strong { color: var(--primary-dark); }
+
+        .jp-unique {
+            background: #FFF0F0;
+            border-left: 4px solid var(--red);
+            padding: 10px 16px;
+            border-radius: 0 8px 8px 0;
+            margin: 14px 0;
+            font-size: 0.9rem;
+        }
+        .jp-unique strong { color: var(--red); }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 12px 0;
+            font-size: 0.88rem;
+        }
+        th, td {
+            border: 1px solid var(--border);
+            padding: 9px 13px;
+            text-align: left;
+        }
+        th { background: #F0F2F5; font-weight: 600; }
+        tr:nth-child(even) { background: #FAFAFA; }
+
+        a { color: var(--blue); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        .tag {
+            display: inline-block;
+            font-size: 0.68rem;
+            font-weight: 600;
+            padding: 2px 8px;
+            border-radius: 10px;
+        }
+        .tag-new { background: #D4EDDA; color: var(--green); }
+        .tag-exist { background: #CCE5FF; color: var(--blue); }
+        .tag-all { background: #E8DEF8; color: var(--purple); }
+
+        details {
+            margin: 10px 0;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        summary {
+            padding: 10px 16px;
+            background: #F7F8FA;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+        summary:hover { background: #EEF0F3; }
+        details > div { padding: 12px 16px; font-size: 0.88rem; }
+
+        .action-list { padding-left: 0; list-style: none; margin: 10px 0; }
+        .action-list li {
+            padding: 4px 0 4px 24px;
+            position: relative;
+            font-size: 0.88rem;
+        }
+        .action-list li::before {
+            content: "☐";
+            position: absolute;
+            left: 0;
+        }
+
+        .resource-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin: 10px 0;
+        }
+        @media (max-width: 640px) { .resource-grid { grid-template-columns: 1fr; } }
+        .res-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 12px;
+            background: #F7F8FA;
+            border-radius: 8px;
+            font-size: 0.85rem;
+        }
+        .res-icon { font-size: 1.1rem; flex-shrink: 0; }
+
+        .steps ol { padding-left: 20px; }
+        .steps li { margin-bottom: 6px; font-size: 0.9rem; }
+        .steps ul { padding-left: 18px; margin-top: 4px; }
+
+        .contact-footer {
+            background: var(--card);
+            border: 2px solid var(--primary);
+            border-radius: 12px;
+            padding: 20px 24px;
+            text-align: center;
+            margin-top: 32px;
+        }
+        .contact-footer h3 { color: var(--primary-dark); margin-bottom: 8px; }
+        .contact-footer p { font-size: 0.9rem; margin-bottom: 4px; }
+
+        .sub-section { margin: 16px 0 10px; }
+        .sub-section h4 {
+            font-size: 0.95rem;
+            padding-bottom: 4px;
+            border-bottom: 1px dashed var(--border);
+            margin-bottom: 10px;
+        }
+    </style>
+
+    <!-- ========== PHASE 1: 準備期 ========== -->
+    <div class="phase phase-1">🟢 階段一：準備期</div>
+
+    <!-- 01 -->
+    <div class="section" id="sec01">
+        <div class="section-head">
+            <span class="sec-num">01</span>
+            <h3>入駐日本站相關優惠 🎁</h3>
+            <span class="tag tag-new">新賣家必讀</span>
+        </div>
+        <div class="section-body">
+            <div class="key-point">
+                <strong>📌 本章重點：</strong>新賣家完成指定任務可獲得最高 5 萬美元福利，涵蓋品牌、物流、廣告、優惠券等面向。
+            </div>
+            <p>🔗 <a href="https://sellercentral.amazon.co.jp/help/hub/reference/external/GXMJ38VA95GUN5XU?locale=zh-TW" target="_blank">新賣家入門大禮包 — 完整說明頁面</a></p>
+            <table>
+                <thead>
+                    <tr><th>#</th><th>優惠項目</th><th>內容</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>1</td><td>品牌回饋加碼</td><td>5%~10%</td></tr>
+                    <tr><td>2</td><td>VINE 抵用金</td><td>200 美元</td></tr>
+                    <tr><td>3</td><td>商品推廣廣告折扣券 + 優惠券費用折抵</td><td>各 50 美元</td></tr>
+                    <tr><td>4</td><td>新品入倉優惠計畫</td><td>自動加入，免倉儲費、免移除費、免退貨處理費</td></tr>
+                    <tr><td>5</td><td>庫存及配送費用優惠</td><td>超過 600 美元優惠；前 100 件多管道配送九折；400 美元入庫配置無誤費抵免</td></tr>
+                    <tr><td>6</td><td>FBA 入庫運輸優惠</td><td>200 美元</td></tr>
+                </tbody>
+            </table>
+            <details>
+                <summary>💡 其他資訊</summary>
+                <div>（請補充原本 Toggle 裡的內容）</div>
+            </details>
+        </div>
+    </div>
+
+    <!-- 02 -->
+    <div class="section" id="sec02">
+        <div class="section-head">
+            <span class="sec-num">02</span>
+            <h3>開通帳號流程 📖</h3>
+            <span class="tag tag-all">所有賣家</span>
+        </div>
+        <div class="section-body">
+            <div class="key-point">
+                <strong>📌 本章重點：</strong>根據你的身份（全新 / 既有賣家）完成帳號開通，並設定基本資訊。
+            </div>
+
+            <div class="sub-section">
+                <h4>🆕 全新賣家（第一次在亞馬遜上銷售）</h4>
+                <details>
+                    <summary>💡 註冊過程的相關資源</summary>
+                    <div>（請補充原本 Toggle 裡的內容）</div>
+                </details>
+            </div>
+
+            <div class="sub-section" id="sec02-existing">
+                <h4>🔄 既有賣家（已有亞馬遜賣家帳號）</h4>
+                <div class="jp-unique">
+                    <strong>⚠️ 注意：</strong>請先找亞馬遜官方經理確認欲開設的站點之輔導資格跟相關優惠。
+                </div>
+                <details>
+                    <summary>💡 從賣家後台（非日本站）切換到日本站點</summary>
+                    <div>（請補充原本 Toggle 裡的內容）</div>
+                </details>
+            </div>
+
+            <div class="sub-section">
+                <h4>✅ 帳號開通後 — 設定 Checklist</h4>
+                <p style="font-size:0.88rem;margin-bottom:10px;">收到團隊審核結果通知帳號開通後，登入賣家後台維護以下基本資訊：</p>
+                <p style="font-size:0.88rem;margin-bottom:12px;">🔗 <a href="https://reurl.cc/86v6xX" target="_blank">亞馬遜日本站賣家後台登入</a></p>
+                <ul class="action-list">
+                    <li><strong>維護公司統編：</strong>賣家後台【設定】⚙️ &gt; 帳戶資訊 &gt; 稅務資訊 &gt; 增值稅資訊 → 新增 VAT/GST 登記號</li>
+                    <li><strong><a href="https://m.media-amazon.com/images/G/28/TWGS/SU/TW_GS_Registration_Guidebook_DSR_Grex.pdf#page=80" target="_blank">設定存款方式</a>：</strong>賣家後台【設定】⚙️ &gt; 帳戶資訊 &gt; 付款資訊 &gt; 存款方式 → 新增存款方式 → 指派日本站點存款方式</li>
+                    <li><strong><a href="https://gs.amazon.com.tw/blog/google-authenticator-230927" target="_blank">改用 Google Authenticator</a>：</strong>手機收驗證簡訊透過多個單位跨國傳送，不穩定時會收不到簡訊</li>
+                    <li><strong><a href="https://sellercentral.amazon.co.jp/help/hub/reference/external/G69035?locale=zh-TW" target="_blank">管理帳戶設定</a>：</strong>更新賣家帳戶資訊、設定和編輯使用者權限</li>
+                </ul>
+            </div>
+            <details>
+                <summary>💡 其他資訊</summary>
+                <div>（請補充原本 Toggle 裡的內容）</div>
+            </details>
+        </div>
+    </div>
+
+    <!-- 03 -->
+    <div class="section" id="sec03">
+        <div class="section-head">
+            <span class="sec-num">03</span>
+            <h3>成本預估 💰</h3>
+            <span class="tag tag-all">所有賣家</span>
+        </div>
+        <div class="section-body">
+            <div class="key-point">
+                <strong>📌 本章重點：</strong>日本站主要成本 = 月費 + 銷售傭金 + FBA 物流倉儲費 + 廣告費 + 促銷費。用 FBA 計算機估算你的實際成本。
+            </div>
+            <table>
+                <thead>
+                    <tr><th>#</th><th>費用項目</th><th>說明</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>1</td><td>專業帳戶月費</td><td>每月 ¥4,900（未申報統編將收 5% 營業稅 = ¥5,145）</td></tr>
+                    <tr><td>2</td><td>成交手續費（銷售傭金）</td><td>依<a href="https://sellercentral.amazon.co.jp/help/hub/reference/external/GT23F3ST7FEZKT9A?locale=zh-TW&initialSessionID=356-3357753-9849531&ld=SOTWSOAIGLOGISTICSNULLMKTJPFeeChange251208" target="_blank">商品類別</a>收取成交金額的 8~15%</td></tr>
+                    <tr><td>3</td><td>FBA 物流 + 倉儲費</td><td>日本亞馬遜倉 → 消費者的物流費 + 月度倉儲費</td></tr>
+                    <tr><td>4</td><td>站內廣告費</td><td>透過設定預算上限控制。建議新品至少投資 10~20% 銷售額於廣告</td></tr>
+                    <tr><td>5</td><td>站內促銷費</td><td>透過設定預算上限控制</td></tr>
+                </tbody>
+            </table>
+            <p style="font-size:0.88rem;margin-top:12px;"><strong>✅ 行動項目：</strong></p>
+            <ul class="action-list">
+                <li>使用 <a href="https://sellercentral.amazon.co.jp/hz/fba/profitabilitycalculator/index?lang=zh_TW" target="_blank">FBA 計算機</a> 估算 FBA 物流 + 倉儲費成本</li>
+                <li>▶️ <a href="https://www.youtube.com/watch?v=rOqNx-bzMG8" target="_blank">觀看 FBA 計算機使用方式說明（YouTube）</a></li>
+            </ul>
+            <details>
+                <summary>💡 其他資訊</summary>
+                <div>（請補充原本 Toggle 裡的內容）</div>
+            </details>
+            <details>
+                <summary>💡 FBA 相關費用計算公式 &amp; 說明</summary>
+                <div>（請補充原本 Toggle 裡的內容）</div>
+            </details>
+        </div>
+    </div>
+
+    <!-- 04 -->
+    <div class="section" id="sec04">
+        <div class="section-head">
+            <span class="sec-num">04</span>
+            <h3>產品合規 🔌</h3>
+            <span class="tag tag-all">所有賣家</span>
+        </div>
+        <div class="section-body">
+            <div class="key-point">
+                <strong>📌 本章重點：</strong>日本站有特殊合規要求。電器需 PSE/Giteki，嬰幼兒/食品/美妝需 JFSL。務必在上架前確認。
+            </div>
+
+            <div class="jp-unique">
+                <strong>⚠️ 日本站特有合規：</strong>以下合規要求是日本站獨有的，其他站點賣家請特別注意。
+            </div>
+
+            <p style="font-size:0.9rem;font-weight:600;margin:12px 0 6px;">你的商品需要哪些合規？快速判斷：</p>
+            <table>
+                <thead>
+                    <tr><th>商品類型</th><th>需要的合規</th><th>提交方式</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>電器商品</td><td>PSE、METI</td><td>上架後 email 至 <a href="mailto:jp-electronics-safety@amazon.co.jp">jp-electronics-safety@amazon.co.jp</a></td></tr>
+                    <tr><td>藍牙 / WiFi 商品</td><td>Giteki (Telec)</td><td>上架後 email 至 <a href="mailto:jp-giteki-safety@amazon.co.jp">jp-giteki-safety@amazon.co.jp</a></td></tr>
+                    <tr><td>嬰幼兒商品</td><td>日本食品衛生法 (JFSL)</td><td>依商品類別提交</td></tr>
+                    <tr><td>食品 / 接觸食品容器 / 美妝品</td><td>JFSL</td><td>依商品類別提交</td></tr>
+                    <tr><td>其他不確定</td><td colspan="2">請諮詢亞馬遜官方經理</td></tr>
+                </tbody>
+            </table>
+
+            <div class="steps">
+                <p style="font-size:0.9rem;font-weight:600;margin:14px 0 6px;">合規準備步驟：</p>
+                <ol>
+                    <li>確認產品是否需要合規檢驗
+                        <ul>
+                            <li>電器商品：PSE <a href="https://sellercentral.amazon.co.jp/help/hub/reference/external/GHJPQ6KDLA9N5F4L?locale=zh-TW" target="_blank">審核規範</a>（附件：Amazon JP_PSE 申請範本.docx）</li>
+                            <li>藍牙/WiFi：Giteki <a href="https://sellercentral.amazon.co.jp/help/hub/reference/external/GV3N5ES8KNR3W3VG?locale=zh-TW" target="_blank">審核規範</a>（附件：Amazon JP_Giteki 申請範本.docx）</li>
+                            <li>食品飲料：<a href="https://sellercentral.amazon.co.jp/help/hub/reference/external/201003420?locale=zh-TW" target="_blank">有效期產品進倉規範</a> — FBA 要求庫存接收時最低剩餘架儲期超過 60 天；距到期日 45 天內將被標記為報廢</li>
+                        </ul>
+                    </li>
+                    <li>針對需要合規檢驗的產品準備相關報告與文件</li>
+                    <li>提交文件到亞馬遜後台通過上架審核</li>
+                    <li>提交文件給頭程物流服務商在進口報關審核用</li>
+                </ol>
+            </div>
+            <details>
+                <summary>💡 其他資訊</summary>
+                <div>（請補充原本 Toggle 裡的內容）</div>
+            </details>
+        </div>
+    </div>
+
+    <!-- 05 -->
+    <div class="section" id="sec05">
+        <div class="section-head">
+            <span class="sec-num">05</span>
+            <h3>金流</h3>
+            <span class="tag tag-all">所有賣家</span>
+        </div>
+        <div class="section-body">
+            <div class="key-point">
+                <strong>📌 本章重點：</strong>亞馬遜每 14 天結算一次，收支互抵。選擇適合你的收款方式，後續都可以在賣家後台切換。
+            </div>
+            <table>
+                <thead>
+                    <tr><th>收款方式</th><th>說明</th><th>手續費</th><th>適合對象</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>日本銀行帳戶</td><td>用日幣直接收款</td><td>依銀行</td><td>已有日本帳戶的賣家</td></tr>
+                    <tr><td>第三方金流</td><td>Payoneer / SUNRATE / Airwallex / WORLDFIRST</td><td>依服務商</td><td>大多數台灣賣家</td></tr>
+                    <tr><td><a href="https://m.media-amazon.com/images/G/28/TWGS/OBSS/TW_GS_AGS_2.5_ACCS_v2.pdf" target="_blank">亞馬遜全球收款</a></td><td>以新台幣接收全球付款</td><td>1.5% + 海外跨行轉帳手續費</td><td>想用台幣收款的賣家</td></tr>
+                </tbody>
+            </table>
+            <details>
+                <summary>💡 其他資訊</summary>
+                <div>（請補充原本 Toggle 裡的內容）</div>
+            </details>
+        </div>
+    </div>
+
+    <!-- ========== PHASE 2: 上架期 ========== -->
+    <div class="phase phase-2">🔵 階段二：上架期</div>
+
+    <!-- 06 -->
+    <div class="section" id="sec06">
+        <div class="section-head">
+            <span class="sec-num">06</span>
+            <h3>品牌註冊</h3>
+            <span class="tag tag-all">所有賣家</span>
+        </div>
+        <div class="section-body">
+            <div class="key-point">
+                <strong>📌 本章重點：</strong>品牌註冊可解鎖 A+、品牌分析等工具。新品牌需先申請商標；既有品牌可從其他站點授權。
+            </div>
+
+            <div class="sub-section">
+                <h4>🆕 品牌註冊（第一次在亞馬遜上做品牌註冊）</h4>
+                <p style="font-size:0.88rem;">🔗 <a href="https://brandregistry.amazon.co.jp/" target="_blank">日本品牌後台</a></p>
+                <div class="steps">
+                    <p style="font-size:0.9rem;font-weight:600;margin:10px 0 6px;">品牌註冊準備步驟：</p>
+                    <ol>
+                        <li>申請商標（提交申請後約 2~3 周可拿到商標局回傳的申請回執，有回執就可以做亞馬遜品牌註冊）</li>
+                        <li>準備以下資料：（請補充清單）</li>
+                        <li>申請亞馬遜品牌註冊</li>
+                    </ol>
+                </div>
+                <div class="resource-grid">
+                    <a class="res-item" href="https://youtu.be/vNkvSWtNCFo" target="_blank">
+                        <span class="res-icon">▶️</span> 品牌註冊實操教學（YouTube）
+                    </a>
+                    <a class="res-item" href="https://m.media-amazon.com/images/G/28/TWGS/Website/Brand_Registration_Manual_TW_v2.pdf" target="_blank">
+                        <span class="res-icon">📄</span> 品牌註冊申請流程手冊 (PDF)
+                    </a>
+                </div>
+                <details>
+                    <summary>💡 其他資訊</summary>
+                    <div>（請補充原本 Toggle 裡的內容）</div>
+                </details>
+            </div>
+
+            <div class="sub-section" id="sec06-auth">
+                <h4>🔄 品牌授權（已在亞馬遜其他站點完成品牌註冊）</h4>
+                <p style="font-size:0.88rem;">從已完成品牌註冊的亞馬遜站點授權到目標站點（參考以下步驟完成亞馬遜品牌授權）</p>
+                <p style="font-size:0.85rem;color:var(--text-light);margin-top:6px;">（請補充授權步驟）</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 07 -->
+    <div class="section" id="sec07">
+        <div class="section-head">
+            <span class="sec-num">07</span>
+            <h3>上架</h3>
+            <span class="tag tag-all">所有賣家</span>
+        </div>
+        <div class="section-body">
+            <div class="key-point">
+                <strong>📌 本章重點：</strong>Listing = 商品詳情頁，由 8 個基本要素組成。高品質的 Listing 直接影響銷量。
+            </div>
+            <p style="font-size:0.88rem;">Listing 就是商品詳情頁。每一款商品上傳成功後，會生成一個獨立的 Listing 頁面，是消費者全面了解您商品最有效的途徑。</p>
+            <p style="font-size:0.9rem;font-weight:600;margin:12px 0 6px;">Listing 8 大要素：</p>
+            <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px;">
+                <span style="background:#F0F2F5;padding:4px 10px;border-radius:6px;font-size:0.82rem;">分類節點</span>
+                <span style="background:#F0F2F5;padding:4px 10px;border-radius:6px;font-size:0.82rem;">搜尋關鍵詞</span>
+                <span style="background:#F0F2F5;padding:4px 10px;border-radius:6px;font-size:0.82rem;">圖片</span>
+                <span style="background:#F0F2F5;padding:4px 10px;border-radius:6px;font-size:0.82rem;">標題</span>
+                <span style="background:#F0F2F5;padding:4px 10px;border-radius:6px;font-size:0.82rem;">商品要點</span>
+                <span style="background:#F0F2F5;padding:4px 10px;border-radius:6px;font-size:0.82rem;">商品描述</span>
+                <span style="background:#F0F2F5;padding:4px 10px;border-radius:6px;font-size:0.82rem;">A+ / 高級 A+</span>
+                <span style="background:#F0F2F5;padding:4px 10px;border-radius:6px;font-size:0.82rem;">品牌名稱</span>
+            </div>
+            <details>
+                <summary>📦 上架準備資訊</summary>
+                <div>（請補充原本 Toggle 裡的內容）</div>
+            </details>
+            <details>
+                <summary>🖥️ 上架操作</summary>
+                <div>（請補充原本 Toggle 裡的內容）</div>
+            </details>
+            <details>
+                <summary>💡 其他資訊</summary>
+                <div>（請補充原本 Toggle 裡的內容）</div>
+            </details>
+            <details>
+                <summary>⚠️ 解決上架錯誤</summary>
+                <div>（請補充原本 Toggle 裡的內容）</div>
+            </details>
+            <details>
+                <summary>🔗 開立客服</summary>
+                <div>（請補充原本 Toggle 裡的內容）</div>
+            </details>
+            <details>
+                <summary>▶️ 教學影片</summary>
+                <div>（請補充原本 Toggle 裡的內容）</div>
+            </details>
+        </div>
+    </div>
+
+    <!-- 08 -->
+    <div class="section" id="sec08">
+        <div class="section-head">
+            <span class="sec-num">08</span>
+            <h3>物流 ✈️</h3>
+            <span class="tag tag-all">所有賣家</span>
+        </div>
+        <div class="section-body">
+            <div class="key-point">
+                <strong>📌 本章重點：</strong>商品從你的工廠/倉庫 → 頭程物流 → 日本亞馬遜 FBA 倉。務必遵守包裝規範與貼標要求。
+            </div>
+            <div class="steps">
+                <p style="font-size:0.9rem;font-weight:600;margin-bottom:6px;">發貨準備步驟：</p>
+                <ol>
+                    <li>針對需要合規檢驗的產品準備相關報告</li>
+                    <li>安排頭程物流（商品從賣家工廠或倉庫到亞馬遜日本倉的運送）</li>
+                    <li><a href="https://m.media-amazon.com/images/G/28/TWGS/Onboarding/FBA_STA_Guide_2024.pdf#page=37" target="_blank">包裝產品並貼標</a>
+                        <ul>
+                            <li>📄 <a href="https://sellercentral.amazon.co.jp/help/hub/reference/external/G200141500?locale=zh-TW" target="_blank">包裝要求</a></li>
+                            <li>📄 <a href="https://sellercentral.amazon.co.jp/help/hub/reference/external/GF4G7547KSLDX2KC?locale=zh-TW" target="_blank">預處理指導</a></li>
+                        </ul>
+                    </li>
+                    <li>賣家後台創貨件</li>
+                </ol>
+            </div>
+            <div class="resource-grid">
+                <a class="res-item" href="https://youtu.be/Xr1Etlr8Jn0?si=xZD8Ud4tu9agYrHw" target="_blank">
+                    <span class="res-icon">▶️</span> FBA 發貨計畫創建手把手（YouTube）
+                </a>
+                <a class="res-item" href="https://m.media-amazon.com/images/G/28/TWGS/Onboarding/FBA_STA_Guide_2024.pdf#page=14" target="_blank">
+                    <span class="res-icon">📄</span> 後台發貨準備手冊 (PDF)
+                </a>
+            </div>
+            <details>
+                <summary>💡 其他資訊</summary>
+                <div>（請補充原本 Toggle 裡的內容）</div>
+            </details>
+            <details>
+                <summary>💡 FBA 相關費用計算公式</summary>
+                <div>（請補充原本 Toggle 裡的內容）</div>
+            </details>
+            <details>
+                <summary>💡 FBA 進倉包裝規範</summary>
+                <div>（請補充原本 Toggle 裡的內容）</div>
+            </details>
+        </div>
+    </div>
+
+    <!-- ========== PHASE 3: 成長期 ========== -->
+    <div class="phase phase-3">🟡 階段三：成長期</div>
+
+    <!-- 09 -->
+    <div class="section" id="sec09">
+        <div class="section-head">
+            <span class="sec-num">09</span>
+            <h3>廣告</h3>
+            <span class="tag tag-new">新賣家重點</span>
+        </div>
+        <div class="section-body">
+            <div class="key-point">
+                <strong>📌 本章重點：</strong>新賣家建議先用新賣家回饋開啟 Sponsored Products 商品推廣，再逐步優化並啟用其他廣告功能。
+            </div>
+            <p style="font-size:0.9rem;font-weight:600;margin-bottom:10px;">🔗 學習資源：</p>
+            <table>
+                <thead>
+                    <tr><th>資源</th><th>類型</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td><a href="https://m.media-amazon.com/images/G/28/TWGS/SU/SU_Promo/SU_Curriculum_JP_Ads.pdf" target="_blank">賣家大學課程總整理 — 日本站</a></td><td>📄 PDF</td></tr>
+                    <tr><td><a href="https://gs.amazon.com.tw/learn/su/su-13?ld=IRTWSOA30D" target="_blank">廣告學習大全</a></td><td>📖 網頁</td></tr>
+                    <tr><td><a href="https://m.media-amazon.com/images/G/28/TWGS/OBSS/Seller_ramp-up_JP.pdf" target="_blank">廣告報表全解析</a></td><td>📄 PDF</td></tr>
+                    <tr><td><a href="https://gs.amazon.com.tw/blog/generic-keywords-230706" target="_blank">找到高報酬的亞馬遜搜尋關鍵字</a></td><td>📖 文章</td></tr>
+                    <tr><td><a href="https://www.youtube.com/watch?v=dovgLb86GZ0" target="_blank">ACOS 優化技巧</a></td><td>▶️ 影片</td></tr>
+                    <tr><td><a href="https://m.media-amazon.com/images/G/28/TWGS/SU/SU_Promo/Ads_Education_Curriculum_TW.pdf?initialSessionID=357-8113271-3355833&ld=IRTWSOAOB11#page=4" target="_blank">進階廣告情境打法</a></td><td>📄 進階</td></tr>
+                </tbody>
+            </table>
+            <details>
+                <summary>💡 其他資訊</summary>
+                <div>（請補充原本 Toggle 裡的內容）</div>
+            </details>
+        </div>
+    </div>
+
+    <!-- 10 -->
+    <div class="section" id="sec10">
+        <div class="section-head">
+            <span class="sec-num">10</span>
+            <h3>促銷</h3>
+            <span class="tag tag-all">所有賣家</span>
+        </div>
+        <div class="section-body">
+            <div class="key-point">
+                <strong>📌 本章重點：</strong>新賣家建議先開優惠券（門檻低），等排名穩定再用其他促銷工具。日本站獨有「積分」制度別忘了設定。
+            </div>
+            <div class="steps">
+                <p style="font-size:0.9rem;font-weight:600;margin-bottom:6px;">給新賣家的建議：</p>
+                <ol>
+                    <li>關注亞馬遜官方經理發出的官方促銷活動 mail（亞馬遜會做站外曝光，人流比一般時段多），並調整廣告及促銷預算集中在活動期間</li>
+                    <li>利用回饋先開啟<a href="https://m.media-amazon.com/images/G/28/TWGS/SU/GN_GS_Promotions_2.2_Coupons_TW.pdf?initialSessionID=355-3002025-1543835&ld=IRTWSOA30D" target="_blank">優惠券</a>（優勢：提報門檻低，要求的折扣幅度低），等排名上升有穩定銷量再提報其他促銷工具</li>
+                </ol>
+            </div>
+            <p style="font-size:0.88rem;">📄 <a href="https://m.media-amazon.com/images/G/28/TWGS/SU/SU_Promo/SU_Curriculum_JP_Promotion.pdf?initialSessionID=355-3002025-1543835&ld=IRTWSOA30D" target="_blank">促銷與旺季 — 日本站 (PDF)</a></p>
+
+            <div class="jp-unique" style="margin-top:16px;">
+                <strong>⚠️ 日本站獨有 —「積分」(Points)</strong><br>
+                一般約設定產品售價的 1~2%，建議跟著競品設定的 %。亞馬遜官方不定期會舉辦積分回饋活動（會有額外曝光機會），再針對活動內容調整 % 設定。<br>
+                🔗 <a href="https://m.media-amazon.com/images/G/28/TWGS/SU/GN_GS_Promotions_2.6_Amazon_Points_TW.pdf" target="_blank">亞馬遜積分設置方式 (PDF)</a>
+            </div>
+            <details>
+                <summary>💡 其他資訊</summary>
+                <div>（請補充原本 Toggle 裡的內容）</div>
+            </details>
+        </div>
+    </div>
+
+    <!-- 11 -->
+    <div class="section" id="sec11">
+        <div class="section-head">
+            <span class="sec-num">11</span>
+            <h3>銷售持續成長 📈</h3>
+            <span class="tag tag-all">所有賣家</span>
+        </div>
+        <div class="section-body">
+            <div class="key-point">
+                <strong>📌 本章重點：</strong>上架後的黃金 90 天是關鍵期。透過評論管理、文案優化、廣告調整持續提升排名。
+            </div>
+            <p style="font-size:0.88rem;margin-bottom:14px;">🔗 <a href="https://gs.amazon.com.tw/perfect-launch" target="_blank">黃金 90 天完整指南</a></p>
+
+            <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-bottom:16px;">
+                <div style="background:#F0FFF4;border-radius:8px;padding:12px 14px;">
+                    <p style="font-weight:700;font-size:0.85rem;color:#155724;margin-bottom:6px;">📅 第 1-30 天：建立基礎</p>
+                    <ul class="action-list" style="margin:0;">
+                        <li>使用 VINE 獲取早期評論</li>
+                        <li>啟動 SP 廣告</li>
+                        <li>設定優惠券 + 積分</li>
+                    </ul>
+                </div>
+                <div style="background:#F0F4FF;border-radius:8px;padding:12px 14px;">
+                    <p style="font-weight:700;font-size:0.85rem;color:#004085;margin-bottom:6px;">📅 第 31-60 天：優化調整</p>
+                    <ul class="action-list" style="margin:0;">
+                        <li>邀請消費者寫評</li>
+                        <li>文案 / 圖片 / A+ 優化</li>
+                        <li>廣告關鍵字 & ACOS 優化</li>
+                    </ul>
+                </div>
+                <div style="background:#FFF8E1;border-radius:8px;padding:12px 14px;">
+                    <p style="font-weight:700;font-size:0.85rem;color:#856404;margin-bottom:6px;">📅 第 61-90 天：擴大成長</p>
+                    <ul class="action-list" style="margin:0;">
+                        <li>提報促銷活動</li>
+                        <li>競品分析</li>
+                        <li>分析成效、調整策略</li>
+                    </ul>
+                </div>
+            </div>
+
+            <p style="font-size:0.9rem;font-weight:600;margin-bottom:8px;">管理消費者評論：</p>
+            <div class="steps">
+                <ol>
+                    <li>使用 <a href="https://sellercentral.amazon.co.jp/help/hub/reference/external/G92T8UV339NZ98TN?locale=zh-TW" target="_blank">VINE</a> 獲取評論
+                        <ul>
+                            <li>▶️ <a href="https://www.youtube.com/watch?v=QWS43qeMB5M&list=PL_T89DpPP7kIrAZrkzsLim5TwvhLPRHzp&index=20" target="_blank">VINE 計畫介紹 & 實操教學（YouTube）</a></li>
+                        </ul>
+                    </li>
+                    <li>邀請有成交訂單紀錄的消費者寫評：<a href="https://sellercentral.amazon.co.jp/help/hub/reference/external/G698QJEQJZFEXSAT?locale=zh-TW" target="_blank">請求顧客評論</a></li>
+                    <li><a href="https://sellercentral.amazon.co.jp/help/hub/reference/external/G201972160?locale=zh-TW" target="_blank">產品評論相關問答集</a></li>
+                </ol>
+            </div>
+
+            <p style="font-size:0.9rem;font-weight:600;margin:12px 0 6px;">其他成長策略：</p>
+            <ul style="font-size:0.88rem;padding-left:20px;">
+                <li>文案優化：圖片、影片、文案調整、<a href="https://gs.amazon.com.tw/news/premium-a-plus-launch-announcement-220824" target="_blank">Premium A+</a></li>
+                <li>廣告優化</li>
+                <li>提報促銷</li>
+                <li>競品分析</li>
+                <li>分析成效 &amp; 調整策略</li>
+            </ul>
+            <details>
+                <summary>💡 其他資訊</summary>
+                <div>（請補充原本 Toggle 裡的內容）</div>
+            </details>
+        </div>
+    </div>
+
+    <!-- 12 -->
+    <div class="section" id="sec12">
+        <div class="section-head">
+            <span class="sec-num">12</span>
+            <h3>企業購</h3>
+            <span class="tag tag-exist">既有賣家進階</span>
+        </div>
+        <div class="section-body">
+            <div class="key-point">
+                <strong>📌 本章重點：</strong>B2B 企業購讓你接觸日本企業客戶，適合辦公用品、工業耗材等品類。
+            </div>
+            <div class="resource-grid">
+                <a class="res-item" href="https://m.media-amazon.com/images/G/28/TWGS/SU/SU_Promo/SU_Curriculum_JP_AB.pdf?initialSessionID=355-3002025-1543835&ld=NSGoogle" target="_blank">
+                    <span class="res-icon">📄</span> B2B 亞馬遜企業購 — 日本站（需登入）
+                </a>
+                <a class="res-item" href="https://sellercentral.amazon.com/help/hub/reference/external/G201542150?locale=zh-TW" target="_blank">
+                    <span class="res-icon">📖</span> B2B 亞馬遜企業購 — 日本站（免登入）
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== PHASE 4: 資源與支援 ========== -->
+    <div class="phase phase-4">⚪ 階段四：資源與支援</div>
+
+    <!-- 13 -->
+    <div class="section" id="sec13">
+        <div class="section-head">
+            <span class="sec-num">13</span>
+            <h3>常見問題</h3>
+            <span class="tag tag-all">所有賣家</span>
+        </div>
+        <div class="section-body">
+            <table>
+                <thead>
+                    <tr><th>問題</th><th>解決方式</th></tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>手機收不到驗證簡訊</td>
+                        <td><a href="https://gs.amazon.com.tw/blog/google-authenticator-230927" target="_blank">改用 Google Authenticator 取代手機驗證</a></td>
+                    </tr>
+                    <tr>
+                        <td>需要聯繫亞馬遜客服</td>
+                        <td>
+                            📄 <a href="https://m.media-amazon.com/images/G/28/TWGS/SU/Listing_Error_Guidebook.pdf#page=3" target="_blank">開立客服操作手冊 (PDF)</a><br>
+                            ▶️ <a href="https://www.youtube.com/watch?v=Rtcn8AMixjY&t=2s" target="_blank">客服 Case 開立操作示範（YouTube）</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>JCT 稅務相關</td>
+                        <td>📄 <a href="https://m.media-amazon.com/images/G/28/TWGS/JCT_CN2JP_Handbook_Official_TW.pdf" target="_blank">JCT 說明手冊 (PDF)</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- 14 -->
+    <div class="section" id="sec14">
+        <div class="section-head">
+            <span class="sec-num">14</span>
+            <h3>其他資源</h3>
+            <span class="tag tag-all">所有賣家</span>
+        </div>
+        <div class="section-body">
+            <table>
+                <thead>
+                    <tr><th>資源</th><th>說明</th></tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><a href="https://www.notion.so/1ea57bc15af78091afa5e713466c3c45?pvs=25" target="_blank">2026 亞馬遜日本站官方消息群組</a></td>
+                        <td>官方最新消息</td>
+                    </tr>
+                    <tr>
+                        <td>亞馬遜日本站賣家自主交流群</td>
+                        <td>密碼：amazonjp</td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://amazonexteu.qualtrics.com/jfe/form/SV_1T6LCBXWnUFkUw6?TrackID=hsinyi" target="_blank">亞馬遜官方團隊 1 對 1 諮詢輔導</a></td>
+                        <td>報名注意事項（請補充）</td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://gs.amazon.com.tw/resources/government?ref=as_tw_ags_hnav_goverment" target="_blank">政府補助資源總整理</a></td>
+                        <td>台灣政府相關補助</td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://sellercentral.amazon.co.jp/help/hub/reference/external/G2?ref=efph_GABBX6GZPA8MSZGW_cont_201411300&locale=zh-TW" target="_blank">亞馬遜賣家後台全指南</a></td>
+                        <td>後台操作完整指南</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- 15 -->
+    <div class="section" id="sec15">
+        <div class="section-head">
+            <span class="sec-num">15</span>
+            <h3>官方消息</h3>
+            <span class="tag tag-all">所有賣家</span>
+        </div>
+        <div class="section-body">
+            <div class="jp-unique">
+                <strong>🔴 重大通知：</strong><a href="https://gs.amazon.com.tw/news/2026-jp-fee-change-251208?ld=SOTWSOAIGLOGISTICSNULLMKTJPFeeChange251208" target="_blank">亞馬遜日本站 2026 年費用調整全攻略，佣金、物流費變更必看</a>
+            </div>
+            <table>
+                <thead>
+                    <tr><th>類別</th><th>消息</th></tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>物流</td>
+                        <td><a href="https://gs.amazon.com.tw/news/jp-fba-fee-change-241217" target="_blank">重要通知！2025 年亞馬遜日本站亞馬遜物流費用發佈</a></td>
+                    </tr>
+                    <tr>
+                        <td>促銷</td>
+                        <td><a href="https://gs.amazon.com.tw/news/promotion-fee-change-250325" target="_blank">重要提醒！2025/6/2 起亞馬遜美日英法德義西站促銷費用調整</a></td>
+                    </tr>
+                    <tr>
+                        <td>VINE</td>
+                        <td>
+                            <a href="https://gs.amazon.com.tw/news/vine-program-update-250502" target="_blank">Amazon Vine 計畫 4 大政策更新與優惠一次看</a><br>
+                            <a href="https://gs.amazon.com.tw/news/vine-program-updates-parent-asin-250502?ld=SOTWSOAMKTFB0505" target="_blank">亞馬遜 Vine 計畫規則更新，嚴禁合併違規變體</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Contact Footer -->
+    <div class="contact-footer">
+        <h3>📞 需要協助？</h3>
+        <p>✉️ <a href="mailto:hsinyih@amazon.com">hsinyih@amazon.com</a> ｜ 📞 +886-2-6631-9471 ｜ 📱 LINE ID: @503udqst</p>
+        <p>🔗 <a href="https://amazonexteu.qualtrics.com/jfe/form/SV_1T6LCBXWnUFkUw6?TrackID=hsinyi" target="_blank">預約亞馬遜官方團隊 1 對 1 諮詢輔導</a></p>
+    </div>
+
+</div><!-- end container -->
+</body>
+</html>

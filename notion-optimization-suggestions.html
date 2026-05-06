@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>亞馬遜日本站經營指導手冊 — Notion 筆記優化建議</title>
+    <style>
+        :root {
+            --primary: #FF9900;
+            --primary-dark: #E88B00;
+            --bg: #FAFAFA;
+            --card-bg: #FFFFFF;
+            --text: #232F3E;
+            --text-light: #545B64;
+            --border: #E7E7E7;
+            --accent-green: #067D62;
+            --accent-red: #D13212;
+            --accent-blue: #0073BB;
+            --tag-new: #067D62;
+            --tag-existing: #0073BB;
+            --tag-both: #8250DF;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC", sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+            padding: 0;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #232F3E 0%, #37475A 100%);
+            color: #fff;
+            padding: 48px 24px;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 2rem;
+            margin-bottom: 8px;
+            font-weight: 700;
+        }
+        .hero p {
+            font-size: 1.05rem;
+            opacity: 0.85;
+            max-width: 640px;
+            margin: 0 auto;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 32px 20px 64px;
+        }
+
+        /* Table of Contents */
+        .toc {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 24px 28px;
+            margin-bottom: 36px;
+        }
+        .toc h2 {
+            font-size: 1.15rem;
+            margin-bottom: 12px;
+            color: var(--primary-dark);
+        }
+        .toc ol {
+            padding-left: 20px;
+        }
+        .toc li {
+            margin-bottom: 4px;
+        }
+        .toc a {
+            color: var(--accent-blue);
+            text-decoration: none;
+        }
+        .toc a:hover { text-decoration: underline; }
+
+        /* Section Cards */
+        .section {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            margin-bottom: 28px;
+            overflow: hidden;
+        }
+        .section-header {
+            background: #F0F2F5;
+            padding: 16px 24px;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .section-header h2 {
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+        .section-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: var(--primary);
+            color: #fff;
+            font-weight: 700;
+            font-size: 0.85rem;
+            flex-shrink: 0;
+        }
+        .section-body {
+            padding: 20px 24px;
+        }
+
+        /* Tags */
+        .tag {
+            display: inline-block;
+            font-size: 0.7rem;
+            font-weight: 600;
+            padding: 2px 8px;
+            border-radius: 10px;
+            margin-left: 8px;
+            vertical-align: middle;
+        }
+        .tag-structure { background: #FFF3CD; color: #856404; }
+        .tag-content  { background: #D1ECF1; color: #0C5460; }
+        .tag-ux       { background: #D4EDDA; color: #155724; }
+        .tag-seo      { background: #F8D7DA; color: #721C24; }
+
+        /* Audience Tags */
+        .audience {
+            display: inline-block;
+            font-size: 0.68rem;
+            font-weight: 600;
+            padding: 2px 8px;
+            border-radius: 10px;
+            margin-right: 4px;
+        }
+        .audience-new      { background: #D4EDDA; color: var(--tag-new); }
+        .audience-existing { background: #CCE5FF; color: var(--tag-existing); }
+        .audience-both     { background: #E8DEF8; color: var(--tag-both); }
+
+        h3 {
+            font-size: 1.05rem;
+            margin: 16px 0 8px;
+            color: var(--text);
+        }
+
+        ul, ol {
+            padding-left: 22px;
+            margin-bottom: 12px;
+        }
+        li { margin-bottom: 6px; }
+
+        .before-after {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin: 12px 0;
+        }
+        @media (max-width: 640px) {
+            .before-after { grid-template-columns: 1fr; }
+        }
+        .ba-box {
+            border-radius: 8px;
+            padding: 14px 16px;
+            font-size: 0.92rem;
+        }
+        .ba-before {
+            background: #FFF3F3;
+            border: 1px solid #F5C6CB;
+        }
+        .ba-after {
+            background: #F0FFF4;
+            border: 1px solid #C3E6CB;
+        }
+        .ba-label {
+            font-weight: 700;
+            font-size: 0.78rem;
+            text-transform: uppercase;
+            margin-bottom: 6px;
+        }
+        .ba-before .ba-label { color: var(--accent-red); }
+        .ba-after  .ba-label { color: var(--accent-green); }
+
+        .tip {
+            background: #FFF8E1;
+            border-left: 4px solid var(--primary);
+            padding: 12px 16px;
+            border-radius: 0 8px 8px 0;
+            margin: 12px 0;
+            font-size: 0.92rem;
+        }
+        .tip strong { color: var(--primary-dark); }
+
+        .priority {
+            display: inline-block;
+            font-size: 0.72rem;
+            font-weight: 700;
+            padding: 2px 10px;
+            border-radius: 10px;
+            margin-left: 6px;
+        }
+        .priority-high   { background: #F5C6CB; color: #721C24; }
+        .priority-medium { background: #FFF3CD; color: #856404; }
+        .priority-low    { background: #D1ECF1; color: #0C5460; }
+
+        code {
+            background: #F0F2F5;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 0.88rem;
+        }
+
+        .summary-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 16px 0;
+            font-size: 0.9rem;
+        }
+        .summary-table th, .summary-table td {
+            border: 1px solid var(--border);
+            padding: 10px 14px;
+            text-align: left;
+        }
+        .summary-table th {
+            background: #F0F2F5;
+            font-weight: 700;
+        }
+        .summary-table tr:nth-child(even) { background: #FAFAFA; }
+
+        footer {
+            text-align: center;
+            padding: 24px;
+            color: var(--text-light);
+            font-size: 0.85rem;
+        }
+    </style>
+</head>
+<body>
+
+<div class="hero">
+    <h1>📋 亞馬遜日本站經營指導手冊 — Notion 筆記優化建議</h1>
+    <p>針對日本亞馬遜賣家（新賣家 &amp; 有經驗賣家）的筆記結構、內容、UX 與 SEO 全面優化方案</p>
+</div>
+
+<div class="container">
+
+    <!-- TOC -->
+    <nav class="toc">
+        <h2>📑 目錄</h2>
+        <ol>
+            <li><a href="#s1">整體結構與導航優化</a></li>
+            <li><a href="#s2">受眾分流設計（新賣家 vs 既有賣家）</a></li>
+            <li><a href="#s3">內容層級與資訊密度優化</a></li>
+            <li><a href="#s4">視覺與排版優化</a></li>
+            <li><a href="#s5">連結管理與資源整合</a></li>
+            <li><a href="#s6">行動導向 CTA 優化</a></li>
+            <li><a href="#s7">各章節細部優化建議</a></li>
+            <li><a href="#s8">優先執行總覽</a></li>
+        </ol>
+    </nav>
+
+    <!-- Section 1 -->
+    <div class="section" id="s1">
+        <div class="section-header">
+            <span class="section-number">1</span>
+            <h2>整體結構與導航優化 <span class="tag tag-structure">結構</span> <span class="priority priority-high">高優先</span></h2>
+        </div>
+        <div class="section-body">
+            <h3>問題分析</h3>
+            <p>目前筆記共 15 個章節以線性方式排列，缺乏明確的「階段感」。新賣家容易迷失在大量資訊中，不知道該從哪裡開始；有經驗的賣家則需要花時間跳過已知內容。</p>
+
+            <h3>優化建議</h3>
+            <ol>
+                <li>在筆記最頂端加入<strong>互動式目錄（Table of Contents）</strong>，搭配 Notion 的錨點連結功能，讓讀者一鍵跳轉。</li>
+                <li>將 15 個章節重新歸類為<strong>4 大階段</strong>，建立清晰的賣家旅程：
+                    <ul>
+                        <li>🟢 <strong>階段一：準備期</strong> — 優惠(01)、開通帳號(02)、成本預估(03)、產品合規(04)、金流(05)</li>
+                        <li>🔵 <strong>階段二：上架期</strong> — 品牌註冊(06)、上架(07)、物流(08)</li>
+                        <li>🟡 <strong>階段三：成長期</strong> — 廣告(09)、促銷(10)、銷售持續成長(11)、企業購(12)</li>
+                        <li>⚪ <strong>階段四：資源與支援</strong> — 常見問題(13)、其他資源(14)、官方消息(15)</li>
+                    </ul>
+                </li>
+                <li>每個階段用 Notion 的 <code>Callout</code> 或 <code>Toggle Heading</code> 包裹，讓讀者可以收合不需要的階段。</li>
+            </ol>
+
+            <div class="before-after">
+                <div class="ba-box ba-before">
+                    <div class="ba-label">❌ 目前</div>
+                    01 → 02 → 03 → ... → 15<br>
+                    線性排列，無分組，無目錄
+                </div>
+                <div class="ba-box ba-after">
+                    <div class="ba-label">✅ 建議</div>
+                    📌 目錄（含錨點跳轉）<br>
+                    🟢 準備期 ▸ 🔵 上架期 ▸ 🟡 成長期 ▸ ⚪ 資源<br>
+                    每階段可收合，附進度 Checklist
+                </div>
+            </div>
+
+            <div class="tip">
+                <strong>💡 Notion 技巧：</strong>使用 <code>/toc</code> 指令可自動產生目錄；使用 <code>/toggle</code> 建立可收合區塊。搭配 Notion 的 Database 功能，還可以建立「我的進度追蹤表」讓賣家勾選已完成步驟。
+            </div>
+        </div>
+    </div>
+
+    <!-- Section 2 -->
+    <div class="section" id="s2">
+        <div class="section-header">
+            <span class="section-number">2</span>
+            <h2>受眾分流設計（新賣家 vs 既有賣家） <span class="tag tag-ux">UX</span> <span class="priority priority-high">高優先</span></h2>
+        </div>
+        <div class="section-body">
+            <h3>問題分析</h3>
+            <p>筆記的 TA 包含「新賣家」與「有亞馬遜銷售經驗的賣家」，但目前僅在【02】帳號開通有做區分（全新賣家 / 既有賣家），其餘章節混合呈現，導致：</p>
+            <ul>
+                <li>新賣家被進階內容嚇到（如企業購 B2B、進階廣告情境打法）</li>
+                <li>有經驗賣家需要翻找才能找到日本站特有的差異資訊</li>
+            </ul>
+
+            <h3>優化建議</h3>
+            <ol>
+                <li>在筆記頂端加入<strong>「你是哪種賣家？」分流引導</strong>：
+                    <ul>
+                        <li><span class="audience audience-new">🆕 新賣家</span> → 建議閱讀路徑：01 → 02(全新) → 03 → 04 → 05 → 06(品牌註冊) → 07 → 08 → 09 → 10</li>
+                        <li><span class="audience audience-existing">🔄 既有賣家</span> → 建議閱讀路徑：01(優惠) → 02(既有) → 04(日本合規差異) → 06(品牌授權) → 08(日本FBA) → 10(積分)</li>
+                    </ul>
+                </li>
+                <li>每個章節內容加上<strong>受眾標籤</strong>，讓讀者快速辨識：
+                    <ul>
+                        <li><span class="audience audience-new">新賣家必讀</span> — 基礎操作、入門概念</li>
+                        <li><span class="audience audience-existing">既有賣家注意</span> — 日本站特有差異、站點切換</li>
+                        <li><span class="audience audience-both">所有賣家適用</span> — 合規、費用、官方消息</li>
+                    </ul>
+                </li>
+                <li>為既有賣家新增<strong>「日本站 vs 其他站點差異速查表」</strong>，涵蓋：積分制度、JCT 稅務、PSE/Giteki 合規、日本消費者偏好等。</li>
+            </ol>
+
+            <div class="tip">
+                <strong>💡 實作方式：</strong>在 Notion 中使用 <code>Callout</code> 區塊搭配不同顏色 emoji 標示受眾。例如：🟢 = 新賣家、🔵 = 既有賣家、🟣 = 所有賣家。或使用 Notion 的 Synced Block 讓共用內容只需維護一份。
+            </div>
+        </div>
+    </div>
+
+    <!-- Section 3 -->
+    <div class="section" id="s3">
+        <div class="section-header">
+            <span class="section-number">3</span>
+            <h2>內容層級與資訊密度優化 <span class="tag tag-content">內容</span> <span class="priority priority-high">高優先</span></h2>
+        </div>
+        <div class="section-body">
+            <h3>問題分析</h3>
+            <p>多數章節將「概念說明」、「操作步驟」、「外部連結」、「補充資訊」混在同一層級，讀者難以區分「我現在該做什麼」和「這是參考資料」。尤其【04】產品合規和【08】物流章節資訊量大，容易造成認知負荷過重。</p>
+            <h3>優化建議</h3>
+            <ol>
+                <li>每個章節統一採用<strong>三層資訊架構</strong>：
+                    <ul>
+                        <li><strong>第一層（必讀）：</strong>一句話摘要 + 行動清單（Checklist）</li>
+                        <li><strong>第二層（操作）：</strong>步驟教學，搭配截圖或影片</li>
+                        <li><strong>第三層（參考）：</strong>放入 Toggle 收合區塊，含外部連結、補充說明、FAQ</li>
+                    </ul>
+                </li>
+                <li>將目前散落在「💡 其他資訊」中的內容<strong>分類整理</strong>，而非全部堆在一個 Toggle 裡。</li>
+                <li>為每個章節加入<strong>「本章重點」摘要框</strong>（Callout），用 2-3 句話說明該章節的核心任務。</li>
+            </ol>
+            <div class="before-after">
+                <div class="ba-box ba-before">
+                    <div class="ba-label">❌ 目前（以【03】成本預估為例）</div>
+                    直接列出 5 項費用 → 💡其他資訊（收合）<br>
+                    讀者不知道「我的總成本大概多少」
+                </div>
+                <div class="ba-box ba-after">
+                    <div class="ba-label">✅ 建議</div>
+                    📌 本章重點：日本站主要成本 = 月費 + 傭金 + FBA費 + 廣告費<br>
+                    ✅ Checklist: □ 用FBA計算機估算 □ 設定廣告預算<br>
+                    📖 詳細說明（Toggle）→ 各費用明細<br>
+                    🔗 參考資源（Toggle）→ 連結集合
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section 4 -->
+    <div class="section" id="s4">
+        <div class="section-header">
+            <span class="section-number">4</span>
+            <h2>視覺與排版優化 <span class="tag tag-ux">UX</span> <span class="priority priority-medium">中優先</span></h2>
+        </div>
+        <div class="section-body">
+            <h3>問題分析</h3>
+            <p>目前筆記大量使用 emoji 作為視覺標記，但缺乏統一規則。部分章節有編號但格式不一致（有的用數字、有的用項目符號）。連結文字過長或過短，不易辨識。</p>
+            <h3>優化建議</h3>
+            <ol>
+                <li><strong>統一 Emoji 語意系統</strong>：
+                    <ul>
+                        <li>📌 = 重要 / 必讀</li>
+                        <li>✅ = 行動項目 / Checklist</li>
+                        <li>💡 = 補充提示</li>
+                        <li>⚠️ = 注意事項 / 常見錯誤</li>
+                        <li>🔗 = 外部連結 / 資源</li>
+                        <li>▶️ = 影片教學</li>
+                    </ul>
+                </li>
+                <li><strong>善用 Notion 的 Column 排版</strong>：將「操作步驟」與「影片教學」並排顯示，減少頁面長度。</li>
+                <li><strong>加入視覺流程圖</strong>：在【02】帳號開通、【04】產品合規、【08】物流章節加入簡易流程圖（可用 Notion 的 Mermaid 語法或嵌入圖片）。</li>
+                <li><strong>連結文字規範化</strong>：統一格式為「[動作] + [內容描述]」，例如：<br>
+                    ❌ <code>連結</code> → ✅ <code>前往日本站賣家後台登入</code><br>
+                    ❌ <code>說明手冊</code> → ✅ <code>下載 JCT 稅務說明手冊 (PDF)</code>
+                </li>
+            </ol>
+            <div class="tip">
+                <strong>💡 排版建議：</strong>Notion 支援 <code>/columns</code> 分欄排版。建議將每個章節的「步驟教學」放左欄、「影片 + 資源連結」放右欄，讓讀者邊看步驟邊參考資源。
+            </div>
+        </div>
+    </div>
+
+    <!-- Section 5 -->
+    <div class="section" id="s5">
+        <div class="section-header">
+            <span class="section-number">5</span>
+            <h2>連結管理與資源整合 <span class="tag tag-content">內容</span> <span class="priority priority-medium">中優先</span></h2>
+        </div>
+        <div class="section-body">
+            <h3>問題分析</h3>
+            <p>筆記中包含大量外部連結（PDF、YouTube、賣家後台、官方網站），但存在以下問題：</p>
+            <ul>
+                <li>部分連結使用短網址（如 <code>reurl.cc</code>），無法從 URL 判斷目的地</li>
+                <li>同一資源在不同章節重複出現（如 FBA 費用計算公式在【03】和【08】都有提及）</li>
+                <li>PDF 連結無法預覽內容，讀者不知道點進去會看到什麼</li>
+                <li>缺乏連結的「最後更新日期」標示，讀者不確定資訊是否仍然有效</li>
+            </ul>
+            <h3>優化建議</h3>
+            <ol>
+                <li><strong>建立「資源總表」</strong>：在筆記末尾（或獨立子頁面）建立 Notion Database，欄位包含：資源名稱、類型（PDF/影片/網頁）、適用章節、最後確認日期。</li>
+                <li><strong>為 PDF 連結加上內容摘要</strong>：例如「📄 FBA 發貨準備手冊 — 含包裝規範、貼標教學、創貨件步驟（共 45 頁）」。</li>
+                <li><strong>統一使用完整 URL</strong>：避免短網址，改用有意義的連結文字。</li>
+                <li><strong>重複資源用 Synced Block</strong>：避免同一資訊在多處維護，更新時只需改一處。</li>
+            </ol>
+        </div>
+    </div>
+
+    <!-- Section 6 -->
+    <div class="section" id="s6">
+        <div class="section-header">
+            <span class="section-number">6</span>
+            <h2>行動導向 CTA 優化 <span class="tag tag-ux">UX</span> <span class="priority priority-medium">中優先</span></h2>
+        </div>
+        <div class="section-body">
+            <h3>問題分析</h3>
+            <p>筆記偏向「資訊彙整」，缺乏明確的行動引導。讀者看完後知道「有哪些事要做」，但不確定「現在該做哪一件」。</p>
+            <h3>優化建議</h3>
+            <ol>
+                <li>在筆記頂端加入<strong>「30 天開賣行動計畫」互動 Checklist</strong>（呼應已有的 30 天開賣計畫 PDF，但轉化為可勾選的 Notion Checklist）：
+                    <ul>
+                        <li>Week 1：帳號開通 + 成本預估 + 合規確認</li>
+                        <li>Week 2：品牌註冊 + 商品上架</li>
+                        <li>Week 3：物流備貨 + FBA 入倉</li>
+                        <li>Week 4：廣告啟動 + 促銷設定</li>
+                    </ul>
+                </li>
+                <li>每個章節結尾加入<strong>「下一步」指引</strong>：例如【02】帳號開通結尾 → 「帳號開通後，請前往【03】成本預估，了解日本站的費用結構。」</li>
+                <li>加入<strong>「需要協助？」固定區塊</strong>，統一放置聯繫方式（目前聯繫資訊只在頁首，讀者滾到下方就看不到了）。</li>
+            </ol>
+        </div>
+    </div>
+
+    <!-- Section 7 -->
+    <div class="section" id="s7">
+        <div class="section-header">
+            <span class="section-number">7</span>
+            <h2>各章節細部優化建議 <span class="tag tag-content">內容</span></h2>
+        </div>
+        <div class="section-body">
+            <table class="summary-table">
+                <thead>
+                    <tr>
+                        <th>章節</th>
+                        <th>目前問題</th>
+                        <th>優化建議</th>
+                        <th>受眾</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>【01】入駐優惠</td>
+                        <td>6 項優惠條列但缺乏「如何領取」的操作指引；部分優惠有金額但無使用期限說明</td>
+                        <td>每項優惠加上：① 領取方式 ② 使用期限 ③ 適用條件。加入「優惠總價值一覽表」讓賣家一目了然</td>
+                        <td><span class="audience audience-new">新賣家</span></td>
+                    </tr>
+                    <tr>
+                        <td>【02】開通帳號</td>
+                        <td>全新賣家 vs 既有賣家的區分做得不錯，但「帳號開通後」的設定步驟缺乏截圖輔助</td>
+                        <td>加入賣家後台截圖標示操作路徑；將「維護統編」「設定存款」「設定驗證器」做成 Checklist</td>
+                        <td><span class="audience audience-both">所有賣家</span></td>
+                    </tr>
+                    <tr>
+                        <td>【03】成本預估</td>
+                        <td>費用項目列舉完整，但缺乏「實際案例試算」，讀者難以估算自己的成本</td>
+                        <td>加入 1-2 個「模擬商品成本試算範例」（如：售價 3,000 日圓的小型商品，各項費用拆解）；加入成本佔比圓餅圖</td>
+                        <td><span class="audience audience-both">所有賣家</span></td>
+                    </tr>
+                    <tr>
+                        <td>【04】產品合規</td>
+                        <td>合規資訊完整但結構複雜，PSE/Giteki/JFSL 混在一起；附件（.docx）不易在 Notion 中預覽</td>
+                        <td>用「決策樹」引導：你的商品是？→ 電器 → PSE/Giteki → 嬰幼兒 → JFSL → 食品 → JFSL + 有效期規範。將 .docx 範本轉為 Notion Template 或 Google Docs 連結</td>
+                        <td><span class="audience audience-both">所有賣家</span></td>
+                    </tr>
+                    <tr>
+                        <td>【05】金流</td>
+                        <td>三種收款方式並列但缺乏比較，讀者不知道該選哪個</td>
+                        <td>加入「收款方式比較表」：手續費率、到帳時間、幣別、適合對象。標示推薦選項</td>
+                        <td><span class="audience audience-both">所有賣家</span></td>
+                    </tr>
+                    <tr>
+                        <td>【06】品牌註冊</td>
+                        <td>品牌註冊 vs 品牌授權的區分清楚，但「準備資料」清單不夠具體</td>
+                        <td>列出完整的準備資料 Checklist（商標證書/申請回執、品牌 Logo、產品圖片等）；加入「常見被退件原因」提醒</td>
+                        <td><span class="audience audience-both">所有賣家</span></td>
+                    </tr>
+                    <tr>
+                        <td>【07】上架</td>
+                        <td>Listing 8 要素的說明偏概念性，缺乏「好的 Listing 長什麼樣」的範例</td>
+                        <td>加入 1-2 個「優質 Listing 範例截圖」對比「待改善 Listing」；針對日本市場特別提醒：日文標題格式、日本消費者重視的圖片風格</td>
+                        <td><span class="audience audience-both">所有賣家</span></td>
+                    </tr>
+                    <tr>
+                        <td>【08】物流</td>
+                        <td>步驟完整但頭程物流部分僅提「安排頭程物流」，缺乏具體指引</td>
+                        <td>補充頭程物流選擇指南：海運 vs 空運 vs 快遞的時效/成本比較；加入「首次發貨建議數量」指引</td>
+                        <td><span class="audience audience-new">新賣家</span></td>
+                    </tr>
+                    <tr>
+                        <td>【09】廣告</td>
+                        <td>資源連結豐富但缺乏「新手第一支廣告怎麼設定」的快速指引</td>
+                        <td>加入「5 分鐘設定第一支 SP 廣告」快速教學；加入建議的初始預算範圍和 ACOS 目標參考值</td>
+                        <td><span class="audience audience-new">新賣家</span></td>
+                    </tr>
+                    <tr>
+                        <td>【10】促銷</td>
+                        <td>日本站獨有的「積分」制度說明不夠突出，容易被忽略</td>
+                        <td>將「積分」獨立為醒目區塊（Callout），強調這是日本站特色；加入日本主要促銷檔期行事曆（Prime Day、Black Friday、年末年始等）</td>
+                        <td><span class="audience audience-both">所有賣家</span></td>
+                    </tr>
+                    <tr>
+                        <td>【11】銷售成長</td>
+                        <td>內容偏向「列舉可做的事」，缺乏優先順序和時間軸</td>
+                        <td>將成長策略按「黃金 90 天」時間軸排列：第 1-30 天做什麼、31-60 天做什麼、61-90 天做什麼</td>
+                        <td><span class="audience audience-both">所有賣家</span></td>
+                    </tr>
+                    <tr>
+                        <td>【12】企業購</td>
+                        <td>內容較少，僅有兩個連結</td>
+                        <td>補充：什麼類型的商品適合企業購？企業購的額外好處？如何開通？加入「適合 / 不適合企業購的商品類型」指引</td>
+                        <td><span class="audience audience-existing">既有賣家</span></td>
+                    </tr>
+                    <tr>
+                        <td>【13】常見問題</td>
+                        <td>僅列 3 個問題，覆蓋面不足</td>
+                        <td>擴充為 FAQ Database（Notion Database），按類別分組：帳號問題、上架問題、物流問題、廣告問題。加入搜尋功能</td>
+                        <td><span class="audience audience-both">所有賣家</span></td>
+                    </tr>
+                    <tr>
+                        <td>【14】其他資源</td>
+                        <td>資源有價值但排列無優先順序</td>
+                        <td>按使用頻率排序；加入「推薦指數」星級標示；將 LINE 群組和諮詢輔導放在最顯眼位置</td>
+                        <td><span class="audience audience-both">所有賣家</span></td>
+                    </tr>
+                    <tr>
+                        <td>【15】官方消息</td>
+                        <td>消息按時間排列但缺乏「影響程度」標示</td>
+                        <td>加入影響程度標籤（🔴 重大 / 🟡 一般 / 🟢 參考）；加入「生效日期」欄位讓賣家快速判斷是否已生效</td>
+                        <td><span class="audience audience-both">所有賣家</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Section 8 -->
+    <div class="section" id="s8">
+        <div class="section-header">
+            <span class="section-number">8</span>
+            <h2>優先執行總覽 <span class="priority priority-high">行動計畫</span></h2>
+        </div>
+        <div class="section-body">
+            <h3>🔴 第一階段（立即執行，1-2 天）</h3>
+            <table class="summary-table">
+                <thead><tr><th>項目</th><th>說明</th><th>預估耗時</th></tr></thead>
+                <tbody>
+                    <tr><td>加入目錄與錨點</td><td>使用 Notion <code>/toc</code> 自動產生，並確認各章節標題格式一致</td><td>30 分鐘</td></tr>
+                    <tr><td>加入受眾分流引導</td><td>在頁首加入「新賣家 / 既有賣家」建議閱讀路徑</td><td>30 分鐘</td></tr>
+                    <tr><td>統一 Emoji 語意</td><td>全文搜尋替換，確保 emoji 使用一致</td><td>1 小時</td></tr>
+                    <tr><td>連結文字規範化</td><td>將「連結」「說明手冊」等模糊文字改為具體描述</td><td>1 小時</td></tr>
+                </tbody>
+            </table>
+            <h3>🟡 第二階段（1 週內完成）</h3>
+            <table class="summary-table">
+                <thead><tr><th>項目</th><th>說明</th><th>預估耗時</th></tr></thead>
+                <tbody>
+                    <tr><td>章節重新分組</td><td>將 15 章歸入 4 大階段，加入 Toggle Heading</td><td>2 小時</td></tr>
+                    <tr><td>三層資訊架構</td><td>每章加入「本章重點」摘要 + Checklist + Toggle 參考資料</td><td>3 小時</td></tr>
+                    <tr><td>30 天行動 Checklist</td><td>將 PDF 內容轉化為 Notion 可勾選清單</td><td>1 小時</td></tr>
+                    <tr><td>收款方式比較表</td><td>【05】金流章節加入比較表格</td><td>30 分鐘</td></tr>
+                </tbody>
+            </table>
+            <h3>🟢 第三階段（2-4 週持續優化）</h3>
+            <table class="summary-table">
+                <thead><tr><th>項目</th><th>說明</th><th>預估耗時</th></tr></thead>
+                <tbody>
+                    <tr><td>成本試算範例</td><td>【03】加入 2 個模擬商品的完整成本拆解</td><td>1 小時</td></tr>
+                    <tr><td>合規決策樹</td><td>【04】建立「你的商品需要哪些合規？」引導流程</td><td>2 小時</td></tr>
+                    <tr><td>日本站差異速查表</td><td>為既有賣家整理日本站 vs 其他站點的關鍵差異</td><td>2 小時</td></tr>
+                    <tr><td>FAQ Database</td><td>【13】擴充為可搜尋的 Notion Database</td><td>2 小時</td></tr>
+                    <tr><td>資源總表 Database</td><td>彙整所有外部連結為 Notion Database，含類型、更新日期</td><td>2 小時</td></tr>
+                    <tr><td>促銷行事曆</td><td>【10】加入日本站年度促銷檔期時間表</td><td>1 小時</td></tr>
+                    <tr><td>Listing 範例對比</td><td>【07】加入優質 vs 待改善的 Listing 截圖範例</td><td>1 小時</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</div><!-- end container -->
+
+<footer>
+    <p>本優化建議由 Kiro 根據 Notion 筆記內容分析產出 · 2026/03/31</p>
+    <p>TA：日本亞馬遜賣家（新賣家 &amp; 有亞馬遜銷售經驗的賣家）</p>
+</footer>
+
+</body>
+</html>

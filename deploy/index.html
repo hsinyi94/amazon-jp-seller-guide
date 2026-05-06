@@ -1,0 +1,1697 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>亞馬遜日本站 — 經營指導手冊</title>
+<style>
+:root{--primary:#FF9900;--primary-dark:#E88B00;--bg:#FAFAFA;--card:#FFF;--text:#232F3E;--text-light:#545B64;--border:#E3E3E3;--green:#067D62;--blue:#0073BB;--red:#D13212;--purple:#8250DF}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC","Microsoft JhengHei",sans-serif;background:var(--bg);color:var(--text);line-height:1.75}
+a{color:var(--blue);text-decoration:none}a:hover{text-decoration:underline}
+.hero{background:linear-gradient(135deg,#232F3E,#37475A);color:#fff;padding:20px 24px 16px;text-align:center}
+.hero h1{font-size:1.4rem;margin-bottom:2px}.hero .sub{opacity:.85;font-size:.85rem}
+.contact-bar{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;margin-top:8px;font-size:.8rem}.contact-bar a{color:#FFD580}
+
+/* Sticky top section */
+.sticky-top{position:sticky;top:0;z-index:110;background:var(--bg);padding-bottom:8px;box-shadow:0 2px 12px rgba(0,0,0,.08)}
+.sticky-top .container-inner{max-width:980px;margin:0 auto;padding:10px 20px 0}
+.progress-wrap{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:10px 18px;margin-bottom:0}
+.progress-wrap h3{font-size:.85rem;margin-bottom:5px;display:flex;justify-content:space-between;align-items:center}
+.progress-wrap h3 span{font-size:.78rem;color:var(--text-light)}
+.progress-bar{width:100%;height:14px;background:#E9ECEF;border-radius:7px;overflow:hidden}
+.progress-fill{height:100%;background:linear-gradient(90deg,var(--primary),#FFB84D);border-radius:7px;transition:width .4s;display:flex;align-items:center;justify-content:center;font-size:.68rem;font-weight:700;color:#fff}
+.tab-bar{display:flex;gap:0;margin-bottom:10px;border-radius:8px;overflow:hidden;border:1px solid var(--border)}
+.tab{flex:1;padding:8px 0;border:none;background:#F7F8FA;font-size:.85rem;font-weight:600;cursor:pointer;color:var(--text-light);transition:all .2s}
+.tab.active{background:var(--primary);color:#fff}
+.tab:hover:not(.active){background:#EEF0F3}
+.container{max-width:980px;margin:0 auto;padding:12px 20px 60px}
+.audience-box{background:var(--card);border:2px solid var(--primary);border-radius:12px;padding:20px;margin-bottom:22px}
+.audience-box h2{font-size:1.05rem;margin-bottom:10px;color:var(--primary-dark)}
+.paths{display:grid;grid-template-columns:1fr 1fr;gap:12px}@media(max-width:640px){.paths{grid-template-columns:1fr}}
+.path{border-radius:10px;padding:14px 16px;font-size:.84rem}.path-new{background:#F0FFF4;border:1px solid #C3E6CB}.path-exist{background:#F0F4FF;border:1px solid #B8DAFF}
+.path h3{font-size:.93rem;margin-bottom:6px}.path ol{padding-left:18px}.path li{margin-bottom:2px}
+.phase{display:flex;align-items:center;gap:10px;padding:10px 18px;border-radius:10px;margin:26px 0 14px;font-size:1.02rem;font-weight:700}
+.p1{background:#D4EDDA;color:#155724}.p2{background:#CCE5FF;color:#004085}.p3{background:#FFF3CD;color:#856404}.p4{background:#E9ECEF;color:#383D41}
+.sec{background:var(--card);border:1px solid var(--border);border-radius:12px;margin-bottom:18px;overflow:hidden}
+.sec-h{padding:12px 20px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:10px;background:#F7F8FA}
+.sec-h h3{font-size:1.02rem;flex:1}
+.num{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:50%;background:var(--primary);color:#fff;font-weight:700;font-size:.76rem;flex-shrink:0}
+.tag{display:inline-block;font-size:.64rem;font-weight:600;padding:2px 7px;border-radius:10px}
+.tag-new{background:#D4EDDA;color:var(--green)}.tag-exist{background:#CCE5FF;color:var(--blue)}.tag-all{background:#E8DEF8;color:var(--purple)}
+.sec-b{padding:14px 20px}
+.kp{background:#FFF8E1;border-left:4px solid var(--primary);padding:9px 14px;border-radius:0 8px 8px 0;margin-bottom:12px;font-size:.86rem}.kp strong{color:var(--primary-dark)}
+.cb-checklist-box{background:linear-gradient(135deg,#EAF4FE,#F0F7FF);border:1px solid #B8DAFF;border-radius:10px;padding:10px 16px;margin-bottom:14px}
+.cb-checklist-box .cb-title{font-size:.88rem;font-weight:700;color:var(--blue);margin-bottom:6px;display:flex;align-items:center;gap:6px}
+.cb-checklist-box .cb-group{margin:0}
+.jp{background:#FFF0F0;border-left:4px solid var(--red);padding:9px 14px;border-radius:0 8px 8px 0;margin:10px 0;font-size:.86rem}.jp strong{color:var(--red)}
+.info-box{background:#F0F7FF;border-left:4px solid var(--blue);padding:9px 14px;border-radius:0 8px 8px 0;margin:10px 0;font-size:.86rem}
+table{width:100%;border-collapse:collapse;margin:8px 0;font-size:.84rem}th,td{border:1px solid var(--border);padding:7px 11px;text-align:left}th{background:#F0F2F5;font-weight:600}tr:nth-child(even){background:#FAFAFA}
+.cb-group{margin:8px 0}.cb-item{display:flex;align-items:flex-start;gap:7px;padding:4px 0;font-size:.86rem;transition:opacity .2s}
+.cb-item input[type=checkbox]{width:16px;height:16px;margin-top:3px;accent-color:var(--primary);cursor:pointer;flex-shrink:0}
+.cb-item.done label{text-decoration:line-through;color:var(--text-light)}
+.cb-item.dimmed{opacity:0.4;pointer-events:none}
+details{margin:7px 0;border:1px solid var(--border);border-radius:8px;overflow:hidden}
+summary{padding:8px 14px;background:#F7F8FA;cursor:pointer;font-weight:600;font-size:.86rem;list-style:none;display:flex;align-items:center;gap:6px}
+summary::-webkit-details-marker{display:none}summary::before{content:"▶";font-size:.6rem;transition:transform .2s}
+details[open] summary::before{transform:rotate(90deg)}summary:hover{background:#EEF0F3}
+.toggle-body{padding:10px 14px;font-size:.84rem}.toggle-body ul,.toggle-body ol{padding-left:18px;margin:4px 0}.toggle-body li{margin-bottom:3px}
+.toggle-body p{margin:4px 0}
+.res-grid{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin:8px 0}@media(max-width:640px){.res-grid{grid-template-columns:1fr}}
+.res-item{display:flex;align-items:center;gap:7px;padding:7px 11px;background:#F7F8FA;border-radius:8px;font-size:.82rem}
+.steps ol{padding-left:20px;margin:5px 0}.steps li{margin-bottom:4px;font-size:.86rem}.steps ul{padding-left:16px;margin-top:3px}
+.sub-sec{margin:12px 0 8px}.sub-sec h4{font-size:.91rem;padding-bottom:3px;border-bottom:1px dashed var(--border);margin-bottom:8px}
+.contact-footer{background:var(--card);border:2px solid var(--primary);border-radius:12px;padding:16px 20px;text-align:center;margin-top:26px}
+.contact-footer h3{color:var(--primary-dark);margin-bottom:5px;font-size:.98rem}.contact-footer p{font-size:.86rem;margin-bottom:3px}
+.week-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:8px}@media(max-width:640px){.week-grid{grid-template-columns:1fr}}
+.week-card{background:#F8F9FA;border-radius:8px;padding:11px 13px}.week-card h4{font-size:.86rem;margin-bottom:5px;color:var(--primary-dark)}
+.day-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin:10px 0}@media(max-width:640px){.day-grid{grid-template-columns:1fr}}
+.day-card{border-radius:8px;padding:11px 13px}.day-card p{font-weight:700;font-size:.82rem;margin-bottom:4px}
+.faq-box{background:#F8FBFF;border:1px solid #B8DAFF;border-radius:10px;padding:14px 16px;margin:12px 0}
+.faq-box h4{font-size:.95rem;color:var(--blue);margin-bottom:8px;display:flex;align-items:center;gap:6px}
+.faq-item{border-bottom:1px solid #E3E8F0;padding:0}
+.faq-item:last-child{border-bottom:none}
+.faq-item summary{background:transparent;padding:10px 4px;font-weight:500;font-size:.88rem;color:var(--text)}
+.faq-item summary:hover{background:#EDF3FC}
+.faq-item[open] summary{color:var(--blue);font-weight:600}
+.faq-item .toggle-body{background:#FFFFFF;border-left:3px solid var(--blue);margin:0 4px 8px;padding:10px 14px;border-radius:0 6px 6px 0}
+.faq-item .toggle-body strong{color:var(--primary-dark)}
+.calc-example{background:#FFF8E1;border-radius:6px;padding:8px 12px;margin:6px 0;font-size:.82rem;font-family:"SFMono-Regular",Consolas,monospace}
+/* Stage blocks for sec07 */
+.stage-block{border-radius:10px;padding:14px 18px;margin:14px 0}
+.stage-block.stage-1{background:#F0FFF4;border:1px solid #C3E6CB}
+.stage-block.stage-2{background:#F0F4FF;border:1px solid #B8DAFF}
+.stage-block.stage-3{background:#FFF8E1;border:1px solid #FFE58A}
+.stage-block .stage-title{font-size:.98rem;font-weight:700;margin-bottom:2px}
+.stage-block.stage-1 .stage-title{color:#155724}
+.stage-block.stage-2 .stage-title{color:#004085}
+.stage-block.stage-3 .stage-title{color:#856404}
+.stage-block .stage-sub{font-size:.8rem;color:var(--text-light);margin-bottom:10px}
+.stage-block.stage-3 .stage-sub{color:var(--red)}
+.stage-block.stage-3 .stage-sub a{color:var(--red);text-decoration:underline}
+.prep-info > ol{padding-left:22px;margin:0}
+.prep-info > ol > li{margin-bottom:10px;padding-left:4px;font-size:.86rem}
+.prep-info > ol > li > ul{margin-top:6px;padding-left:22px;list-style-type:disc}
+.prep-info > ol > li > ul > li{margin-bottom:3px;font-size:.84rem;color:var(--text-light)}
+.prep-info > ol > li > ul > li a{color:var(--blue)}
+
+/* 5-step flow diagram for 30-day plan */
+.flow-5step{background:#fff;border-radius:12px;padding:20px 16px 14px;margin:14px 0 18px;border:1px solid var(--border);overflow-x:auto}
+.flow-5step h3{font-size:1rem;font-weight:700;margin-bottom:4px;color:var(--text)}
+.flow-5step .flow-sub{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:14px;flex-wrap:wrap;gap:8px}
+.flow-5step .flow-sub .flow-title{font-size:1rem;font-weight:700}
+.flow-5step .flow-sub .flow-brand{font-size:.72rem;color:var(--text-light);font-weight:600;letter-spacing:.5px}
+.flow-arrows{display:grid;grid-template-columns:repeat(5,1fr);gap:4px;margin-bottom:12px;min-width:720px}
+.flow-arrow{height:34px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:.82rem;font-weight:700;position:relative;clip-path:polygon(0 0,calc(100% - 14px) 0,100% 50%,calc(100% - 14px) 100%,0 100%,14px 50%)}
+.flow-arrow:first-child{clip-path:polygon(0 0,calc(100% - 14px) 0,100% 50%,calc(100% - 14px) 100%,0 100%)}
+.flow-arrow.c1{background:#2E5090}
+.flow-arrow.c2{background:#E88B00}
+.flow-arrow.c3{background:#2E5090}
+.flow-arrow.c4{background:#E88B00}
+.flow-arrow.c5{background:#2E5090}
+.flow-steps{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;min-width:720px}
+.flow-step{text-align:center;padding:0 6px}
+.flow-step .flow-icon{width:58px;height:58px;border-radius:50%;margin:0 auto 10px;display:flex;align-items:center;justify-content:center;font-size:1.5rem;color:#fff}
+.flow-step.c1 .flow-icon{background:#2E5090}
+.flow-step.c2 .flow-icon{background:#E88B00}
+.flow-step.c3 .flow-icon{background:#2E5090}
+.flow-step.c4 .flow-icon{background:#E88B00}
+.flow-step.c5 .flow-icon{background:#2E5090}
+.flow-step .flow-name{font-weight:700;font-size:.95rem;margin-bottom:6px;color:var(--text)}
+.flow-step ul{list-style:none;padding:0;text-align:left;margin:0 auto;display:inline-block;font-size:.78rem;color:var(--text-light);line-height:1.5}
+.flow-step ul li::before{content:"•";margin-right:4px;color:var(--text-light)}
+.flow-tags{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-top:14px;min-width:720px}
+.flow-tag{background:#F0F2F5;color:var(--text);font-size:.76rem;font-weight:600;padding:6px 8px;border-radius:6px;text-align:center}
+
+/* Amazon Seller Central header mockup (for sec02 switch demo) */
+.sc-mockup{background:#131A22;border-radius:8px;padding:14px 18px;margin:10px 0;color:#fff;font-family:-apple-system,BlinkMacSystemFont,Arial,sans-serif;position:relative;overflow:visible}
+.sc-mockup .sc-top{display:flex;align-items:center;gap:16px;padding-bottom:10px;border-bottom:1px solid #2a3540;position:relative}
+.sc-mockup .sc-hamburger{font-size:1.1rem;color:#fff;opacity:.85}
+.sc-mockup .sc-logo{font-size:1rem;font-weight:500;color:#fff}
+.sc-mockup .sc-logo .amz{font-weight:700}
+.sc-mockup .sc-logo .arrow{color:#FF9900;font-size:.9em;margin-left:1px}
+.sc-mockup .sc-divider{color:#2a3540;font-size:1.2rem;margin:0 2px}
+.sc-mockup .sc-store{display:flex;align-items:center;gap:8px;padding:6px 12px;border:2px solid #FF3B3B;border-radius:4px;position:relative;cursor:pointer}
+.sc-mockup .sc-store .site{color:#fff;font-size:.88rem}
+.sc-mockup .sc-store .caret{font-size:.7rem;color:#ccc;margin-left:auto}
+.sc-mockup .sc-dropdown{position:absolute;top:calc(100% + 6px);left:0;background:#fff;color:#111;border:2px solid #FF3B3B;border-radius:4px;padding:8px 14px;min-width:140px;box-shadow:0 4px 10px rgba(0,0,0,.25);font-size:.88rem;z-index:2}
+.sc-mockup .sc-dropdown::before{content:"▼";position:absolute;top:-12px;left:16px;color:#FF3B3B;font-size:.8rem}
+.sc-mockup .sc-nav{display:flex;gap:20px;padding-top:10px;font-size:.85rem;color:#ccc}
+.sc-mockup .sc-nav span{cursor:pointer}
+.sc-mockup .sc-note{margin-top:12px;font-size:.82rem;color:#b0bec5}
+.sc-mockup .sc-hint{color:#FF3B3B;font-weight:700}
+@media(max-width:640px){.sc-mockup{padding:12px}.sc-mockup .sc-top{flex-wrap:wrap}}
+
+/* Compliance badges grid for sec04 */
+.comp-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:14px 0}
+@media(max-width:900px){.comp-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:480px){.comp-grid{grid-template-columns:1fr}}
+.comp-card{background:#fff;border:1px solid var(--border);border-radius:10px;padding:16px 14px;display:flex;flex-direction:column;align-items:center}
+.comp-card .comp-mark{height:58px;display:flex;align-items:center;justify-content:center;margin-bottom:10px;gap:6px}
+.comp-card .comp-name{font-size:.95rem;font-weight:700;color:var(--primary-dark);text-align:center;margin-bottom:10px;min-height:2.6em;line-height:1.3}
+.comp-card ul{list-style:none;padding:0;margin:0;font-size:.82rem;color:var(--text);width:100%}
+.comp-card ul li{padding:2px 0 2px 12px;position:relative;line-height:1.5}
+.comp-card ul li::before{content:"•";position:absolute;left:0;color:var(--text-light)}
+
+/* PSE symbol — diamond and circle */
+.mark-pse{display:flex;align-items:center;gap:4px}
+.mark-pse .pse-diamond,.mark-pse .pse-circle{width:46px;height:46px;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.75rem;color:var(--text);font-family:Georgia,serif;line-height:1}
+.mark-pse .pse-diamond{border:2px solid var(--text);transform:rotate(45deg)}
+.mark-pse .pse-diamond span{transform:rotate(-45deg);letter-spacing:1px}
+.mark-pse .pse-circle{border:2px solid var(--text);border-radius:50%}
+.mark-pse .pse-circle span{letter-spacing:1px}
+
+/* Giteki (Telec) symbol */
+.mark-giteki{width:54px;height:54px;border:2.5px solid var(--text);border-radius:50%;display:flex;align-items:center;justify-content:center;position:relative;color:var(--text);font-weight:700;font-family:Georgia,serif}
+.mark-giteki::before{content:"〒";font-size:1.4rem}
+
+/* ST mark for toys */
+.mark-st{font-family:Georgia,serif;font-weight:900;font-size:2rem;letter-spacing:-2px;color:var(--text)}
+
+/* SG mark for consumer products */
+.mark-sg{width:52px;height:52px;border:3px solid #2E8B3F;border-radius:8px;display:flex;align-items:center;justify-content:center;font-weight:900;font-style:italic;font-size:1.5rem;color:#2E8B3F;font-family:Georgia,serif;background:#fff}
+
+/* Section image (official reference visuals) */
+.sec-img{width:100%;max-width:100%;height:auto;border-radius:10px;border:1px solid var(--border);margin:10px 0;display:block}
+.sec-img-row{display:grid;grid-template-columns:1fr;gap:10px;margin:10px 0}
+.sec-img-cap{font-size:.78rem;color:var(--text-light);margin:-4px 0 8px;text-align:center}
+/* Path Selector for sec02 */
+.path-selector{background:var(--card);border:2px dashed var(--primary);border-radius:12px;padding:16px;margin:12px 0}
+.path-selector h4{font-size:.95rem;margin-bottom:10px;color:var(--primary-dark)}
+.path-options{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media(max-width:640px){.path-options{grid-template-columns:1fr}}
+.path-opt{padding:14px;border:2px solid var(--border);border-radius:10px;cursor:pointer;background:#FAFAFA;transition:all .15s;text-align:left;font-family:inherit;font-size:.88rem;color:var(--text)}
+.path-opt:hover{border-color:var(--primary);background:#FFF8E1}
+.path-opt.selected{border-color:var(--primary);background:#FFF4DC;box-shadow:0 0 0 3px rgba(255,153,0,.15)}
+.path-opt .opt-icon{font-size:1.2rem;margin-right:6px}
+.path-opt .opt-title{font-weight:700;color:var(--primary-dark);display:block;margin-bottom:3px}
+.path-opt .opt-desc{font-size:.8rem;color:var(--text-light)}
+.path-panel{display:none;animation:fadeIn .25s ease}
+.path-panel.active{display:block}
+@keyframes fadeIn{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:translateY(0)}}
+.reset-path{background:transparent;border:1px solid var(--border);color:var(--text-light);padding:4px 10px;border-radius:6px;font-size:.78rem;cursor:pointer;margin-left:8px}
+.reset-path:hover{background:#F0F2F5}
+
+/* Section Nav (Fixed Left Sidebar) */
+.section-nav{position:fixed;top:0;left:0;width:220px;height:100vh;background:var(--card);border-right:1px solid var(--border);box-shadow:2px 0 8px rgba(0,0,0,.04);z-index:90;overflow-y:auto;padding:18px 12px}
+.section-nav h3{font-size:.92rem;margin-bottom:10px;color:var(--primary-dark);padding:0 6px}
+.section-nav ul{list-style:none;padding:0}
+.section-nav li{padding:0}
+.section-nav a{display:block;padding:7px 10px;font-size:.82rem;color:var(--text);border-radius:6px;border-left:3px solid transparent;transition:all .15s}
+.section-nav a:hover{background:#F0F2F5;text-decoration:none}
+.section-nav a.active{background:#FFF4DC;border-left-color:var(--primary);color:var(--primary-dark);font-weight:600}
+.section-nav .nav-phase{font-size:.7rem;color:var(--text-light);font-weight:700;text-transform:uppercase;margin:10px 10px 4px;letter-spacing:.5px}
+
+/* Push main content right on desktop */
+@media(min-width:1024px){
+  body{padding-left:220px}
+}
+
+/* Mobile: hide sidebar, show toggle button */
+.nav-toggle{display:none}
+@media(max-width:1023px){
+  .section-nav{transform:translateX(-100%);transition:transform .3s;box-shadow:4px 0 16px rgba(0,0,0,.15)}
+  .section-nav.open{transform:translateX(0)}
+  .nav-toggle{display:flex;position:fixed;top:12px;left:12px;z-index:200;padding:8px 14px;border-radius:24px;background:var(--primary);color:#fff;border:none;font-size:.85rem;font-weight:600;cursor:pointer;box-shadow:0 4px 14px rgba(255,153,0,.4);align-items:center;gap:6px}
+  .nav-toggle:hover{transform:scale(1.05)}
+  .nav-overlay{position:fixed;inset:0;background:rgba(0,0,0,.3);z-index:80;opacity:0;pointer-events:none;transition:opacity .2s}
+  .nav-overlay.show{opacity:1;pointer-events:auto}
+}
+
+/* Search Bar */
+.search-wrap{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:8px 14px;margin-bottom:8px;display:flex;gap:6px;align-items:center;flex-wrap:wrap}
+.search-input{flex:1;min-width:180px;padding:6px 10px;border:1px solid var(--border);border-radius:8px;font-size:.85rem;outline:none;transition:border-color .15s}
+.search-input:focus{border-color:var(--primary);box-shadow:0 0 0 3px rgba(255,153,0,.15)}
+.search-btn{padding:6px 12px;border:none;border-radius:8px;background:var(--primary);color:#fff;font-size:.82rem;font-weight:600;cursor:pointer;transition:background .15s}
+.search-btn:hover{background:var(--primary-dark)}
+.search-btn.secondary{background:#F0F2F5;color:var(--text)}
+.search-btn.secondary:hover{background:#E3E8F0}
+.search-info{font-size:.82rem;color:var(--text-light);margin-left:4px}
+.search-hit{background:#FFE58A;color:#000;border-radius:3px;padding:1px 3px}
+.search-hit.current{background:#FF9900;color:#fff}
+</style>
+</head>
+<body>
+
+<!-- Left Sidebar Nav -->
+<button class="nav-toggle" id="navToggle" title="章節目錄" aria-label="開啟章節目錄"><span class="nav-icon">📑</span> 目錄</button>
+<div class="nav-overlay" id="navOverlay"></div>
+<aside class="section-nav" id="sectionNav">
+  <h3>📑 章節目錄</h3>
+  <ul>
+    <li class="nav-phase">🟢 階段一：準備期</li>
+    <li><a href="#sec01" class="nav-link">【01】入駐日本站相關優惠</a></li>
+    <li><a href="#sec02" class="nav-link">【02】開通帳號流程</a></li>
+    <li><a href="#sec03" class="nav-link">【03】成本預估</a></li>
+    <li><a href="#sec04" class="nav-link">【04】產品合規</a></li>
+    <li><a href="#sec05" class="nav-link">【05】金流</a></li>
+    <li class="nav-phase">🔵 階段二：上架期</li>
+    <li><a href="#sec06" class="nav-link">【06】品牌註冊</a></li>
+    <li><a href="#sec07" class="nav-link">【07】上架</a></li>
+    <li><a href="#sec08" class="nav-link">【08】物流</a></li>
+    <li class="nav-phase">🟡 階段三：成長期</li>
+    <li><a href="#sec09" class="nav-link">【09】廣告</a></li>
+    <li><a href="#sec10" class="nav-link">【10】促銷</a></li>
+    <li><a href="#sec11" class="nav-link">【11】銷售持續成長</a></li>
+    <li><a href="#sec12" class="nav-link">【12】企業購</a></li>
+    <li class="nav-phase">⚪ 階段四：資源與支援</li>
+    <li><a href="#sec13" class="nav-link">【13】常見問題</a></li>
+    <li><a href="#sec14" class="nav-link">【14】其他資源</a></li>
+    <li><a href="#sec15" class="nav-link">【15】官方消息</a></li>
+  </ul>
+</aside>
+
+<div class="sticky-top">
+<div class="hero">
+<h1>亞馬遜日本站 — 經營指導手冊</h1>
+<div class="sub">編輯者：亞馬遜全球開店 台灣資深業務拓展經理 黃馨儀</div>
+<div class="contact-bar">
+<span>✉️ <a href="mailto:hsinyih@amazon.com">hsinyih@amazon.com</a></span>
+<span>📞 +886-2-6631-9471</span>
+<span>📱 LINE ID: <a href="#">@503udqst</a></span>
+</div>
+</div>
+<div class="container-inner">
+
+<!-- Search Bar -->
+<div class="search-wrap">
+  <input type="search" class="search-input" id="searchInput" placeholder="🔍 搜尋關鍵字（例：VINE、品牌回饋、FBA、合規...）" autocomplete="off">
+  <button class="search-btn" id="searchBtn">搜尋</button>
+  <button class="search-btn secondary" id="searchPrev" title="上一個" style="display:none">↑</button>
+  <button class="search-btn secondary" id="searchNext" title="下一個" style="display:none">↓</button>
+  <button class="search-btn secondary" id="searchClear" style="display:none">清除</button>
+  <span class="search-info" id="searchInfo"></span>
+</div>
+
+<!-- Progress Bar -->
+<div class="progress-wrap" id="progressWrap">
+  <h3>📊 整體完成進度 <span id="progressText">0 / 0 項完成</span></h3>
+  <div class="progress-bar"><div class="progress-fill" id="progressFill" style="width:0%">0%</div></div>
+</div>
+
+</div>
+</div>
+
+<div class="container">
+
+<!-- Audience Selector -->
+<div class="audience-box">
+<h2>📌 你是哪種賣家？選擇你的閱讀路徑</h2>
+<div class="paths">
+<div class="path path-new"><h3>🆕 新賣家（第一次在亞馬遜上銷售）</h3><ol>
+<li><a href="#sec01">【01】入駐優惠</a> — 領取最高 5 萬美元福利</li>
+<li><a href="#sec02">【02】開通帳號</a> — 全新賣家註冊流程</li>
+<li><a href="#sec03">【03】成本預估</a> — 了解日本站費用結構</li>
+<li><a href="#sec04">【04】產品合規</a> — 確認合規需求</li>
+<li><a href="#sec05">【05】金流</a> — 選擇收款方式</li>
+<li><a href="#sec06">【06】品牌註冊</a> — 申請商標 + 品牌註冊</li>
+<li><a href="#sec07">【07】上架</a> — 建立第一個 Listing</li>
+<li><a href="#sec08">【08】物流</a> — 備貨、包裝、FBA 入倉</li>
+<li><a href="#sec09">【09】廣告</a> — 啟動第一支廣告</li>
+<li><a href="#sec10">【10】促銷</a> — 設定優惠券與積分</li>
+</ol></div>
+<div class="path path-exist"><h3>🔄 既有賣家（已有其他站點帳號）</h3><ol>
+<li><a href="#sec01">【01】入駐優惠</a> — 確認日本站新站點優惠</li>
+<li><a href="#sec02-exist">【02】開通帳號</a> — 從現有後台切換日本站</li>
+<li><a href="#sec03">【03】成本預估</a> — 了解日本站費用結構</li>
+<li><a href="#sec04">【04】產品合規</a> — ⚠️ 日本站特有 PSE/Giteki/JFSL</li>
+<li><a href="#sec05">【05】金流</a> — 選擇收款方式</li>
+<li><a href="#sec06-auth">【06】品牌授權</a> — 從其他站點授權到日本站</li>
+<li><a href="#sec07">【07】上架</a> — 如果做跨站點上架</li>
+<li><a href="#sec08">【08】物流</a> — 日本 FBA 入倉規範</li>
+<li><a href="#sec09">【09】廣告</a> — 啟動第一支廣告</li>
+<li><a href="#sec10">【10】促銷</a> — ⚠️ 日本站獨有積分制度</li>
+</ol></div>
+</div></div>
+
+<!-- 30-Day Checklist -->
+<div style="background:var(--card);border:1px solid var(--border);border-radius:12px;padding:18px 20px;margin-bottom:22px">
+<h2 style="font-size:1.05rem;margin-bottom:3px">📋 30 天開賣行動計畫</h2>
+<p style="font-size:.82rem;margin-bottom:12px">📄 <a href="https://m.media-amazon.com/images/G/28/TWGS/OBSS/Seller_ramp-up_JP.pdf" target="_blank">下載完整 PDF 版（必看）</a></p>
+
+<!-- 5-step flow diagram -->
+<div class="flow-5step">
+<div class="flow-sub">
+<div class="flow-title">開店五步驟，90 天開始獲取全球訂單</div>
+<div class="flow-brand">🅰 amazon global selling</div>
+</div>
+<div class="flow-arrows">
+<div class="flow-arrow c1">STEP 1</div>
+<div class="flow-arrow c2">STEP 2</div>
+<div class="flow-arrow c3">STEP 3</div>
+<div class="flow-arrow c4">STEP 4</div>
+<div class="flow-arrow c5">STEP 5</div>
+</div>
+<div class="flow-steps">
+<div class="flow-step c1">
+<div class="flow-icon">📷</div>
+<div class="flow-name">開賣評估</div>
+<ul><li>成本測算</li><li>市場狀況調查</li><li>合規輔導</li></ul>
+</div>
+<div class="flow-step c2">
+<div class="flow-icon">🧮</div>
+<div class="flow-name">申請帳號</div>
+<ul><li>通知帳戶經理寄發連結</li><li>提交公司文件審核</li><li>通過視訊驗證</li></ul>
+</div>
+<div class="flow-step c3">
+<div class="flow-icon">📄</div>
+<div class="flow-name">準備上架</div>
+<ul><li>產品圖</li><li>產品描述</li><li>條碼申請</li><li>品牌註冊</li></ul>
+</div>
+<div class="flow-step c4">
+<div class="flow-icon">🚚</div>
+<div class="flow-name">發貨至 FBA 倉</div>
+<ul><li>申請 FBA 入倉</li><li>打包商品並貼標</li><li>運送至指定 FBA 倉庫</li></ul>
+</div>
+<div class="flow-step c5">
+<div class="flow-icon">🛒</div>
+<div class="flow-name">提升銷量</div>
+<ul><li>註冊 VINE</li><li>設定廣告</li><li>設定優惠券</li><li>優化產品頁</li></ul>
+</div>
+</div>
+<div class="flow-tags">
+<div class="flow-tag">1:1 顧問諮詢</div>
+<div class="flow-tag">手把手線上註冊教學</div>
+<div class="flow-tag">上架發貨手把手</div>
+<div class="flow-tag">新賣家入庫折扣</div>
+<div class="flow-tag">US$50 廣告金</div>
+</div>
+</div>
+<div class="week-grid">
+<div class="week-card"><h4>Week 1：帳號與準備</h4><div class="cb-group">
+<div class="cb-item"><input type="checkbox" class="task-cb" data-audience="both"><label>完成帳號註冊 / 站點開通</label></div>
+<div class="cb-item"><input type="checkbox" class="task-cb" data-audience="both"><label>維護公司統編（VAT/GST 登記號）</label></div>
+<div class="cb-item"><input type="checkbox" class="task-cb" data-audience="both"><label>設定存款方式</label></div>
+<div class="cb-item"><input type="checkbox" class="task-cb" data-audience="both"><label>改用 Google Authenticator</label></div>
+<div class="cb-item"><input type="checkbox" class="task-cb" data-audience="both"><label>確認產品合規需求</label></div>
+</div></div>
+<div class="week-card"><h4>Week 2：品牌與上架</h4><div class="cb-group">
+<div class="cb-item"><input type="checkbox" class="task-cb" data-audience="both"><label>申請商標 / 品牌授權</label></div>
+<div class="cb-item"><input type="checkbox" class="task-cb" data-audience="both"><label>完成亞馬遜品牌註冊</label></div>
+<div class="cb-item"><input type="checkbox" class="task-cb" data-audience="both"><label>用 FBA 計算機估算成本</label></div>
+<div class="cb-item"><input type="checkbox" class="task-cb" data-audience="both"><label>準備 Listing 素材（含日文翻譯）</label></div>
+<div class="cb-item"><input type="checkbox" class="task-cb" data-audience="both"><label>上架第一批商品</label></div>
+</div></div>
+<div class="week-card"><h4>Week 3：物流備貨</h4><div class="cb-group">
+<div class="cb-item"><input type="checkbox" class="task-cb" data-audience="both"><label>安排頭程物流</label></div>
+<div class="cb-item"><input type="checkbox" class="task-cb" data-audience="both"><label>包裝產品並貼標</label></div>
+<div class="cb-item"><input type="checkbox" class="task-cb" data-audience="both"><label>在賣家後台創建貨件</label></div>
+<div class="cb-item"><input type="checkbox" class="task-cb" data-audience="both"><label>準備合規文件供報關使用</label></div>
+</div></div>
+<div class="week-card"><h4>Week 4：廣告與促銷</h4><div class="cb-group">
+<div class="cb-item"><input type="checkbox" class="task-cb" data-audience="both"><label>啟動 Sponsored Products 廣告</label></div>
+<div class="cb-item"><input type="checkbox" class="task-cb" data-audience="both"><label>設定優惠券</label></div>
+<div class="cb-item"><input type="checkbox" class="task-cb" data-audience="both"><label>設定積分（日本站獨有）</label></div>
+<div class="cb-item"><input type="checkbox" class="task-cb" data-audience="both"><label>加入 VINE 計畫獲取評論</label></div>
+</div></div>
+</div></div>
+
+<!-- ===== PHASE 1 ===== -->
+<div class="phase p1">🟢 階段一：準備期</div>
+
+<!-- 01 -->
+<div class="sec" id="sec01">
+<div class="sec-h"><span class="num">01</span><h3>入駐日本站相關優惠 🎁</h3><span class="tag tag-new">新賣家必讀</span></div>
+<div class="sec-b">
+<div class="kp"><strong>📌 本章重點：</strong>新賣家完成指定任務可獲得最高 5 萬美元福利，涵蓋品牌、物流、廣告、優惠券等面向。</div>
+<div class="cb-checklist-box">
+<div class="cb-title">✅ 本章行動清單</div>
+<div class="cb-group">
+<div class="cb-item"><input type="checkbox" class="task-cb" data-audience="both"><label>已確認新賣家入門大禮包內容</label></div>
+<div class="cb-item"><input type="checkbox" class="task-cb" data-audience="both"><label>已了解各項優惠的領取條件</label></div>
+</div>
+</div>
+<p style="font-size:.86rem;margin-bottom:8px">🔗 <a href="https://sellercentral.amazon.co.jp/help/hub/reference/external/GXMJ38VA95GUN5XU?locale=zh-TW" target="_blank">新賣家入門大禮包 — 完整說明</a>：完成指定任務獲得最高達 5 萬美元福利。幫助賣家透過品牌註冊、亞馬遜物流、亞馬遜廣告、亞馬遜優惠券等在初期快速成長。</p>
+<table><thead><tr><th>#</th><th>優惠項目</th><th>內容</th></tr></thead><tbody>
+<tr><td>1</td><td>品牌回饋加碼</td><td>最高可獲得 <strong>¥7,875,000</strong>（約 NT$1,575,000）<br>前 ¥7,500,000（約 NT$1,500,000）銷售額享 10% 回饋，接下來 ¥142,500,000（約 NT$28,500,000）享 5% 回饋</td></tr>
+<tr><td>2</td><td>VINE 抵用金</td><td><strong>¥30,000</strong>（約 NT$6,000）</td></tr>
+<tr><td>3</td><td>商品推廣廣告折扣券 + 優惠券費用折抵</td><td>廣告折扣券最高 <strong>¥150,000</strong>（約 NT$30,000）<br>優惠券費用折抵 <strong>¥7,500</strong>（約 NT$1,500）</td></tr>
+<tr><td>4</td><td>新品入倉優惠計畫</td><td>自動加入，免倉儲費、免移除費、免退貨處理費</td></tr>
+<tr><td>5</td><td>庫存及配送費用優惠</td><td>首 365 天免倉儲利用附加費與低量庫存費；FBA 入庫配送費抵免</td></tr>
+<tr><td>6</td><td>FBA 入庫運輸優惠</td><td><strong>¥15,000</strong>（約 NT$3,000，使用 Partnered Carrier）或 <strong>¥30,000</strong>（約 NT$6,000，使用 Amazon Global Logistics）<br><span style="font-size:.78rem;color:var(--red)">⚠️ 需從日本或中國發貨到日本亞馬遜倉才適用此優惠</span></td></tr>
+</tbody></table>
+<p style="font-size:.78rem;color:var(--text-light);margin-top:4px">💱 台幣金額以 1 JPY = 0.2 TWD（約 5:1 匯率）換算，實際匯率請以當下為準。</p>
+
+<div class="faq-box">
+<h4>❓ 常見問題 FAQ</h4>
+<details class="faq-item"><summary>1. 品牌回饋條件是什麼？</summary><div class="toggle-body">
+<p>要取得品牌回饋加碼，需同時符合以下條件：</p>
+<ul>
+<li>在亞馬遜日本站上架第一個商品後 <strong>6 個月內</strong>完成亞馬遜品牌註冊</li>
+<li>你必須是該品牌的<strong>第一位品牌擁有者</strong>（Brand Representative）</li>
+<li>使用<strong>專業賣家方案</strong>（個人賣家方案不適用）</li>
+<li>帳戶維持在正常狀態（Normal 或 Vacation）</li>
+</ul>
+<p style="margin-top:6px">📌 每個賣家帳號只能使用一次此優惠，無論擁有幾個品牌。</p>
+</div></details>
+
+<details class="faq-item"><summary>2. 品牌回饋 5~10% 如何計算？有額度上限嗎？</summary><div class="toggle-body">
+<p><strong>計算方式（分兩階段）：</strong></p>
+<ul>
+<li>前 <strong>¥7,500,000</strong>（約 NT$1,500,000）合格品牌銷售額 → 享 <strong>10%</strong> 銷售傭金折抵</li>
+<li>接下來 <strong>¥142,500,000</strong>（約 NT$28,500,000）合格品牌銷售額 → 享 <strong>5%</strong> 銷售傭金折抵</li>
+</ul>
+<p><strong>額度上限：總回饋金額最高 ¥7,875,000（約 NT$1,575,000）</strong></p>
+<div class="calc-example">
+💡 試算範例：<br>
+你賣一個品牌商品 ¥100，銷售傭金 15% = ¥15<br>
+套用 10% 折扣後，回饋 ¥10 → 實際支付傭金僅 ¥5
+</div>
+<p style="margin-top:6px">⏱️ <strong>使用期限：</strong>達到 ¥7,875,000 上限 或 符合資格後滿 1 年（以先到者為準）</p>
+<p>📊 可在賣家後台「New Seller Incentives dashboard」查看累積回饋進度。</p>
+</div></details>
+
+<details class="faq-item"><summary>3. 什麼是優惠券 (Coupon)？</summary><div class="toggle-body">
+<p>優惠券是亞馬遜站內的促銷工具，消費者在購物頁面會看到醒目的「折扣券」標示，點擊後可折抵商品金額。</p>
+<p><strong>優勢：</strong></p>
+<ul>
+<li>提報門檻低，容易操作</li>
+<li>要求的折扣幅度低（比 Deal 類促銷更彈性）</li>
+<li>可在搜尋結果頁和商品頁面獲得額外曝光</li>
+<li>適合新賣家累積銷量和評論</li>
+</ul>
+<p><strong>新賣家福利：</strong>可獲得 <strong>¥7,500</strong>（約 NT$1,500）優惠券費用折抵額度，用於抵免建立優惠券的費用。</p>
+<p style="margin-top:6px">🔗 <a href="https://sellercentral.amazon.co.jp/help/hub/reference/external/G3QLEV6W2QK84C57?locale=zh-TW" target="_blank">優惠券官方說明</a> ｜ ▶️ <a href="https://www.youtube.com/watch?v=Sae5jgso1Fc" target="_blank">Coupon 優惠券 0-1 手把手短影音</a></p>
+</div></details>
+
+<details class="faq-item"><summary>4. 什麼是 VINE？</summary><div class="toggle-body">
+<p>Amazon Vine 是亞馬遜的「優質評論家計畫」。亞馬遜會邀請平台上最受信任的評論家，為新商品撰寫客觀評論，幫助其他消費者做購買決策。</p>
+<p><strong>運作方式：</strong></p>
+<ul>
+<li>賣家提供免費商品給 Vine 評論家</li>
+<li>評論家試用後會撰寫真實評論（好評或負評都有可能）</li>
+<li>對新品累積初期評論非常有幫助</li>
+</ul>
+<p><strong>新賣家福利：</strong>可獲得 <strong>¥30,000</strong>（約 NT$6,000）VINE 抵用金，用於抵免 Vine 註冊費。</p>
+<p><strong>⚠️ 使用時機很關鍵：</strong></p>
+<ul>
+<li>必須在符合品牌福利資格後的 <strong>90 天內</strong>註冊 Vine，才能拿到抵用金</li>
+<li>但要等<strong>符合資格滿 5 天後</strong>再註冊 ASIN，抵用金才會啟用（太早註冊會被收費）</li>
+<li>抵用金 1 年內未使用會失效</li>
+</ul>
+<p style="margin-top:6px">📖 想申請 VINE？請看 ▶️ <a href="https://www.youtube.com/watch?v=QWS43qeMB5M&list=PL_T89DpPP7kIrAZrkzsLim5TwvhLPRHzp&index=20" target="_blank">亞馬遜 VINE 計畫介紹 &amp; 實操教學短影音</a></p>
+<p>🔗 <a href="https://sellercentral.amazon.co.jp/help/hub/reference/external/G92T8UV339NZ98TN?locale=zh-TW" target="_blank">Amazon Vine 官方說明</a></p>
+</div></details>
+</div>
+
+</div></div>
+
+<!-- 02 -->
+<div class="sec" id="sec02">
+<div class="sec-h"><span class="num">02</span><h3>開通帳號流程 📖</h3><span class="tag tag-all">所有賣家</span></div>
+<div class="sec-b">
+<div class="kp"><strong>📌 本章重點：</strong>根據你的身份（全新 / 既有賣家）完成帳號開通，並設定基本資訊。</div>
+
+<!-- Step 1: Choose seller type -->
+<div class="path-selector" id="sec02-step1">
+<h4>🧭 第一步：請選擇你的情況</h4>
+<div class="path-options">
+<button class="path-opt" data-path="new"><span class="opt-icon">🆕</span><span class="opt-title">全新賣家</span><span class="opt-desc">第一次在亞馬遜上銷售，需要註冊新帳號</span></button>
+<button class="path-opt" data-path="existing"><span class="opt-icon">🔄</span><span class="opt-title">既有賣家</span><span class="opt-desc">已有亞馬遜帳號，想開通日本站點</span></button>
+</div>
+</div>
+
+<!-- Step 2 (only for new sellers): Choose company type -->
+<div class="path-selector path-panel" id="sec02-step2" data-show-when="new">
+<h4>🧭 第二步：你要用哪個公司註冊？</h4>
+<div class="path-options">
+<button class="path-opt" data-path="tw"><span class="opt-icon">🇹🇼</span><span class="opt-title">台灣公司</span><span class="opt-desc">使用台灣公司文件註冊（最常見）</span></button>
+<button class="path-opt" data-path="jp"><span class="opt-icon">🇯🇵</span><span class="opt-title">日本公司</span><span class="opt-desc">已在日本設立子公司或分公司</span></button>
+</div>
+</div>
+
+<!-- Panel: New Seller common intro (shows when new seller is picked, regardless of company type) -->
+<div class="path-panel" data-show-when="new">
+<div class="sub-sec"><h4>🆕 全新賣家註冊流程 <button class="reset-path" data-reset="all">↺ 重選身份</button></h4>
+<div class="info-box">亞馬遜帳號註冊，請提供以下資訊給亞馬遜官方經理在內部系統建檔，在取得資訊後<strong>經理會提供註冊連結</strong>，<strong style="color:var(--red)">賣家須從經理發出的註冊連結完成帳號註冊才能有完整的輔導權限跟優惠。</strong><br>（如果聯繫經理前已註冊好亞馬遜帳號，也還是可以先找經理，幫您確認輔導資格。）</div>
+<p style="font-size:.86rem;font-weight:600;margin:10px 0 4px">提供以下資訊給亞馬遜官方經理發註冊連結：</p>
+<ol style="font-size:.84rem;padding-left:20px;margin-bottom:10px">
+<li>公司名稱</li><li>聯絡人姓名</li><li>聯絡人電話</li><li>聯絡人 email</li><li>負責人姓名</li><li>負責人 email</li><li>註冊帳號用的 email（建議用公用信箱避免人員異動造成帳號登入問題）</li>
+</ol>
+</div>
+</div>
+
+<!-- Panel: Taiwan company — only shown when new:tw -->
+<div class="path-panel" data-show-when="new:tw">
+<div class="sub-sec"><h4>🇹🇼 台灣公司註冊 — 需要準備的資料</h4>
+<p style="font-size:.84rem;margin-bottom:6px">使用台灣公司註冊亞馬遜日本站<a href="https://m.media-amazon.com/images/G/28/TWGS/SU/TW_GS_Registration_Guidebook_DSR_Grex.pdf#page=6" target="_blank">需要準備的資料</a>：</p>
+<ol style="font-size:.84rem;padding-left:20px">
+<li>公司文件彩色掃描件</li>
+<li>法定代表人護照 or 身分證彩色掃描件</li>
+<li>付款信用卡</li>
+<li>聯繫方式</li>
+</ol>
+</div>
+<div class="cb-checklist-box">
+<div class="cb-title">✅ 本章行動清單</div>
+<div class="cb-group">
+<div class="cb-item"><input type="checkbox" class="task-cb" data-audience="new"><label>已提供資訊給亞馬遜官方經理</label></div>
+<div class="cb-item"><input type="checkbox" class="task-cb" data-audience="new"><label>已備齊台灣公司註冊所需資料</label></div>
+<div class="cb-item"><input type="checkbox" class="task-cb" data-audience="new"><label>已從經理發出的註冊連結完成帳號註冊</label></div>
+</div>
+</div>
+</div>
+
+<!-- Panel: Japan company — only shown when new:jp -->
+<div class="path-panel" data-show-when="new:jp">
+<div class="sub-sec"><h4>🇯🇵 日本公司註冊 — 需要準備的資料</h4>
+<ol style="font-size:.84rem;padding-left:20px">
+<li>負責人身分證明（日本政府發行的有臉部照片的身分證明，例：護照或駕照等）</li>
+<li>地址證明（以下文件擇一，文件地址需同註冊帳號的公司或同負責人資訊並為過去 180 天內發行）
+<ul>
+<li><strong>來自企業編號發布網站的螢幕截圖</strong>（首推使用此文件，到 <a href="https://www.houjin-bangou.nta.go.jp/" target="_blank">https://www.houjin-bangou.nta.go.jp/</a> 查詢公司資料下載）</li>
+<li><strong>履歷事項全部證明書</strong>（首推使用此文件）</li>
+<li>水費帳單 / 網路費帳單 / 電費帳單 / 租金收據 / 瓦斯費帳單 / 電話費帳單 / 銀行帳戶或信用卡對帳單</li>
+</ul></li>
+<li>付款信用卡</li>
+<li>聯繫方式</li>
+<li>履歷事項全部證明書</li>
+</ol>
+</div>
+<div class="cb-checklist-box">
+<div class="cb-title">✅ 本章行動清單</div>
+<div class="cb-group">
+<div class="cb-item"><input type="checkbox" class="task-cb" data-audience="new"><label>已提供資訊給亞馬遜官方經理</label></div>
+<div class="cb-item"><input type="checkbox" class="task-cb" data-audience="new"><label>已備齊日本公司註冊所需資料</label></div>
+<div class="cb-item"><input type="checkbox" class="task-cb" data-audience="new"><label>已從經理發出的註冊連結完成帳號註冊</label></div>
+</div>
+</div>
+</div>
+
+<!-- Panel: Registration resources — shown for both new:tw and new:jp -->
+<div class="path-panel" data-show-when="new:tw,new:jp">
+<details><summary>💡 註冊過程的相關資源</summary><div class="toggle-body">
+<ol>
+<li>📄 <a href="https://m.media-amazon.com/images/G/28/TWGS/SU/TW_GS_Registration_Guidebook_DSR_Grex.pdf" target="_blank">亞馬遜賣家帳號註冊手冊</a>（包含需準備資料的細節跟具體操作步驟）</li>
+<li>▶️ <a href="https://www.youtube.com/watch?v=kz5sBjClUnU" target="_blank">註冊 0-1 手把手短影音</a></li>
+<li>▶️ <a href="https://www.youtube.com/watch?v=UpezGtT3B6Q" target="_blank">亞馬遜帳號註冊實操教學</a></li>
+<li>操作過程遇到問題請找亞馬遜官方經理</li>
+</ol>
+<p style="margin-top:6px">🔍 公司英文名查詢：<a href="https://fbfh.trade.gov.tw/fb/web/queryBasicf.do" target="_blank">經濟部登記系統查詢</a><br>
+🔍 公司與信用卡英文地址查詢：<a href="https://www.post.gov.tw/post/internet/Postal/index.jsp?ID=207#result" target="_blank">郵局中文地址英譯</a></p>
+</div></details>
+</div>
+
+<!-- Panel: Existing seller — only shown when existing -->
+<div class="path-panel" data-show-when="existing">
+<div class="sub-sec" id="sec02-exist"><h4>🔄 既有賣家（已有亞馬遜賣家帳號）<button class="reset-path" data-reset="all">↺ 重選身份</button></h4>
+<div class="jp"><strong>⚠️ 注意：</strong>請先找亞馬遜官方經理確認欲開設的站點之輔導資格跟相關優惠。</div>
+<div class="info-box" style="margin-top:10px"><strong>💡 從賣家後台（非日本站）切換到日本站點：</strong>由亞馬遜賣家後台，點擊視窗上方【店鋪名稱｜站點】處 &gt; 點擊【日本】</div>
+
+<!-- Seller Central header mockup -->
+<div class="sc-mockup">
+<div class="sc-top">
+<span class="sc-hamburger">≡</span>
+<span class="sc-logo"><span class="amz">amazon</span> seller central</span>
+<span class="sc-divider">｜</span>
+<div class="sc-store">
+<span class="site">美國</span>
+<span class="caret">▾</span>
+<div class="sc-dropdown">日本</div>
+</div>
+</div>
+<div class="sc-nav">
+<span>新增產品</span>
+<span>探索服務</span>
+</div>
+<p class="sc-note"><span class="sc-hint">點擊紅框處的站點名稱</span>，下拉選單會出現【日本】，選擇即可切換到日本站後台。</p>
+</div>
+</div>
+<div class="cb-checklist-box">
+<div class="cb-title">✅ 本章行動清單</div>
+<div class="cb-group">
+<div class="cb-item"><input type="checkbox" class="task-cb" data-audience="existing"><label>已聯繫官方經理確認輔導資格與優惠</label></div>
+<div class="cb-item"><input type="checkbox" class="task-cb" data-audience="existing"><label>已從現有後台切換到日本站點</label></div>
+</div>
+</div>
+</div>
+
+<!-- Common: Account setup after approval (ALWAYS visible, not tied to selector) -->
+<div class="sub-sec"><h4>✅ 帳號開通後 — 共通設定 Checklist</h4>
+<p style="font-size:.84rem;margin-bottom:8px">收到團隊審核結果通知帳號開通，即可登入賣家後台維護以下基本資訊：<br>🔗 <a href="https://sellercentral.amazon.co.jp/" target="_blank">亞馬遜日本站賣家後台登入</a></p>
+<div class="cb-group">
+<div class="cb-item"><input type="checkbox" class="task-cb" data-audience="both"><label><strong>維護公司統編：</strong>賣家後台【設定】⚙️ &gt; 帳戶資訊 &gt; 稅務資訊 &gt; 增值稅資訊 → 新增 VAT/GST 登記號</label></div>
+<div class="cb-item"><input type="checkbox" class="task-cb" data-audience="both"><label><strong><a href="https://m.media-amazon.com/images/G/28/TWGS/SU/TW_GS_Registration_Guidebook_DSR_Grex.pdf#page=80" target="_blank">設定存款方式</a>：</strong>賣家後台【設定】⚙️ &gt; 帳戶資訊 &gt; 付款資訊 &gt; 存款方式 → 新增存款方式 → 指派日本站點存款方式</label></div>
+<div class="cb-item"><input type="checkbox" class="task-cb" data-audience="both"><label><strong><a href="https://gs.amazon.com.tw/blog/google-authenticator-230927" target="_blank">改用 Google Authenticator</a>：</strong>手機收驗證簡訊透過多個單位跨國傳送，不穩定時會收不到簡訊</label></div>
+<div class="cb-item"><input type="checkbox" class="task-cb" data-audience="both"><label><strong><a href="https://sellercentral.amazon.co.jp/help/hub/reference/external/G69035?locale=zh-TW" target="_blank">管理帳戶設定</a>：</strong>更新賣家帳戶資訊、設定和編輯使用者權限</label></div>
+</div></div>
+
+<details><summary>💡 其他資訊</summary><div class="toggle-body">
+<ol>
+<li><a href="https://sellercentral.amazon.com/help/hub/reference/external/202161060?ref=efph_202161060_relt_G4BBHW7XBNS2GMWU&locale=zh-TW" target="_blank">維護公司統編的意義與須知</a></li>
+<li><a href="https://m.media-amazon.com/images/G/28/TWGS/SU/TW_GS_Registration_Guidebook_DSR_Grex.pdf#page=53" target="_blank">設定收款帳戶時，無法收到驗證簡訊</a></li>
+</ol>
+</div></details>
+
+<!-- FAQ box — always visible -->
+<div class="faq-box">
+<h4>❓ 常見問題 FAQ</h4>
+<details class="faq-item"><summary>1. 是否需要註冊日本法人才能開通日本亞馬遜帳號？</summary><div class="toggle-body">
+<p><strong>不需要。</strong>使用台灣公司即可註冊亞馬遜日本站帳號，無須特別在日本設立法人。</p>
+<p>你只需要準備好台灣公司文件、法定代表人身分證明、可支付日幣的信用卡和聯絡方式即可。</p>
+<p style="margin-top:6px">📖 若你打算使用日本公司註冊（例如已在日本設立子公司），可在上方「🧭 第二步」選擇「🇯🇵 日本公司」查看所需資料。</p>
+</div></details>
+
+<details class="faq-item"><summary>2. 台灣的公司文件接受什麼格式？</summary><div class="toggle-body">
+<p>以下三種台灣政府核發的公司文件擇一皆可：</p>
+<ul>
+<li>公司設立登記表</li>
+<li>公司變更登記表</li>
+<li>商業登記核准函 + 商業登記抄本（需兩份一起提交）</li>
+</ul>
+<p style="margin-top:6px">⚠️ 文件需為彩色掃描檔，資訊需清晰可辨識。</p>
+</div></details>
+
+<details class="faq-item"><summary>3. 護照 / 身分證怎麼掃描才不會有審核問題？</summary><div class="toggle-body">
+<p><strong>關鍵檢查清單：</strong></p>
+<ul>
+<li>護照 / 身分證上的姓名必須與<strong>營業執照上法定代表人的姓名一致</strong></li>
+<li>護照 / 身分證上的姓名應與<strong>註冊的亞馬遜帳戶上的姓名完全匹配</strong></li>
+<li>必須由<strong>台灣政府出具</strong></li>
+<li>護照 / 身分證必須<strong>在有效期內</strong></li>
+<li>建議<strong>優先使用護照</strong>作為身分資料，如不具有效護照則可以使用身分證代替</li>
+<li>若使用護照作為身份資料，請檢查並確認您已於<strong>「持照人簽名」(SIGNATURE OF BEARER)</strong> 欄位簽名</li>
+</ul>
+</div></details>
+
+<details class="faq-item"><summary>4. 可接受什麼類型的信用卡或金融卡？</summary><div class="toggle-body">
+<p><strong>可支付日幣的信用卡或簽帳金融卡</strong>，不限信用卡發行國家、不限信用卡持有者。</p>
+<p><strong>✅ 接受的卡別：</strong>AMEX、VISA、Mastercard</p>
+<p><strong>❌ 不接受：</strong>預付卡、禮券、支票、線上付款系統（如 PayPal）等替代付款方式</p>
+</div></details>
+</div>
+</div></div>
+
+<!-- 03 -->
+<div class="sec" id="sec03">
+<div class="sec-h"><span class="num">03</span><h3>成本預估 💰</h3><span class="tag tag-all">所有賣家</span></div>
+<div class="sec-b">
+<div class="kp"><strong>📌 本章重點：</strong>日本站主要成本 = 月費 + 銷售傭金 + FBA 物流倉儲費 + 廣告費 + 促銷費。</div>
+<div class="cb-checklist-box">
+<div class="cb-title">✅ 本章行動清單</div>
+<div class="cb-group">
+<div class="cb-item"><input type="checkbox" class="task-cb" data-audience="both"><label>已使用 <a href="https://sellercentral.amazon.co.jp/hz/fba/profitabilitycalculator/index?lang=zh_TW" target="_blank">FBA 計算機</a> 估算成本</label></div>
+<div class="cb-item"><input type="checkbox" class="task-cb" data-audience="both"><label>已觀看 <a href="https://www.youtube.com/watch?v=rOqNx-bzMG8" target="_blank">FBA 計算機使用方式說明（YouTube）</a></label></div>
+</div>
+</div>
+<table><thead><tr><th>#</th><th>費用項目</th><th>說明</th></tr></thead><tbody>
+<tr><td>1</td><td>專業帳戶月費</td><td>每月 ¥4,900（未申報統編將收 5% 營業稅 = ¥5,145）</td></tr>
+<tr><td>2</td><td>成交手續費（銷售傭金）</td><td>依<a href="https://sellercentral.amazon.co.jp/help/hub/reference/external/GT23F3ST7FEZKT9A?locale=zh-TW&initialSessionID=356-3357753-9849531&ld=SOTWSOAIGLOGISTICSNULLMKTJPFeeChange251208" target="_blank">商品類別</a>收取成交金額的 8~15%</td></tr>
+<tr><td>3</td><td>FBA 物流 + 倉儲費</td><td>日本亞馬遜倉 → 消費者的物流費 + 月度倉儲費</td></tr>
+<tr><td>4</td><td>站內廣告費</td><td>透過設定預算上限控制。建議新品至少投資 10~20% 銷售額於廣告</td></tr>
+<tr><td>5</td><td>站內促銷費</td><td>透過設定預算上限控制</td></tr>
+</tbody></table>
+<details><summary>💡 其他資訊</summary><div class="toggle-body">
+<ul>
+<li><a href="https://m.media-amazon.com/images/G/28/TWGS/Onboarding/FBA_STA_Guide_2024.pdf#page=3" target="_blank">什麼是 FBA？</a></li>
+<li><a href="https://gs.amazon.com.tw/fbm" target="_blank">不用 FBA，由賣家直接發貨給買家 (FBM)</a></li>
+</ul>
+</div></details>
+<details><summary>💡 FBA 相關費用計算公式 &amp; 說明</summary><div class="toggle-body">
+<ul>
+<li><a href="https://sellercentral.amazon.co.jp/help/hub/reference/external/G200612770?ref=efph_GABBX6GZPA8MSZGW_cont_201411300&locale=zh-TW" target="_blank">亞馬遜日本站倉儲月費</a></li>
+<li><a href="https://sellercentral.amazon.co.jp/help/hub/reference/external/201112670" target="_blank">亞馬遜日本站 FBA 配送費用</a></li>
+<li><a href="https://sellercentral.amazon.co.jp/help/hub/reference/external/G200685050?locale=zh-TW" target="_blank">FBA 退貨和報廢處置費用</a></li>
+<li>▶️ <a href="https://www.youtube.com/watch?v=rOqNx-bzMG8" target="_blank">亞馬遜成本介紹計算短影音</a></li>
+</ul>
+</div></details>
+</div></div>
+
+<!-- 04 -->
+<div class="sec" id="sec04">
+<div class="sec-h"><span class="num">04</span><h3>產品合規 🔌</h3><span class="tag tag-all">所有賣家</span></div>
+<div class="sec-b">
+<div class="kp"><strong>📌 本章重點：</strong>日本站有特殊合規要求。電器需 PSE/Giteki，嬰幼兒/食品/美妝需 JFSL。務必在上架前確認。</div>
+<div class="cb-checklist-box">
+<div class="cb-title">✅ 本章行動清單</div>
+<div class="cb-group">
+<div class="cb-item"><input type="checkbox" class="task-cb" data-audience="both"><label>已確認商品所需合規類型</label></div>
+<div class="cb-item"><input type="checkbox" class="task-cb" data-audience="both"><label>已準備合規報告與文件</label></div>
+<div class="cb-item"><input type="checkbox" class="task-cb" data-audience="both"><label>已提交文件至亞馬遜後台</label></div>
+<div class="cb-item"><input type="checkbox" class="task-cb" data-audience="both"><label>已提交文件給頭程物流服務商</label></div>
+</div>
+</div>
+<div class="jp"><strong>⚠️ 日本站特有合規：</strong>以下合規要求是日本站獨有的，其他站點賣家請特別注意。</div>
+
+<!-- Compliance badges visual (official reference image) -->
+<img class="sec-img" src="images/產品合規.png" alt="日本站合規標章：PSE 電器用品安全法 / Telec 特定無線設備基準適合證明 / ST 玩具安全基準 / SG 消費品安全基準">
+<table><thead><tr><th>商品類型</th><th>需要的合規</th><th>提交方式</th></tr></thead><tbody>
+<tr><td>電器商品</td><td>PSE、METI</td><td>上架後 email 至 <a href="mailto:jp-electronics-safety@amazon.co.jp">jp-electronics-safety@amazon.co.jp</a></td></tr>
+<tr><td>藍牙 / WiFi 商品</td><td>Giteki (Telec)</td><td>上架後 email 至 <a href="mailto:jp-giteki-safety@amazon.co.jp">jp-giteki-safety@amazon.co.jp</a></td></tr>
+<tr><td>嬰幼兒商品</td><td>日本食品衛生法 (JFSL)</td><td>依商品類別提交</td></tr>
+<tr><td>食品 / 接觸食品容器 / 美妝品</td><td>JFSL</td><td>依商品類別提交</td></tr>
+<tr><td>其他不確定</td><td colspan="2">請諮詢亞馬遜官方經理</td></tr>
+</tbody></table>
+<div class="steps"><p style="font-size:.86rem;font-weight:600;margin:8px 0 4px">合規準備步驟：</p><ol>
+<li>確認產品是否需要合規檢驗
+<ul>
+<li>電器商品：PSE <a href="https://sellercentral.amazon.co.jp/help/hub/reference/external/GHJPQ6KDLA9N5F4L?locale=zh-TW" target="_blank">審核規範</a>（附件：📎 <a href="files/Amazon_JP_PSE申請範本.docx" download>Amazon JP_PSE 申請範本.docx</a>）</li>
+<li>藍牙/WiFi：Giteki <a href="https://sellercentral.amazon.co.jp/help/hub/reference/external/GV3N5ES8KNR3W3VG?locale=zh-TW" target="_blank">審核規範</a>（附件：📎 <a href="files/Amazon_JP_Giteki申請範本.docx" download>Amazon JP_Giteki 申請範本.docx</a>）</li>
+<li>食品飲料：<a href="https://sellercentral.amazon.co.jp/help/hub/reference/external/201003420?locale=zh-TW" target="_blank">有效期產品進倉規範</a> — FBA 要求庫存接收時最低剩餘架儲期超過 60 天；距到期日 45 天內將被標記為報廢</li>
+</ul></li>
+<li>針對需要合規檢驗的產品準備相關報告與文件</li>
+<li>提交文件到亞馬遜後台通過上架審核</li>
+<li>提交文件給頭程物流服務商在進口報關審核用</li>
+</ol></div>
+<details><summary>💡 其他資訊</summary><div class="toggle-body">
+<ul>
+<li><a href="https://m.media-amazon.com/images/G/28/TWGS/Website/SPN_PDF/TWAGS_SP_JP.pdf?initialSessionID=355-3002025-1543835&ld=NSGoogle#page=36" target="_blank">亞馬遜官方第三方服務商清單</a>：協助評估產品所需的檢驗項目、流程、費用</li>
+<li><a href="https://m.media-amazon.com/images/G/28/TWGS/SU/New_Seller_Compliance_Guidebook_JP.pdf" target="_blank">亞馬遜日本站新賣家合規檢查表</a></li>
+</ul>
+</div></details>
+</div></div>
+
+<!-- 05 -->
+<div class="sec" id="sec05">
+<div class="sec-h"><span class="num">05</span><h3>金流</h3><span class="tag tag-all">所有賣家</span></div>
+<div class="sec-b">
+<div class="kp"><strong>📌 本章重點：</strong>亞馬遜每 14 天結算一次，收支互抵。選擇適合你的收款方式，後續都可以在賣家後台切換。</div>
+<div class="cb-checklist-box">
+<div class="cb-title">✅ 本章行動清單</div>
+<div class="cb-group">
+<div class="cb-item"><input type="checkbox" class="task-cb" data-audience="both"><label>已選定收款方式</label></div>
+<div class="cb-item"><input type="checkbox" class="task-cb" data-audience="both"><label>已在賣家後台完成收款設定</label></div>
+</div>
+</div>
+<div class="info-box">亞馬遜費用結算期：每 14 天結算一次，收支互抵後有收入的情況會收到款項，須支付的情況會由信用卡扣款。收款方式後續都可以在賣家後台做切換。</div>
+<table><thead><tr><th>收款方式</th><th>說明</th><th>手續費</th><th>匯率彈性</th><th>適合對象</th></tr></thead><tbody>
+<tr><td>日本銀行帳戶</td><td>用日幣直接收款</td><td>依銀行</td><td>—</td><td>已有日本帳戶的賣家</td></tr>
+<tr><td>第三方金流</td><td>Payoneer / SUNRATE / Airwallex / WORLDFIRST</td><td>依服務商</td><td>同幣別收款，<strong>轉台幣時間點自行決定</strong>（匯率彈性高）</td><td>大多數台灣賣家</td></tr>
+<tr><td><a href="https://m.media-amazon.com/images/G/28/TWGS/OBSS/TW_GS_AGS_2.5_ACCS_v2.pdf" target="_blank">亞馬遜全球收款</a></td><td>以新台幣接收全球付款</td><td>1.5% + 海外跨行轉帳手續費</td><td>銀行打款<strong>當下決定轉台幣匯率</strong>（匯率無法自選）</td><td>想用台幣收款的賣家</td></tr>
+</tbody></table>
+<details><summary>💡 其他資訊</summary><div class="toggle-body">
+<ul>
+<li><a href="https://m.media-amazon.com/images/G/28/TWGS/Website/SPN_PDF/TWAGS_SP_JP.pdf?initialSessionID=355-3002025-1543835&ld=NSGoogle#page=53" target="_blank">亞馬遜官方第三方服務商清單</a>：協助評估並申請第三方金流收款帳號</li>
+<li><strong><a href="https://m.media-amazon.com/images/G/28/TWGS/SU/TW_GS_Registration_Guidebook_DSR_Grex.pdf#page=80" target="_blank">設定存款方式</a>：</strong>賣家後台【設定】⚙️ &gt; 帳戶資訊 &gt; 付款資訊 &gt; 存款方式 → 新增存款方式 → 指派日本站點存款方式</li>
+</ul>
+</div></details>
+</div></div>
+
+<!-- ===== PHASE 2 ===== -->
+<div class="phase p2">🔵 階段二：上架期</div>
+
+<!-- 06 -->
+<div class="sec" id="sec06">
+<div class="sec-h"><span class="num">06</span><h3>品牌註冊</h3><span class="tag tag-all">所有賣家</span></div>
+<div class="sec-b">
+<div class="kp"><strong>📌 本章重點：</strong>品牌註冊可解鎖 A+、品牌分析等工具。新品牌需先申請商標；既有品牌可從其他站點授權。</div>
+
+<!-- Step 1: Choose brand scenario -->
+<div class="path-selector" id="sec06-step1">
+<h4>🧭 請選擇你的情況</h4>
+<div class="path-options">
+<button class="path-opt" data-path="new"><span class="opt-icon">🆕</span><span class="opt-title">第一次在亞馬遜上做品牌註冊</span><span class="opt-desc">尚未有亞馬遜品牌註冊，需從申請商標開始</span></button>
+<button class="path-opt" data-path="auth"><span class="opt-icon">🔄</span><span class="opt-title">已在其他亞馬遜站點完成品牌註冊</span><span class="opt-desc">從既有站點授權品牌到日本站</span></button>
+</div>
+</div>
+
+<!-- Panel: Brand registration (first time) -->
+<div class="path-panel" data-show-when-06="new">
+<div class="sub-sec"><h4>🆕 品牌註冊（第一次在亞馬遜上做品牌註冊）<button class="reset-path" data-reset-06="all">↺ 重選</button></h4>
+<p style="font-size:.84rem;margin-bottom:8px">🔗 <a href="https://brandregistry.amazon.co.jp/" target="_blank">日本品牌後台</a></p>
+<div class="steps"><p style="font-size:.86rem;font-weight:600;margin-bottom:4px">品牌註冊準備步驟：</p><ol>
+<li>申請商標（提交申請後約 2~3 周可拿到商標局回傳的申請回執，有回執就可以做亞馬遜品牌註冊）</li>
+<li>準備以下資料：
+<ul>
+<li>商標局申請時給的申請回執 (pdf) / 商標證書 (pdf)</li>
+<li>實拍產品圖片或產品包裝圖片（擇一），要有品牌名/logo 設計（其中包含 1 張有手拍照入鏡，1 張無手）(jpg/png)</li>
+<li>黑白色高清 logo 圖檔或文字圖片 (jpg/png)</li>
+<li>英文廠商與品牌合約書 (pdf)：提供製造商/工廠方與品牌方的合約證明。若無此資料可參考<a href="https://amazonexteu.qualtrics.com/CP/File.php?F=F_5A8pUpbisEL8Kou" target="_blank">過往賣家上傳的範本</a>（僅供參考，限品牌註冊用）</li>
+<li>英文 Invoice (pdf)：提供品牌方向工廠方採購的英文發票。若無此資料可參考<a href="https://amazonexteu.qualtrics.com/CP/File.php?F=F_eWmhBssYs1k17JY" target="_blank">過往賣家上傳的範本</a>（僅供參考，限品牌註冊用）</li>
+</ul></li>
+<li>申請亞馬遜品牌註冊（參考以下影音及手冊）</li>
+</ol></div>
+<div class="res-grid">
+<a class="res-item" href="https://youtu.be/vNkvSWtNCFo" target="_blank">▶️ 品牌註冊實操教學（YouTube）</a>
+<a class="res-item" href="https://m.media-amazon.com/images/G/28/TWGS/Website/Brand_Registration_Manual_TW_v2.pdf" target="_blank">📄 品牌註冊申請流程手冊 (PDF)</a>
+</div>
+<img class="sec-img" src="images/亞馬遜品牌註冊1.png" alt="亞馬遜品牌註冊流程說明 1">
+<img class="sec-img" src="images/亞馬遜品牌註冊2.png" alt="亞馬遜品牌註冊流程說明 2">
+<div class="cb-checklist-box">
+<div class="cb-title">✅ 本章行動清單</div>
+<div class="cb-group">
+<div class="cb-item"><input type="checkbox" class="task-cb" data-audience="new"><label>已申請商標 / 取得申請回執</label></div>
+<div class="cb-item"><input type="checkbox" class="task-cb" data-audience="new"><label>已準備品牌註冊所需資料</label></div>
+<div class="cb-item"><input type="checkbox" class="task-cb" data-audience="new"><label>已完成亞馬遜品牌註冊</label></div>
+</div>
+</div>
+<details><summary>💡 其他資訊</summary><div class="toggle-body">
+<ul>
+<li><a href="https://m.media-amazon.com/images/G/28/TWGS/Website/SPN_PDF/TWAGS_SP_JP.pdf?initialSessionID=355-3002025-1543835&ld=NSGoogle#page=79" target="_blank">亞馬遜官方第三方服務商清單</a>：協助評估商標申請所需的流程、費用</li>
+<li><a href="https://gs.amazon.com.tw/brand-plus/brandprotection?ref=as_tw_ags_brandsuccess_brandprotection" target="_blank">亞馬遜品牌註冊的重要性</a>：獲得新賣家優惠資格、<a href="https://advertising.amazon.com/zh-tw/solutions/products/stores" target="_blank">品牌旗艦店</a>與 A+ 等使用權限</li>
+<li><a href="https://gs.amazon.com.tw/blog/brand-registry-appeal-231229" target="_blank">品牌註冊申訴與視訊驗證</a></li>
+</ul>
+</div></details>
+</div>
+</div>
+
+<!-- Panel: Brand authorization (from other marketplace) -->
+<div class="path-panel" data-show-when-06="auth">
+<div class="sub-sec" id="sec06-auth"><h4>🔄 品牌授權（已在亞馬遜其他站點完成品牌註冊）<button class="reset-path" data-reset-06="all">↺ 重選</button></h4>
+<p style="font-size:.84rem;margin-bottom:6px">從已完成品牌註冊的亞馬遜站點授權到目標站點：</p>
+<ul style="font-size:.84rem;padding-left:18px;margin-bottom:8px">
+<li>📄 <a href="https://m.media-amazon.com/images/G/28/TWGS/Onboarding/Brand_Authorization_Deck.pdf" target="_blank">【品牌授權】跨帳號/跨站點 品牌授權流程 SOP</a></li>
+<li>📖 <a href="https://gs.amazon.com.tw/news/brand-registery-230607" target="_blank">詳解亞馬遜品牌註冊後帳戶角色與權益，品牌授權怎麼做</a></li>
+</ul>
+<div class="info-box">如需要完整的品牌權益與優惠，請完成以下角色授權：<br>
+1. <strong>銷售帳戶 (Selling account)：</strong>Brand Representative（品牌擁有者）<br>
+2. <strong>使用者權益 (User permission)：</strong>Administrator（管理員）&amp; Brand Owner（權力所有者）</div>
+<div class="cb-checklist-box">
+<div class="cb-title">✅ 本章行動清單</div>
+<div class="cb-group">
+<div class="cb-item"><input type="checkbox" class="task-cb" data-audience="existing"><label>已完成品牌授權到日本站</label></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+
+<!-- 07 -->
+<div class="sec" id="sec07">
+<div class="sec-h"><span class="num">07</span><h3>上架</h3><span class="tag tag-all">所有賣家</span></div>
+<div class="sec-b">
+<div class="kp"><strong>📌 本章重點：</strong>Listing = 商品詳情頁，由 8 個基本要素組成。高品質的 Listing 直接影響銷量。</div>
+<div class="cb-checklist-box">
+<div class="cb-title">✅ 本章行動清單</div>
+<div class="cb-group">
+<div class="cb-item"><input type="checkbox" class="task-cb" data-audience="both"><label>已準備上架素材（圖片、標題、關鍵詞、描述）</label></div>
+<div class="cb-item"><input type="checkbox" class="task-cb" data-audience="both"><label>已完成日文翻譯</label></div>
+<div class="cb-item"><input type="checkbox" class="task-cb" data-audience="both"><label>已完成商品上架</label></div>
+<div class="cb-item"><input type="checkbox" class="task-cb" data-audience="both"><label>已建立 A+ 頁面 <span style="color:var(--red);font-size:.78rem">⚠️ 需完成<a href="#sec06" style="color:var(--red);text-decoration:underline">品牌註冊</a>才能使用此功能</span></label></div>
+</div>
+</div>
+<p style="font-size:.84rem;margin-bottom:8px">Listing 就是商品詳情頁。每一款商品上傳成功後，會生成一個獨立的 Listing 頁面，是消費者全面了解您商品最有效的途徑。</p>
+<img class="sec-img" src="images/上架1.png" alt="上架說明圖 1">
+<img class="sec-img" src="images/上架2.png" alt="上架說明圖 2">
+<div style="display:flex;flex-wrap:wrap;gap:4px;margin-bottom:10px">
+<span style="background:#F0F2F5;padding:3px 9px;border-radius:6px;font-size:.78rem">分類節點</span>
+<span style="background:#F0F2F5;padding:3px 9px;border-radius:6px;font-size:.78rem">搜尋關鍵詞</span>
+<span style="background:#F0F2F5;padding:3px 9px;border-radius:6px;font-size:.78rem">圖片</span>
+<span style="background:#F0F2F5;padding:3px 9px;border-radius:6px;font-size:.78rem">標題</span>
+<span style="background:#F0F2F5;padding:3px 9px;border-radius:6px;font-size:.78rem">商品要點</span>
+<span style="background:#F0F2F5;padding:3px 9px;border-radius:6px;font-size:.78rem">商品描述</span>
+<span style="background:#F0F2F5;padding:3px 9px;border-radius:6px;font-size:.78rem">A+ / 高級 A+</span>
+<span style="background:#F0F2F5;padding:3px 9px;border-radius:6px;font-size:.78rem">品牌名稱</span>
+</div>
+
+<!-- Stage 1: Prep -->
+<div class="stage-block stage-1">
+<div class="stage-title">🟢 階段一：上架前準備</div>
+<div class="stage-sub">所有賣家都要做</div>
+<div class="prep-info">
+<ol>
+<li><strong>確認產品條碼：</strong>1) 使用 <a href="https://sellercentral.amazon.co.jp/help/hub/reference/external/G200317470?locale=zh-TW" target="_blank">GS1 國際條碼</a> 或 2) <a href="https://www.youtube.com/watch?v=WAJfDdNybWI" target="_blank">申請條碼豁免</a>（亞馬遜會自動生成條碼）
+<ul>
+<li>▶️ <a href="https://www.youtube.com/shorts/WAJfDdNybWI" target="_blank">國際條碼豁免資格申請教學</a></li>
+<li><a href="https://m.media-amazon.com/images/G/28/TWGS/Website/SPN_PDF/TWAGS_SP_JP.pdf?initialSessionID=355-3002025-1543835&ld=NSGoogle#page=52" target="_blank">透過 GSI 購買國際條碼的服務商清單</a></li>
+</ul></li>
+<li><strong>基本圖片 &amp; 文案準備：</strong>
+<ul>
+<li><a href="https://gs.amazon.com.tw/listing?ld=IRTWSOA30D" target="_blank">Listing 商品詳情頁全介紹</a></li>
+<li><a href="https://m.media-amazon.com/images/G/28/TWGS/Onboarding/Required_attribute_for_your_first_listing.pdf?initialSessionID=355-3002025-1543835&ld=IRTWSOA30D" target="_blank">第一次上架商品必要資訊一覽表</a></li>
+<li>📌 圖片覆蓋其他國家站點，請到針對特定國家/地區的圖片上傳</li>
+</ul></li>
+<li><strong>日文翻譯：</strong>亞馬遜提供免費翻譯協助，📎 <a href="files/(New_Version)_CID-XXXXXXX-seller_店鋪名-hsinyih-原文語言2JP-需要翻譯幾個ASINs.xlsm" download>下載翻譯檔案</a>填寫後回傳給亞馬遜官方經理
+<ul>
+<li>可翻譯語言：中文或英文（文案同時有中文跟英文的情況，請分開兩個檔案提交）</li>
+<li>可翻譯項目：品牌名稱、標題、商品描述、搜尋關鍵詞、A+/高級 A+ 文字、商品要點</li>
+<li>文案填寫位置："main" 工作表的藍底欄位</li>
+<li>翻譯時長：約一周</li>
+<li>ASIN 或 SKU 沒有可以空白，綠底請空白留給翻譯團隊填寫；若有不希望翻譯的文字（如品牌名），可至 tab: exception 填寫</li>
+</ul></li>
+<li><strong>產品合規文件（如適用）：</strong>參考 <a href="#sec04">【04】產品合規</a> 章節確認你的商品是否需要</li>
+</ol>
+</div>
+</div>
+
+<!-- Stage 2: Execute -->
+<div class="stage-block stage-2">
+<div class="stage-title">🔵 階段二：執行上架</div>
+<div class="stage-sub">選擇適合你的上架方式</div>
+<p style="font-size:.84rem;margin-bottom:8px">📄 <a href="https://m.media-amazon.com/images/G/28/TWGS/Onboarding/Listing_guidance_1_by_1.pdf" target="_blank">商品完整上架指南（PDF）</a></p>
+<table>
+<thead><tr><th>上架方式</th><th>適用情境</th><th>教學資源</th></tr></thead>
+<tbody>
+<tr><td><strong>逐一上架</strong></td><td>少量商品（&lt;30 個）或跨站點需要個別文案</td><td>▶️ <a href="https://www.youtube.com/watch?v=M0yM3X5yikc&list=PL_T89DpPP7kIrAZrkzsLim5TwvhLPRHzp&index=8" target="_blank">手把手影片</a></td></tr>
+<tr><td><strong>跟賣上架</strong></td><td>欲上架商品已在目標站點有其他賣家上架</td><td>▶️ <a href="https://www.youtube.com/shorts/fJpYQw0QA9s" target="_blank">手把手影片</a></td></tr>
+<tr><td><strong>批量上架</strong></td><td>大量商品</td><td>📄 <a href="https://m.media-amazon.com/images/G/28/TWGS/SU/Bulk_Upload_TW.pdf" target="_blank">批量上架指南</a></td></tr>
+<tr><td><strong>跨站點上架</strong></td><td>已在其他站點有商品，要複製到日本站</td><td>📄 <a href="https://m.media-amazon.com/images/G/28/TWGS/SU/2024_Cross_Listing_Tool_Guidance.pdf?initialSessionID=357-2372308-6042415&ld=SOTWSOAMKTNSR240311&ldStackingCodes=SOTWSOAMKTNSR240311" target="_blank">跨站點上架指南</a></td></tr>
+</tbody>
+</table>
+<p style="font-size:.86rem;font-weight:600;margin:12px 0 6px">▶️ 進階教學影片：</p>
+<div class="res-grid">
+<a class="res-item" href="https://www.youtube.com/watch?v=B2R67ZOCzHo" target="_blank">▶️ Listing 父子變體綁定實操教學</a>
+<a class="res-item" href="https://www.youtube.com/watch?v=URkscb_Lk_Y&t=364s" target="_blank">▶️ 跨站點翻譯上架 0-1 手把手</a>
+<a class="res-item" href="https://www.youtube.com/watch?v=QUQ5a7h48b0" target="_blank">▶️ 全新 AI listing 上架功能（圖片/URL）</a>
+<a class="res-item" href="https://www.youtube.com/watch?v=5UFHVdH05Mw" target="_blank">▶️ 全新 AI listing 上架功能（Keyword）</a>
+</div>
+<details style="margin-top:8px"><summary>📌 其他上架情境</summary><div class="toggle-body">
+<ul>
+<li><a href="https://sellercentral.amazon.co.jp/help/hub/reference/external/G200182190?locale=zh-TW" target="_blank">刊登預購商品</a></li>
+</ul>
+</div></details>
+</div>
+
+<!-- Stage 3: Post-launch optimization -->
+<div class="stage-block stage-3">
+<div class="stage-title">🟡 階段三：上架後進階優化</div>
+<div class="stage-sub">⚠️ 以下功能需完成<a href="#sec06">品牌註冊</a>才能使用</div>
+<p style="font-size:.86rem;font-weight:600;margin-bottom:4px">A+ 內容</p>
+<ul style="font-size:.84rem;margin-bottom:10px;padding-left:20px">
+<li><a href="https://sellercentral.amazon.co.jp/help/hub/reference/external/G202102930?locale=zh-TW" target="_blank">A+ 詳細規範說明</a></li>
+<li>▶️ <a href="https://www.youtube.com/watch?v=dOhqt8lAKUA" target="_blank">A+ 內容 0-1 手把手短影音</a></li>
+<li><a href="https://gs.amazon.com.tw/news/premium-a-plus-launch-announcement-220824" target="_blank">Premium A+ 介紹</a>（進階版）</li>
+</ul>
+<p style="font-size:.86rem;font-weight:600;margin-bottom:4px">品牌旗艦店</p>
+<ul style="font-size:.84rem;padding-left:20px">
+<li><a href="https://m.media-amazon.com/images/G/28/TWGS/SU/CN_GS_Ads_1.5_Stores_TW.pdf?initialSessionID=358-7923920-0529152&ld=NSGoogle&ldStackingCodes=NSGoogle" target="_blank">品牌旗艦店資格要求</a></li>
+<li><a href="https://advertising.amazon.com/zh-tw/solutions/products/stores" target="_blank">品牌旗艦店介紹</a></li>
+</ul>
+</div>
+
+<!-- Troubleshooting -->
+<details style="margin-top:14px"><summary>🔧 疑難排解（上架錯誤、開立客服）</summary><div class="toggle-body">
+<p style="font-weight:600;margin-bottom:4px">解決上架錯誤：</p>
+<ul><li>📄 <a href="https://m.media-amazon.com/images/G/28/TWGS/SU/Listing_Error_Guidebook.pdf#page=16" target="_blank">常見問題指南</a></li></ul>
+<p style="font-weight:600;margin:10px 0 4px">開立客服：</p>
+<ul>
+<li>後台開客服：📄 <a href="https://m.media-amazon.com/images/G/28/TWGS/SU/Listing_Error_Guidebook.pdf#page=3" target="_blank">開立客服操作手冊</a></li>
+<li>▶️ <a href="https://www.youtube.com/watch?v=Rtcn8AMixjY&t=2s" target="_blank">亞馬遜客服 Case 開立實際操作示範</a></li>
+<li>免登入開客服：<a href="https://sellercentral.amazon.co.jp/cu/help/contact-us" target="_blank">連結</a></li>
+</ul>
+</div></details>
+</div></div>
+
+<!-- 08 -->
+<div class="sec" id="sec08">
+<div class="sec-h"><span class="num">08</span><h3>物流 ✈️</h3><span class="tag tag-all">所有賣家</span></div>
+<div class="sec-b">
+<div class="kp"><strong>📌 本章重點：</strong>商品從你的工廠/倉庫 → 頭程物流 → 日本亞馬遜 FBA 倉。務必遵守包裝規範與貼標要求。</div>
+<img class="sec-img" src="images/物流.png" alt="物流流程示意圖">
+<div class="cb-checklist-box">
+<div class="cb-title">✅ 本章行動清單</div>
+<div class="cb-group">
+<div class="cb-item"><input type="checkbox" class="task-cb" data-audience="both"><label>已安排頭程物流</label></div>
+<div class="cb-item"><input type="checkbox" class="task-cb" data-audience="both"><label>已完成包裝與貼標</label></div>
+<div class="cb-item"><input type="checkbox" class="task-cb" data-audience="both"><label>已在賣家後台創建貨件</label></div>
+<div class="cb-item"><input type="checkbox" class="task-cb" data-audience="both"><label>商品已入日本 FBA 倉</label></div>
+</div>
+</div>
+
+<!-- Stage 1: Prep -->
+<div class="stage-block stage-1">
+<div class="stage-title">🟢 階段一：發貨前準備</div>
+<div class="stage-sub">所有賣家都要做</div>
+<div class="prep-info">
+<ol>
+<li><strong>合規報告：</strong>針對需要合規檢驗的產品準備相關報告（參考 <a href="#sec04">【04】產品合規</a>）</li>
+<li><strong>安排頭程物流：</strong>商品從賣家工廠或倉庫到亞馬遜日本倉的運送
+<ul>
+<li><a href="https://m.media-amazon.com/images/G/28/TWGS/Website/SPN_PDF/TWAGS_SP_JP.pdf?initialSessionID=355-3002025-1543835&ld=NSGoogle#page=17" target="_blank">亞馬遜官方第三方服務商清單</a>：協助評估頭程物流所需的流程、費用以及進出口相關合規</li>
+<li><a href="https://sellercentral.amazon.co.jp/help/hub/reference/external/200141510?ref=efph_200141510_cont_200685730&locale=zh-TW" target="_blank">亞馬遜日本倉庫地址（英文）</a></li>
+<li><a href="https://gs.amazon.com.tw/fbm" target="_blank">不用 FBA，由賣家直接發貨給買家 (FBM)</a></li>
+</ul></li>
+<li><strong><a href="https://m.media-amazon.com/images/G/28/TWGS/Onboarding/FBA_STA_Guide_2024.pdf#page=37" target="_blank">包裝產品並貼標</a>：</strong>務必遵守規範避免入倉被退
+<ul>
+<li><a href="https://sellercentral.amazon.co.jp/help/hub/reference/external/G200141500?locale=zh-TW" target="_blank">包裝要求</a></li>
+<li><a href="https://sellercentral.amazon.co.jp/help/hub/reference/external/GF4G7547KSLDX2KC?locale=zh-TW" target="_blank">預處理指導</a></li>
+<li><a href="https://sellercentral.amazon.co.jp/help/hub/reference/external/201105770?ref=efph_201105770_cont_201074400&locale=zh-TW" target="_blank">亞馬遜日本 FBA 產品尺寸層級</a></li>
+<li><a href="https://sellercentral.amazon.co.jp/help/hub/reference/external/200280260?locale=zh-TW" target="_blank">亞馬遜日本 FBA 包裝箱尺寸和重量限制</a></li>
+</ul></li>
+</ol>
+</div>
+</div>
+
+<!-- Stage 2: Execute -->
+<div class="stage-block stage-2">
+<div class="stage-title">🔵 階段二：執行發貨（賣家後台創貨件）</div>
+<div class="stage-sub">依照教學手冊在賣家後台建立入倉貨件</div>
+<div class="res-grid">
+<a class="res-item" href="https://youtu.be/Xr1Etlr8Jn0?si=xZD8Ud4tu9agYrHw" target="_blank">▶️ FBA 發貨計畫創建手把手（YouTube）</a>
+<a class="res-item" href="https://m.media-amazon.com/images/G/28/TWGS/Onboarding/FBA_STA_Guide_2024.pdf#page=14" target="_blank">📄 後台發貨準備手冊 (PDF)</a>
+</div>
+</div>
+
+<!-- Stage 3: FBA costs and operations -->
+<div class="stage-block stage-3" style="background:#FFF8E1;border:1px solid #FFE58A">
+<div class="stage-title" style="color:#856404">🟡 階段三：FBA 費用與後台操作</div>
+<div class="stage-sub" style="color:var(--text-light)">了解物流費用結構並管理你的 FBA 商品</div>
+<p style="font-size:.86rem;font-weight:600;margin-bottom:4px">💰 FBA 相關費用計算公式</p>
+<ul style="font-size:.84rem;margin-bottom:10px;padding-left:20px">
+<li><a href="https://sellercentral.amazon.co.jp/help/hub/reference/external/G200612770?ref=efph_GABBX6GZPA8MSZGW_cont_201411300&locale=zh-TW" target="_blank">亞馬遜日本站倉儲月費</a></li>
+<li><a href="https://sellercentral.amazon.co.jp/help/hub/reference/external/GABBX6GZPA8MSZGW?ref=efph_GABBX6GZPA8MSZGW_cont_201411300&locale=zh-TW" target="_blank">亞馬遜日本站 FBA 配送費用</a></li>
+<li><a href="https://sellercentral.amazon.co.jp/help/hub/reference/external/G200685050?locale=zh-TW" target="_blank">FBA 退貨和報廢處置費用</a></li>
+<li>🔴 <a href="https://gs.amazon.com.tw/news/jp-fba-fee-change-241217" target="_blank">重要通知！2025 年亞馬遜日本站亞馬遜物流費用發佈</a></li>
+</ul>
+<p style="font-size:.86rem;font-weight:600;margin-bottom:4px">🖥️ 後台常用操作</p>
+<ul style="font-size:.84rem;padding-left:20px">
+<li>後台 Listing 互相切換 FBM / FBA</li>
+<li>查詢賣家記號 (Merchant Token)</li>
+<li>查詢店鋪頁面</li>
+</ul>
+</div>
+</div></div>
+
+<!-- ===== PHASE 3 ===== -->
+<div class="phase p3">🟡 階段三：成長期</div>
+
+<!-- 09 -->
+<div class="sec" id="sec09">
+<div class="sec-h"><span class="num">09</span><h3>廣告</h3><span class="tag tag-new">新賣家重點</span></div>
+<div class="sec-b">
+<div class="kp"><strong>📌 本章重點：</strong>新賣家建議先用新賣家回饋開啟 Sponsored Products 商品推廣，再逐步優化並啟用其他廣告功能。</div>
+<div class="cb-checklist-box">
+<div class="cb-title">✅ 本章行動清單</div>
+<div class="cb-group">
+<div class="cb-item"><input type="checkbox" class="task-cb" data-audience="both"><label>已啟動 Sponsored Products 廣告</label></div>
+<div class="cb-item"><input type="checkbox" class="task-cb" data-audience="both"><label>已設定廣告預算上限</label></div>
+<div class="cb-item"><input type="checkbox" class="task-cb" data-audience="both"><label>已學習基礎廣告操作</label></div>
+<div class="cb-item"><input type="checkbox" class="task-cb" data-audience="both"><label>已開始優化廣告成效（ACOS、關鍵字）</label></div>
+</div>
+</div>
+<div class="info-box">給新賣家的建議：利用回饋先開啟 Sponsor Product 商品推廣，再持續做優化以及啟用其他廣告功能。🔗 <a href="https://advertising.amazon.com/ja-jp?ref_=a20m_us_hnav_p_sp" target="_blank">商品推廣廣告官方頁面</a></div>
+
+<!-- Stage 1: Start -->
+<div class="stage-block stage-1">
+<div class="stage-title">🟢 階段一：啟動你的第一支廣告</div>
+<div class="stage-sub">新賣家從這裡開始</div>
+<div class="res-grid">
+<a class="res-item" href="https://www.youtube.com/watch?v=arAXFMfju-o&feature=youtu.be" target="_blank">▶️ Sponsored Product 商品推廣 0-1 手把手</a>
+<a class="res-item" href="https://m.media-amazon.com/images/G/28/TWGS/SU/SU_Promo/SU_Curriculum_JP_Ads.pdf" target="_blank">📄 賣家大學廣告課程 — 日本站</a>
+</div>
+<p style="font-size:.86rem;font-weight:600;margin:10px 0 4px">🌟 5 分鐘搞懂手動廣告（三集）</p>
+<ul style="font-size:.84rem;padding-left:20px">
+<li><a href="https://youtube.com/shorts/0vUoQCgd_m0" target="_blank">上集：剛上架必看！6 步驟教你用手動投放廣告</a></li>
+<li><a href="https://youtube.com/shorts/GpFGfRGTrbM" target="_blank">中集：決定廣告成效的關鍵步驟</a></li>
+<li><a href="https://youtube.com/shorts/9NslMOVP3sI" target="_blank">下集：手動廣告設置最後一步超關鍵</a></li>
+</ul>
+</div>
+
+<!-- Stage 2: Learn -->
+<div class="stage-block stage-2">
+<div class="stage-title">🔵 階段二：系統性學習</div>
+<div class="stage-sub">投放一段時間後建議深入了解廣告邏輯</div>
+<div class="res-grid">
+<a class="res-item" href="https://gs.amazon.com.tw/learn/su/su-13?ld=IRTWSOA30D" target="_blank">📖 廣告學習大全</a>
+<a class="res-item" href="https://m.media-amazon.com/images/G/28/TWGS/OBSS/Seller_ramp-up_JP.pdf" target="_blank">📄 廣告報表全解析</a>
+<a class="res-item" href="https://gs.amazon.com.tw/blog/generic-keywords-230706" target="_blank">📖 找到高報酬的搜尋關鍵字</a>
+<a class="res-item" href="https://www.youtube.com/playlist?list=PL_T89DpPP7kKl84WwvhL1ihjS9XCXnXuZ" target="_blank">▶️ 廣告資源大集合播放清單</a>
+</div>
+</div>
+
+<!-- Stage 3: Optimize -->
+<div class="stage-block stage-3">
+<div class="stage-title">🟡 階段三：進階優化</div>
+<div class="stage-sub" style="color:var(--text-light)">有穩定廣告數據後開始做成效優化</div>
+<div class="res-grid">
+<a class="res-item" href="https://www.youtube.com/watch?v=dovgLb86GZ0" target="_blank">▶️ ACOS 優化技巧</a>
+<a class="res-item" href="https://m.media-amazon.com/images/G/28/TWGS/SU/SU_Promo/Ads_Education_Curriculum_TW.pdf?initialSessionID=357-8113271-3355833&ld=IRTWSOAOB11#page=4" target="_blank">📄 進階廣告情境打法</a>
+</div>
+</div>
+</div></div>
+
+<!-- 10 -->
+<div class="sec" id="sec10">
+<div class="sec-h"><span class="num">10</span><h3>促銷</h3><span class="tag tag-all">所有賣家</span></div>
+<div class="sec-b">
+<div class="kp"><strong>📌 本章重點：</strong>新賣家建議先開優惠券（門檻低），等排名穩定再用其他促銷工具。日本站獨有「積分」制度別忘了設定。</div>
+<img class="sec-img" src="images/促銷1.png" alt="促銷說明圖 1">
+<img class="sec-img" src="images/促銷2.png" alt="促銷說明圖 2">
+<img class="sec-img" src="images/促銷3.png" alt="促銷說明圖 3">
+<div class="cb-checklist-box">
+<div class="cb-title">✅ 本章行動清單</div>
+<div class="cb-group">
+<div class="cb-item"><input type="checkbox" class="task-cb" data-audience="both"><label>已設定優惠券（Coupon）</label></div>
+<div class="cb-item"><input type="checkbox" class="task-cb" data-audience="both"><label>已設定積分 Points（日本站獨有）</label></div>
+<div class="cb-item"><input type="checkbox" class="task-cb" data-audience="both"><label>已關注官方促銷活動 mail 並調整預算</label></div>
+</div>
+</div>
+
+<!-- Stage 1 -->
+<div class="stage-block stage-1">
+<div class="stage-title">🟢 階段一：入門促銷工具（門檻低）</div>
+<div class="stage-sub">新賣家建議從這些開始</div>
+<p style="font-size:.86rem;font-weight:600;margin-bottom:4px">🎟️ 優惠券（Coupon）</p>
+<ul style="font-size:.84rem;padding-left:20px;margin-bottom:10px">
+<li>優勢：提報門檻低，要求的折扣幅度低</li>
+<li>📄 <a href="https://m.media-amazon.com/images/G/28/TWGS/SU/GN_GS_Promotions_2.2_Coupons_TW.pdf?initialSessionID=355-3002025-1543835&ld=IRTWSOA30D" target="_blank">優惠券詳細介紹</a></li>
+<li>▶️ <a href="https://www.youtube.com/watch?v=Sae5jgso1Fc" target="_blank">Coupon 優惠券 0-1 手把手短影音</a></li>
+</ul>
+<div class="jp"><strong>⚠️ 日本站獨有 —「積分」(Points)</strong><br>
+一般約設定產品售價的 1~2%，建議跟著競品設定的 %。亞馬遜官方不定期會舉辦積分回饋活動（會有額外曝光機會），再針對活動內容調整 % 設定。<br>
+🔗 <a href="https://m.media-amazon.com/images/G/28/TWGS/SU/GN_GS_Promotions_2.6_Amazon_Points_TW.pdf" target="_blank">亞馬遜積分設置方式 (PDF)</a></div>
+</div>
+
+<!-- Stage 2 -->
+<div class="stage-block stage-2">
+<div class="stage-title">🔵 階段二：搭配官方大型促銷檔期</div>
+<div class="stage-sub">排名穩定後開始提報站內活動</div>
+<p style="font-size:.84rem;margin-bottom:6px">關注亞馬遜官方經理發出的官方促銷活動 mail（亞馬遜會做站外曝光，人流比一般時段多），並<strong>調整廣告及促銷預算集中在活動期間</strong>。</p>
+<div class="res-grid">
+<a class="res-item" href="https://m.media-amazon.com/images/G/28/TWGS/SU/SU_Promo/SU_Curriculum_JP_Promotion.pdf?initialSessionID=355-3002025-1543835&ld=IRTWSOA30D" target="_blank">📄 促銷與旺季 — 日本站</a>
+</div>
+</div>
+
+<!-- Stage 3 -->
+<div class="stage-block stage-3">
+<div class="stage-title">🟡 階段三：費用政策動態</div>
+<div class="stage-sub" style="color:var(--text-light)">留意促銷相關費用調整</div>
+<ul style="font-size:.84rem;padding-left:20px">
+<li>🔴 <a href="https://gs.amazon.com.tw/news/promotion-fee-change-250325" target="_blank">重要提醒！2025/6/2 起亞馬遜美日英法德義西站促銷費用調整</a></li>
+</ul>
+</div>
+</div></div>
+
+<!-- 11 -->
+<div class="sec" id="sec11">
+<div class="sec-h"><span class="num">11</span><h3>銷售持續成長 📈</h3><span class="tag tag-all">所有賣家</span></div>
+<div class="sec-b">
+<div class="kp"><strong>📌 本章重點：</strong>上架後的黃金 90 天是關鍵期。透過評論管理、文案優化、廣告調整持續提升排名。</div>
+<p style="font-size:.84rem;margin-bottom:10px">🔗 <a href="https://gs.amazon.com.tw/perfect-launch" target="_blank">黃金 90 天完整指南</a></p>
+
+<!-- Stage 1: Days 1-30 -->
+<div class="stage-block stage-1">
+<div class="stage-title">🟢 階段一：第 1-30 天 — 建立基礎</div>
+<div class="stage-sub">累積早期評論、啟動基本行銷</div>
+<div class="cb-checklist-box">
+<div class="cb-title">✅ 本階段行動清單</div>
+<div class="cb-group">
+<div class="cb-item"><input type="checkbox" class="task-cb" data-audience="both"><label>使用 VINE 獲取早期評論</label></div>
+<div class="cb-item"><input type="checkbox" class="task-cb" data-audience="both"><label>啟動 SP 廣告</label></div>
+<div class="cb-item"><input type="checkbox" class="task-cb" data-audience="both"><label>設定優惠券 + 積分</label></div>
+</div>
+</div>
+<p style="font-size:.86rem;font-weight:600;margin:8px 0 4px">評論管理資源</p>
+<ul style="font-size:.84rem;padding-left:20px">
+<li>使用 <a href="https://sellercentral.amazon.co.jp/help/hub/reference/external/G92T8UV339NZ98TN?locale=zh-TW" target="_blank">VINE</a> 獲取評論 ▶️ <a href="https://www.youtube.com/watch?v=QWS43qeMB5M&list=PL_T89DpPP7kIrAZrkzsLim5TwvhLPRHzp&index=20" target="_blank">VINE 實操教學影片</a></li>
+<li>邀請有成交訂單紀錄的消費者寫評：<a href="https://sellercentral.amazon.co.jp/help/hub/reference/external/G698QJEQJZFEXSAT?locale=zh-TW" target="_blank">請求顧客評論</a></li>
+<li><a href="https://sellercentral.amazon.co.jp/help/hub/reference/external/G201972160?locale=zh-TW" target="_blank">產品評論相關問答集</a></li>
+</ul>
+</div>
+
+<!-- Stage 2: Days 31-60 -->
+<div class="stage-block stage-2">
+<div class="stage-title">🔵 階段二：第 31-60 天 — 優化調整</div>
+<div class="stage-sub">根據初期數據優化 Listing 與廣告</div>
+<div class="cb-checklist-box">
+<div class="cb-title">✅ 本階段行動清單</div>
+<div class="cb-group">
+<div class="cb-item"><input type="checkbox" class="task-cb" data-audience="both"><label>邀請消費者寫評</label></div>
+<div class="cb-item"><input type="checkbox" class="task-cb" data-audience="both"><label>文案 / 圖片 / A+ 優化</label></div>
+<div class="cb-item"><input type="checkbox" class="task-cb" data-audience="both"><label>廣告關鍵字 &amp; ACOS 優化</label></div>
+</div>
+</div>
+<p style="font-size:.86rem;font-weight:600;margin:8px 0 4px">文案優化方向</p>
+<ul style="font-size:.84rem;padding-left:20px">
+<li>圖片、影片、文案調整</li>
+<li><a href="https://gs.amazon.com.tw/news/premium-a-plus-launch-announcement-220824" target="_blank">Premium A+ 進階版介紹</a></li>
+</ul>
+</div>
+
+<!-- Stage 3: Days 61-90 -->
+<div class="stage-block stage-3">
+<div class="stage-title">🟡 階段三：第 61-90 天 — 擴大成長</div>
+<div class="stage-sub" style="color:var(--text-light)">參加大型活動、分析競品、制定長期策略</div>
+<div class="cb-checklist-box">
+<div class="cb-title">✅ 本階段行動清單</div>
+<div class="cb-group">
+<div class="cb-item"><input type="checkbox" class="task-cb" data-audience="both"><label>提報促銷活動</label></div>
+<div class="cb-item"><input type="checkbox" class="task-cb" data-audience="both"><label>競品分析</label></div>
+<div class="cb-item"><input type="checkbox" class="task-cb" data-audience="both"><label>分析成效、調整策略</label></div>
+</div>
+</div>
+<p style="font-size:.86rem;font-weight:600;margin:8px 0 4px">長期成長策略</p>
+<ul style="font-size:.84rem;padding-left:20px">
+<li>定期提報站內促銷檔期</li>
+<li>競品分析：關鍵字、定價、評論、廣告位</li>
+<li>分析成效後調整策略（文案、廣告、促銷組合）</li>
+</ul>
+</div>
+</div></div>
+
+<!-- 12 -->
+<div class="sec" id="sec12">
+<div class="sec-h"><span class="num">12</span><h3>企業購 (B2B)</h3><span class="tag tag-exist">進階功能</span></div>
+<div class="sec-b">
+<div class="kp"><strong>📌 本章重點：</strong>B2B 企業購讓你接觸日本企業客戶，適合辦公用品、工業耗材、大宗採購商品。</div>
+<img class="sec-img" src="images/企業購1.png" alt="企業購說明圖 1">
+<img class="sec-img" src="images/企業購2.png" alt="企業購說明圖 2">
+<div class="cb-checklist-box">
+<div class="cb-title">✅ 本章行動清單</div>
+<div class="cb-group">
+<div class="cb-item"><input type="checkbox" class="task-cb" data-audience="both"><label>已了解企業購適合的商品類型</label></div>
+<div class="cb-item"><input type="checkbox" class="task-cb" data-audience="both"><label>已開通企業購功能</label></div>
+<div class="cb-item"><input type="checkbox" class="task-cb" data-audience="both"><label>已設定企業客戶專屬價格 / 數量折扣</label></div>
+</div>
+</div>
+
+<!-- Stage 1: What is it -->
+<div class="stage-block stage-1">
+<div class="stage-title">🟢 階段一：什麼是企業購？</div>
+<div class="stage-sub">先了解功能再決定是否開通</div>
+<p style="font-size:.86rem;margin-bottom:6px">亞馬遜日本站的<strong>企業購 (Amazon Business)</strong> 是專為 B2B（企業對企業）設計的銷售通道。日本的法人用戶、政府單位、學校、醫院等可以透過企業購帳號在亞馬遜上採購。</p>
+<p style="font-size:.86rem;font-weight:600;margin:8px 0 4px">企業購 vs 一般消費者的差異</p>
+<table style="font-size:.84rem">
+<thead><tr><th>面向</th><th>企業購買家</th><th>一般消費者</th></tr></thead>
+<tbody>
+<tr><td>買家身份</td><td>企業、政府、學校、醫院</td><td>個人消費者</td></tr>
+<tr><td>採購量</td><td>通常較大，會有大宗訂單</td><td>多為單件或少量</td></tr>
+<tr><td>價格機制</td><td>可設定數量折扣、企業專屬價</td><td>統一定價</td></tr>
+<tr><td>稅務</td><td>可能需要開立發票</td><td>一般收據即可</td></tr>
+<tr><td>購買頻率</td><td>長期、穩定、可重複採購</td><td>一次性購買居多</td></tr>
+</tbody>
+</table>
+<p style="font-size:.86rem;font-weight:600;margin:10px 0 4px">適合哪些商品？</p>
+<ul style="font-size:.84rem;padding-left:20px">
+<li>✅ 辦公文具、辦公設備、事務機耗材</li>
+<li>✅ 工業耗材、五金工具、零配件</li>
+<li>✅ 清潔用品、醫療耗材、實驗室用品</li>
+<li>✅ IT 周邊（USB、網路線、轉接器等大宗採購品）</li>
+<li>❌ 時尚服飾、美妝品等偏消費型商品（效果較有限）</li>
+</ul>
+</div>
+
+<!-- Stage 2: How to enable -->
+<div class="stage-block stage-2">
+<div class="stage-title">🔵 階段二：如何開通 &amp; 學習</div>
+<div class="stage-sub">前往賣家後台申請並學習相關功能</div>
+<div class="res-grid">
+<a class="res-item" href="https://m.media-amazon.com/images/G/28/TWGS/SU/SU_Promo/SU_Curriculum_JP_AB.pdf?initialSessionID=355-3002025-1543835&ld=NSGoogle" target="_blank">📄 B2B 企業購 — 日本站（需登入）</a>
+<a class="res-item" href="https://sellercentral.amazon.com/help/hub/reference/external/G201542150?locale=zh-TW" target="_blank">📖 B2B 企業購 — 日本站（免登入）</a>
+</div>
+</div>
+
+<!-- Stage 3: Advanced features -->
+<div class="stage-block stage-3">
+<div class="stage-title">🟡 階段三：進階功能運用</div>
+<div class="stage-sub" style="color:var(--text-light)">開通後可設定這些專屬 B2B 功能</div>
+<ul style="font-size:.84rem;padding-left:20px">
+<li><strong>企業專屬價格：</strong>對企業買家展示更優惠的價格</li>
+<li><strong>數量折扣：</strong>購買越多折扣越多，鼓勵大宗採購</li>
+<li><strong>B2B 專屬促銷：</strong>針對企業客戶的限定優惠</li>
+</ul>
+<p style="font-size:.82rem;color:var(--text-light);margin-top:8px">💡 具體設定方式請參考上方學習資源。</p>
+</div>
+</div></div>
+
+<!-- ===== PHASE 4 ===== -->
+<div class="phase p4">⚪ 階段四：資源與支援</div>
+
+<!-- 13 -->
+<div class="sec" id="sec13">
+<div class="sec-h"><span class="num">13</span><h3>常見問題</h3><span class="tag tag-all">所有賣家</span></div>
+<div class="sec-b">
+<table><thead><tr><th>問題</th><th>解決方式</th></tr></thead><tbody>
+<tr><td>手機收不到驗證簡訊</td><td><a href="https://gs.amazon.com.tw/blog/google-authenticator-230927" target="_blank">改用 Google Authenticator 取代手機驗證</a></td></tr>
+<tr><td>需要聯繫亞馬遜客服</td><td>📄 <a href="https://m.media-amazon.com/images/G/28/TWGS/SU/Listing_Error_Guidebook.pdf#page=3" target="_blank">開立客服操作手冊 (PDF)</a><br>▶️ <a href="https://www.youtube.com/watch?v=Rtcn8AMixjY&t=2s" target="_blank">客服 Case 開立操作示範（YouTube）</a></td></tr>
+<tr><td>JCT 稅務相關</td><td>📄 <a href="https://m.media-amazon.com/images/G/28/TWGS/JCT_CN2JP_Handbook_Official_TW.pdf" target="_blank">JCT 說明手冊 (PDF)</a></td></tr>
+</tbody></table>
+</div></div>
+
+<!-- 14 -->
+<div class="sec" id="sec14">
+<div class="sec-h"><span class="num">14</span><h3>其他資源</h3><span class="tag tag-all">所有賣家</span></div>
+<div class="sec-b">
+<table><thead><tr><th>資源</th><th>說明</th></tr></thead><tbody>
+<tr><td><a href="https://www.notion.so/1ea57bc15af78091afa5e713466c3c45?pvs=21" target="_blank">2026 亞馬遜日本站官方消息群組</a></td><td>官方最新消息</td></tr>
+<tr><td><a href="https://line.me/ti/g2/jd0Crs2LKWKTW94a7jqE641eXev-kr9cUH-cMQ?utm_source=invitation&utm_medium=link_copy&utm_campaign=default" target="_blank">亞馬遜日本站賣家自主交流群</a></td><td>密碼：amazonjp</td></tr>
+<tr><td><a href="https://amazonexteu.qualtrics.com/jfe/form/SV_1T6LCBXWnUFkUw6?TrackID=hsinyi" target="_blank">亞馬遜官方團隊 1 對 1 諮詢輔導</a></td><td>👉 上架問題排解：協助解析上架流程或系統問題<br>👉 出單加速：判斷銷售問題，增加銷售機會<br>👉 廣告優化：解讀廣告數據並做成效優化</td></tr>
+<tr><td><a href="https://gs.amazon.com.tw/resources/government?ref=as_tw_ags_hnav_goverment" target="_blank">政府補助資源總整理</a></td><td>台灣政府相關補助</td></tr>
+<tr><td><a href="https://sellercentral.amazon.co.jp/help/hub/reference/external/G2?ref=efph_GABBX6GZPA8MSZGW_cont_201411300&locale=zh-TW" target="_blank">亞馬遜賣家後台全指南</a></td><td>後台操作完整指南</td></tr>
+</tbody></table>
+</div></div>
+
+<!-- 15 -->
+<div class="sec" id="sec15">
+<div class="sec-h"><span class="num">15</span><h3>官方消息</h3><span class="tag tag-all">所有賣家</span></div>
+<div class="sec-b">
+<div class="jp"><strong>🔴 重大通知：</strong><a href="https://gs.amazon.com.tw/news/2026-jp-fee-change-251208?ld=SOTWSOAIGLOGISTICSNULLMKTJPFeeChange251208" target="_blank">亞馬遜日本站 2026 年費用調整全攻略，佣金、物流費變更必看</a></div>
+<table><thead><tr><th>類別</th><th>消息</th></tr></thead><tbody>
+<tr><td>物流</td><td><a href="https://gs.amazon.com.tw/news/jp-fba-fee-change-241217" target="_blank">重要通知！2025 年亞馬遜日本站亞馬遜物流費用發佈</a></td></tr>
+<tr><td>促銷</td><td><a href="https://gs.amazon.com.tw/news/promotion-fee-change-250325" target="_blank">重要提醒！2025/6/2 起亞馬遜美日英法德義西站促銷費用調整</a></td></tr>
+<tr><td>VINE</td><td><a href="https://gs.amazon.com.tw/news/vine-program-update-250502" target="_blank">Amazon Vine 計畫 4 大政策更新與優惠一次看</a><br><a href="https://gs.amazon.com.tw/news/vine-program-updates-parent-asin-250502?ld=SOTWSOAMKTFB0505" target="_blank">亞馬遜 Vine 計畫規則更新，嚴禁合併違規變體</a></td></tr>
+</tbody></table>
+</div></div>
+
+<!-- Contact Footer -->
+<div class="contact-footer">
+<h3>📞 需要協助？</h3>
+<p>✉️ <a href="mailto:hsinyih@amazon.com">hsinyih@amazon.com</a> ｜ 📞 +886-2-6631-9471 ｜ 📱 LINE ID: @503udqst</p>
+</div>
+</div>
+
+<script>
+// Section Navigation (floating TOC)
+(function(){
+  var toggle=document.getElementById('navToggle');
+  var nav=document.getElementById('sectionNav');
+  var overlay=document.getElementById('navOverlay');
+  var links=document.querySelectorAll('.nav-link');
+
+  function openNav(){nav.classList.add('open');overlay.classList.add('show')}
+  function closeNav(){nav.classList.remove('open');overlay.classList.remove('show')}
+
+  if(toggle) toggle.addEventListener('click',openNav);
+  if(overlay) overlay.addEventListener('click',closeNav);
+
+  // Close nav after clicking a link (mobile friendly)
+  links.forEach(function(a){
+    a.addEventListener('click',function(){setTimeout(closeNav,150)});
+  });
+
+  // Scrollspy — highlight active section
+  var sections=[];
+  links.forEach(function(a){
+    var id=a.getAttribute('href').substring(1);
+    var el=document.getElementById(id);
+    if(el) sections.push({id:id,el:el,link:a});
+  });
+
+  function updateActive(){
+    var pos=window.scrollY+120;
+    var active=sections[0];
+    sections.forEach(function(s){
+      if(s.el.offsetTop<=pos) active=s;
+    });
+    links.forEach(function(a){a.classList.remove('active')});
+    if(active) active.link.classList.add('active');
+  }
+  window.addEventListener('scroll',updateActive,{passive:true});
+  updateActive();
+})();
+</script>
+
+<script>
+// Keyword Search
+(function(){
+  var input=document.getElementById('searchInput');
+  var btn=document.getElementById('searchBtn');
+  var prevBtn=document.getElementById('searchPrev');
+  var nextBtn=document.getElementById('searchNext');
+  var clearBtn=document.getElementById('searchClear');
+  var info=document.getElementById('searchInfo');
+  var container=document.querySelector('.container');
+  var currentIdx=-1;
+  var hits=[];
+
+  // Escape regex special chars
+  function escapeRegex(s){return s.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')}
+
+  // Remove all existing highlights
+  function clearHighlights(){
+    var marks=container.querySelectorAll('.search-hit');
+    marks.forEach(function(m){
+      var parent=m.parentNode;
+      parent.replaceChild(document.createTextNode(m.textContent),m);
+      parent.normalize();
+    });
+    hits=[];
+    currentIdx=-1;
+  }
+
+  // Walk text nodes and wrap matches
+  function highlightTextNodes(node,regex){
+    if(node.nodeType===3){ // text node
+      var text=node.nodeValue;
+      if(!regex.test(text)) return;
+      regex.lastIndex=0;
+      var frag=document.createDocumentFragment();
+      var last=0,m;
+      while((m=regex.exec(text))!==null){
+        if(m.index>last) frag.appendChild(document.createTextNode(text.slice(last,m.index)));
+        var span=document.createElement('span');
+        span.className='search-hit';
+        span.textContent=m[0];
+        frag.appendChild(span);
+        last=m.index+m[0].length;
+        if(m.index===regex.lastIndex) regex.lastIndex++;
+      }
+      if(last<text.length) frag.appendChild(document.createTextNode(text.slice(last)));
+      node.parentNode.replaceChild(frag,node);
+    } else if(node.nodeType===1 && node.childNodes && !/^(SCRIPT|STYLE|INPUT|BUTTON|TEXTAREA)$/.test(node.tagName) && !node.classList.contains('search-hit')){
+      // Convert to array first because DOM mutates during traversal
+      var children=Array.prototype.slice.call(node.childNodes);
+      children.forEach(function(c){highlightTextNodes(c,regex)});
+    }
+  }
+
+  // Open all parent details elements so match is visible
+  function openAncestors(el){
+    var cur=el.parentNode;
+    while(cur && cur!==document.body){
+      if(cur.tagName==='DETAILS') cur.open=true;
+      cur=cur.parentNode;
+    }
+  }
+
+  function doSearch(){
+    var q=(input.value||'').trim();
+    clearHighlights();
+    if(!q){
+      info.textContent='';
+      prevBtn.style.display='none';
+      nextBtn.style.display='none';
+      clearBtn.style.display='none';
+      return;
+    }
+    var regex=new RegExp(escapeRegex(q),'gi');
+    highlightTextNodes(container,regex);
+
+    hits=Array.prototype.slice.call(container.querySelectorAll('.search-hit'));
+    if(hits.length===0){
+      info.textContent='找不到相符的項目';
+      info.style.color='var(--red)';
+      prevBtn.style.display='none';
+      nextBtn.style.display='none';
+      clearBtn.style.display='inline-block';
+      return;
+    }
+    // Open all details containing hits
+    hits.forEach(openAncestors);
+    info.style.color='var(--text-light)';
+    prevBtn.style.display='inline-block';
+    nextBtn.style.display='inline-block';
+    clearBtn.style.display='inline-block';
+    gotoHit(0);
+  }
+
+  function gotoHit(i){
+    if(hits.length===0) return;
+    if(currentIdx>=0 && hits[currentIdx]) hits[currentIdx].classList.remove('current');
+    currentIdx=(i+hits.length)%hits.length;
+    var h=hits[currentIdx];
+    h.classList.add('current');
+    h.scrollIntoView({behavior:'smooth',block:'center'});
+    info.textContent=(currentIdx+1)+' / '+hits.length+' 個結果';
+  }
+
+  btn.addEventListener('click',doSearch);
+  input.addEventListener('keydown',function(e){
+    if(e.key==='Enter'){
+      e.preventDefault();
+      if(hits.length>0 && input.value.trim()===(hits[0]?hits[0].textContent:'')){
+        // same query, go next
+        gotoHit(currentIdx+1);
+      } else {
+        doSearch();
+      }
+    } else if(e.key==='Escape'){
+      input.value='';
+      clearHighlights();
+      info.textContent='';
+      prevBtn.style.display='none';
+      nextBtn.style.display='none';
+      clearBtn.style.display='none';
+    }
+  });
+  nextBtn.addEventListener('click',function(){gotoHit(currentIdx+1)});
+  prevBtn.addEventListener('click',function(){gotoHit(currentIdx-1)});
+  clearBtn.addEventListener('click',function(){
+    input.value='';
+    clearHighlights();
+    info.textContent='';
+    prevBtn.style.display='none';
+    nextBtn.style.display='none';
+    clearBtn.style.display='none';
+    input.focus();
+  });
+
+  // Keyboard shortcut: Ctrl/Cmd + K focuses search
+  document.addEventListener('keydown',function(e){
+    if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==='k'){
+      e.preventDefault();
+      input.focus();
+      input.select();
+    }
+  });
+})();
+</script>
+
+<script>
+// Section 02 Path Selector
+(function(){
+  var STORAGE_KEY='sec02-path';
+  var sec=document.getElementById('sec02');
+  if(!sec) return;
+  var state={step1:null,step2:null};
+  try{
+    var saved=localStorage.getItem(STORAGE_KEY);
+    if(saved) state=JSON.parse(saved);
+  }catch(e){}
+
+  function save(){localStorage.setItem(STORAGE_KEY,JSON.stringify(state))}
+
+  function currentKey(){
+    if(!state.step1) return null;
+    if(state.step1==='existing') return 'existing';
+    if(state.step1==='new' && state.step2) return 'new:'+state.step2;
+    return 'new'; // new seller but hasn't picked company yet
+  }
+
+  function matchesShow(showAttr,key){
+    if(!showAttr||!key) return false;
+    var list=showAttr.split(',').map(function(s){return s.trim()});
+    return list.indexOf(key)!==-1;
+  }
+
+  function render(){
+    var step1=sec.querySelector('#sec02-step1');
+    var step2=sec.querySelector('#sec02-step2');
+    var key=currentKey();
+
+    // Step 1 buttons state
+    step1.querySelectorAll('.path-opt').forEach(function(btn){
+      btn.classList.toggle('selected',btn.dataset.path===state.step1);
+    });
+    // Hide step1 once chosen
+    step1.style.display=state.step1?'none':'';
+
+    // Step 2 visibility (only when step1 is 'new')
+    var showStep2=state.step1==='new';
+    step2.classList.toggle('active',showStep2 && !state.step2);
+    if(showStep2 && state.step2){
+      step2.classList.remove('active');
+    }
+    step2.querySelectorAll('.path-opt').forEach(function(btn){
+      btn.classList.toggle('selected',btn.dataset.path===state.step2);
+    });
+
+    // Show/hide all path-panels based on their data-show-when
+    sec.querySelectorAll('.path-panel').forEach(function(panel){
+      if(panel.id==='sec02-step2') return; // handled above
+      var showWhen=panel.getAttribute('data-show-when');
+      var shouldShow=false;
+      // Match 'new' panels when step1 is new (regardless of step2)
+      if(key){
+        if(matchesShow(showWhen,key)) shouldShow=true;
+        // Also show panels marked 'new' when user has picked new but hasn't picked company yet
+        if(state.step1==='new' && matchesShow(showWhen,'new')) shouldShow=true;
+      }
+      panel.classList.toggle('active',shouldShow);
+    });
+  }
+
+  // Click on step1 options
+  sec.querySelectorAll('#sec02-step1 .path-opt').forEach(function(btn){
+    btn.addEventListener('click',function(){
+      state.step1=this.dataset.path;
+      state.step2=null;
+      save();render();
+    });
+  });
+  // Click on step2 options
+  sec.querySelectorAll('#sec02-step2 .path-opt').forEach(function(btn){
+    btn.addEventListener('click',function(){
+      state.step2=this.dataset.path;
+      save();render();
+    });
+  });
+  // Reset buttons
+  sec.querySelectorAll('.reset-path').forEach(function(btn){
+    btn.addEventListener('click',function(e){
+      e.stopPropagation();
+      var type=this.dataset.reset;
+      if(type==='all'){state.step1=null;state.step2=null}
+      else if(type==='step2'){state.step2=null}
+      save();render();
+      // Scroll back to top of sec02
+      sec.scrollIntoView({behavior:'smooth',block:'start'});
+    });
+  });
+
+  render();
+})();
+</script>
+
+<script>
+// Section 06 Path Selector
+(function(){
+  var STORAGE_KEY='sec06-path';
+  var sec=document.getElementById('sec06');
+  if(!sec) return;
+  var state={choice:null};
+  try{
+    var saved=localStorage.getItem(STORAGE_KEY);
+    if(saved) state=JSON.parse(saved);
+  }catch(e){}
+
+  function save(){localStorage.setItem(STORAGE_KEY,JSON.stringify(state))}
+
+  function render(){
+    var step1=sec.querySelector('#sec06-step1');
+    step1.querySelectorAll('.path-opt').forEach(function(btn){
+      btn.classList.toggle('selected',btn.dataset.path===state.choice);
+    });
+    // Hide step1 once chosen
+    step1.style.display=state.choice?'none':'';
+
+    // Show matching panels
+    sec.querySelectorAll('.path-panel').forEach(function(panel){
+      var showWhen=panel.getAttribute('data-show-when-06');
+      if(showWhen==null) return; // not a sec06 panel
+      panel.classList.toggle('active',showWhen===state.choice);
+    });
+  }
+
+  // Click on step1 options
+  sec.querySelectorAll('#sec06-step1 .path-opt').forEach(function(btn){
+    btn.addEventListener('click',function(){
+      state.choice=this.dataset.path;
+      save();render();
+    });
+  });
+  // Reset buttons
+  sec.querySelectorAll('[data-reset-06]').forEach(function(btn){
+    btn.addEventListener('click',function(e){
+      e.stopPropagation();
+      state.choice=null;
+      save();render();
+      sec.scrollIntoView({behavior:'smooth',block:'start'});
+    });
+  });
+
+  render();
+})();
+</script>
+
+<script>
+(function(){
+var K='amzjp-v4';
+function load(){try{return JSON.parse(localStorage.getItem(K))||{}}catch(e){return{}}}
+function save(s){localStorage.setItem(K,JSON.stringify(s))}
+function update(){
+var a=document.querySelectorAll('.task-cb'),c=document.querySelectorAll('.task-cb:checked'),t=a.length,d=c.length,p=t?Math.round(d/t*100):0;
+var f=document.getElementById('progressFill'),x=document.getElementById('progressText');
+f.style.width=p+'%';f.textContent=p+'%';x.textContent=d+' / '+t+' 項完成';
+f.style.background=p<30?'linear-gradient(90deg,#FF6B6B,#FF9900)':p<70?'linear-gradient(90deg,#FF9900,#FFB84D)':'linear-gradient(90deg,#28A745,#067D62)';
+}
+function tog(cb){var i=cb.closest('.cb-item');if(cb.checked)i.classList.add('done');else i.classList.remove('done')}
+var s=load(),cbs=document.querySelectorAll('.task-cb');
+cbs.forEach(function(cb,i){cb.dataset.idx=i;if(s[i]){cb.checked=true;tog(cb)}
+cb.addEventListener('change',function(){var st=load();if(this.checked)st[this.dataset.idx]=true;else delete st[this.dataset.idx];save(st);tog(this);update()})});
+update();
+window.resetProgress=function(){localStorage.removeItem(K);cbs.forEach(function(cb){cb.checked=false;tog(cb)});update();alert('進度已重置！')};
+})();
+</script>
+</body>
+</html>
