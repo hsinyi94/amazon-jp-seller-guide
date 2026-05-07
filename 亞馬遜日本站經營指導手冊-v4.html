@@ -259,6 +259,72 @@ details[open] summary::before{transform:rotate(90deg)}summary:hover{background:#
 .search-info{font-size:.82rem;color:var(--text-light);margin-left:4px}
 .search-hit{background:#FFE58A;color:#000;border-radius:3px;padding:1px 3px}
 .search-hit.current{background:#FF9900;color:#fff}
+
+/* Enhanced Search Results Panel */
+.search-wrap{position:relative}
+.search-results{position:absolute;top:calc(100% + 6px);left:14px;right:14px;max-height:420px;background:var(--card);border:1px solid var(--border);border-radius:10px;box-shadow:0 8px 24px rgba(0,0,0,.12);display:none;z-index:120;overflow:hidden}
+.search-results.open{display:flex;flex-direction:column}
+.search-filters{padding:10px 14px;border-bottom:1px solid var(--border);background:#FAFBFC;display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+.search-filters .filter-label{font-size:.72rem;color:var(--text-light);font-weight:600;margin-right:2px}
+.filter-chip{padding:3px 10px;border:1px solid var(--border);border-radius:14px;background:#fff;font-size:.74rem;cursor:pointer;transition:all .15s;user-select:none}
+.filter-chip:hover{border-color:var(--primary);color:var(--primary-dark)}
+.filter-chip.active{background:var(--primary);color:#fff;border-color:var(--primary)}
+.search-results-list{overflow-y:auto;flex:1}
+.search-result-item{padding:10px 14px;border-bottom:1px solid var(--border);cursor:pointer;transition:background .1s}
+.search-result-item:hover{background:#FFF8E1}
+.search-result-item:last-child{border-bottom:none}
+.search-result-title{font-size:.85rem;font-weight:600;color:var(--primary-dark);margin-bottom:3px;display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.search-result-badge{font-size:.66rem;background:#EEF0F3;color:var(--text-light);padding:1px 6px;border-radius:8px;font-weight:500}
+.search-result-snippet{font-size:.78rem;color:var(--text-light);line-height:1.5;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.search-result-snippet mark{background:#FFE58A;color:#000;padding:0 2px;border-radius:2px;font-weight:600}
+.search-empty{padding:20px;text-align:center;color:var(--text-light);font-size:.85rem}
+.search-empty .empty-hint{margin-top:6px;font-size:.76rem}
+
+/* Guided Wizard (floating) */
+.wizard-fab{position:fixed;right:20px;bottom:20px;z-index:300;background:linear-gradient(135deg,var(--primary),#FFB84D);color:#fff;border:none;border-radius:28px;padding:12px 18px;font-size:.88rem;font-weight:700;cursor:pointer;box-shadow:0 6px 20px rgba(255,153,0,.35);display:flex;align-items:center;gap:8px;transition:transform .15s,box-shadow .15s}
+.wizard-fab:hover{transform:translateY(-2px);box-shadow:0 8px 26px rgba(255,153,0,.45)}
+.wizard-fab .wizard-icon{font-size:1.2rem}
+@media(max-width:640px){.wizard-fab{right:14px;bottom:14px;padding:10px 14px;font-size:.82rem}}
+.wizard-overlay{position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:400;display:none;align-items:flex-end;justify-content:center;padding:20px;animation:wzFade .2s ease}
+.wizard-overlay.open{display:flex}
+@media(min-width:640px){.wizard-overlay{align-items:center}}
+.wizard-modal{width:100%;max-width:480px;max-height:80vh;background:var(--card);border-radius:16px;display:flex;flex-direction:column;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.3);animation:wzSlide .25s ease}
+.wizard-header{padding:14px 18px;background:linear-gradient(135deg,#232F3E,#37475A);color:#fff;display:flex;align-items:center;gap:10px}
+.wizard-header .wz-title{font-size:.96rem;font-weight:700}
+.wizard-header .wz-subtitle{font-size:.72rem;opacity:.85;margin-top:1px}
+.wizard-close{background:rgba(255,255,255,.15);color:#fff;border:none;width:30px;height:30px;border-radius:50%;font-size:1rem;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .15s}
+.wizard-close:hover{background:rgba(255,255,255,.3)}
+.wizard-body{padding:16px 18px;overflow-y:auto;flex:1}
+.wizard-question{font-size:.95rem;font-weight:700;margin-bottom:4px;color:var(--text)}
+.wizard-hint{font-size:.78rem;color:var(--text-light);margin-bottom:12px}
+.wizard-options{display:flex;flex-direction:column;gap:8px}
+.wizard-option{padding:11px 14px;border:1.5px solid var(--border);border-radius:10px;background:#fff;cursor:pointer;font-family:inherit;font-size:.86rem;text-align:left;transition:all .15s;display:flex;align-items:flex-start;gap:8px;line-height:1.5;color:var(--text)}
+.wizard-option:hover{border-color:var(--primary);background:#FFF8E1;transform:translateX(2px)}
+.wizard-option .opt-emoji{font-size:1.1rem;flex-shrink:0}
+.wizard-option .opt-content{flex:1}
+.wizard-option .opt-label{font-weight:600;margin-bottom:2px;color:var(--primary-dark);display:block}
+.wizard-option .opt-desc{font-size:.76rem;color:var(--text-light);font-weight:400;display:block}
+.wizard-answer{background:linear-gradient(135deg,#FFF8E1,#FFFCF0);border:1px solid #FFE58A;border-radius:10px;padding:12px 14px;margin-bottom:10px}
+.wizard-answer .answer-title{font-size:.88rem;font-weight:700;color:var(--primary-dark);margin-bottom:6px;display:flex;align-items:center;gap:6px}
+.wizard-answer .answer-text{font-size:.82rem;color:var(--text);line-height:1.65;margin-bottom:8px}
+.wizard-answer .answer-links{display:flex;flex-wrap:wrap;gap:6px}
+.wizard-answer .answer-link{display:inline-flex;align-items:center;gap:4px;padding:5px 10px;background:#fff;border:1px solid var(--primary);color:var(--primary-dark);border-radius:14px;font-size:.76rem;text-decoration:none;font-weight:600;transition:all .15s}
+.wizard-answer .answer-link:hover{background:var(--primary);color:#fff;text-decoration:none}
+.wizard-footer{padding:10px 18px;border-top:1px solid var(--border);background:#FAFBFC;display:flex;gap:8px;justify-content:space-between;align-items:center}
+.wizard-back{background:transparent;border:1px solid var(--border);color:var(--text-light);padding:6px 12px;border-radius:8px;font-size:.78rem;cursor:pointer;font-family:inherit}
+.wizard-back:hover{background:#F0F2F5;color:var(--text)}
+.wizard-back:disabled{opacity:.3;cursor:not-allowed}
+.wizard-progress{font-size:.72rem;color:var(--text-light)}
+@keyframes wzFade{from{opacity:0}to{opacity:1}}
+@keyframes wzSlide{from{transform:translateY(20px);opacity:0}to{transform:translateY(0);opacity:1}}
+
+/* Section scroll-to highlight animation */
+.sec.highlight-flash{animation:secFlash 1.6s ease}
+@keyframes secFlash{0%,100%{box-shadow:0 0 0 0 rgba(255,153,0,0)}30%{box-shadow:0 0 0 4px rgba(255,153,0,.35)}}
+
+/* Offset sections from sticky top when jumped via hash */
+.sec{scroll-margin-top:180px}
+@media(max-width:640px){.sec{scroll-margin-top:160px}}
 </style>
 </head>
 <body>
@@ -305,12 +371,31 @@ details[open] summary::before{transform:rotate(90deg)}summary:hover{background:#
 
 <!-- Search Bar -->
 <div class="search-wrap">
-  <input type="search" class="search-input" id="searchInput" placeholder="🔍 搜尋關鍵字（例：VINE、品牌回饋、FBA、合規...）" autocomplete="off">
+  <input type="search" class="search-input" id="searchInput" placeholder="🔍 搜尋手冊：FBA、積分、合規、品牌註冊..." autocomplete="off">
   <button class="search-btn" id="searchBtn">搜尋</button>
   <button class="search-btn secondary" id="searchPrev" title="上一個" style="display:none">↑</button>
   <button class="search-btn secondary" id="searchNext" title="下一個" style="display:none">↓</button>
   <button class="search-btn secondary" id="searchClear" style="display:none">清除</button>
   <span class="search-info" id="searchInfo"></span>
+
+  <!-- Results panel with filters -->
+  <div class="search-results" id="searchResults">
+    <div class="search-filters">
+      <span class="filter-label">👥 身份：</span>
+      <button class="filter-chip active" data-filter="audience" data-value="all">全部</button>
+      <button class="filter-chip" data-filter="audience" data-value="new">🆕 新賣家</button>
+      <button class="filter-chip" data-filter="audience" data-value="existing">🔄 既有賣家</button>
+    </div>
+    <div class="search-filters">
+      <span class="filter-label">🎯 階段：</span>
+      <button class="filter-chip active" data-filter="phase" data-value="all">全部</button>
+      <button class="filter-chip" data-filter="phase" data-value="p1">🟢 準備</button>
+      <button class="filter-chip" data-filter="phase" data-value="p2">🔵 啟動</button>
+      <button class="filter-chip" data-filter="phase" data-value="p3">🟡 成長</button>
+      <button class="filter-chip" data-filter="phase" data-value="p4">⚪ 進階</button>
+    </div>
+    <div class="search-results-list" id="searchResultsList"></div>
+  </div>
 </div>
 
 <!-- Progress Bar -->
@@ -1927,6 +2012,379 @@ document.querySelectorAll('img.sec-img.zoomable').forEach(function(img){
 });
 lb.addEventListener('click',function(e){if(e.target===lb||e.target===closeBtn)close()});
 document.addEventListener('keydown',function(e){if(e.key==='Escape'&&lb.classList.contains('open'))close()});
+})();
+</script>
+<!-- ============================================== -->
+<!-- 🧭 引導精靈 + 搜尋結果面板增強（層級 1+2） -->
+<!-- ============================================== -->
+<button class="wizard-fab" id="wizardFab" title="需要幫忙？用問答找到你要的章節"><span class="wizard-icon">💬</span> 需要幫忙？</button>
+<div class="wizard-overlay" id="wizardOverlay" role="dialog" aria-modal="true" aria-label="引導精靈">
+  <div class="wizard-modal">
+    <div class="wizard-header">
+      <div style="flex:1">
+        <div class="wz-title">🧭 手冊導引精靈</div>
+        <div class="wz-subtitle">用問答的方式，幫你找到最合適的章節</div>
+      </div>
+      <button class="wizard-close" id="wizardClose" aria-label="關閉">✕</button>
+    </div>
+    <div class="wizard-body" id="wizardBody"></div>
+    <div class="wizard-footer">
+      <button class="wizard-back" id="wizardBack" disabled>← 上一步</button>
+      <span class="wizard-progress" id="wizardProgress"></span>
+      <button class="wizard-back" id="wizardRestart">🔄 重新開始</button>
+    </div>
+  </div>
+</div>
+
+<script>
+// Search Results Panel Enhancement (augments existing keyword search)
+(function(){
+  var input=document.getElementById('searchInput');
+  var resultsPanel=document.getElementById('searchResults');
+  var resultsList=document.getElementById('searchResultsList');
+  var container=document.querySelector('.container');
+  if(!input||!resultsPanel||!resultsList||!container) return;
+
+  var SECTION_META={
+    'sec01':{title:'入駐日本站相關優惠',audience:'new',phase:'p1',icon:'🎁'},
+    'sec02':{title:'開通帳號流程',audience:'all',phase:'p1',icon:'📖'},
+    'sec03':{title:'成本預估',audience:'all',phase:'p1',icon:'💰'},
+    'sec04':{title:'產品合規',audience:'all',phase:'p1',icon:'🔌'},
+    'sec05':{title:'金流',audience:'all',phase:'p2',icon:'💳'},
+    'sec06':{title:'品牌註冊',audience:'all',phase:'p2',icon:'®️'},
+    'sec07':{title:'上架',audience:'all',phase:'p2',icon:'📦'},
+    'sec08':{title:'物流',audience:'all',phase:'p2',icon:'✈️'},
+    'sec09':{title:'廣告',audience:'new',phase:'p3',icon:'📣'},
+    'sec10':{title:'促銷',audience:'all',phase:'p3',icon:'🎟️'},
+    'sec11':{title:'銷售持續成長',audience:'all',phase:'p3',icon:'📈'},
+    'sec12':{title:'企業購 (B2B)',audience:'existing',phase:'p4',icon:'🏢'},
+    'sec13':{title:'常見問題',audience:'all',phase:'p4',icon:'❓'},
+    'sec14':{title:'其他資源',audience:'all',phase:'p4',icon:'📚'},
+    'sec15':{title:'官方消息',audience:'all',phase:'p4',icon:'📰'}
+  };
+  var PHASE_LABEL={p1:'🟢 準備',p2:'🔵 啟動',p3:'🟡 成長',p4:'⚪ 進階'};
+  var AUDIENCE_LABEL={all:'👥 所有',new:'🆕 新賣家',existing:'🔄 既有'};
+  var activeFilters={audience:'all',phase:'all'};
+
+  function escapeRegex(s){return s.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')}
+  function escapeHtml(s){return String(s).replace(/[&<>"']/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
+
+  function findEnclosingSection(el){
+    var cur=el;
+    while(cur && cur!==document.body){
+      if(cur.classList && cur.classList.contains('sec') && cur.id && /^sec\d+$/.test(cur.id)) return cur;
+      cur=cur.parentNode;
+    }
+    return null;
+  }
+
+  function buildSnippet(hit,q){
+    var block=hit;
+    for(var i=0;i<5;i++){
+      if(!block.parentNode) break;
+      if(block.tagName==='P'||block.tagName==='LI'||block.tagName==='SUMMARY'||block.tagName==='DIV') break;
+      block=block.parentNode;
+    }
+    var text=(block.textContent||'').replace(/\s+/g,' ').trim();
+    if(text.length<30 && block.parentNode) text=(block.parentNode.textContent||'').replace(/\s+/g,' ').trim();
+    var lower=text.toLowerCase();
+    var idx=lower.indexOf(q.toLowerCase());
+    if(idx<0) idx=0;
+    var start=Math.max(0,idx-35);
+    var end=Math.min(text.length,idx+q.length+70);
+    var snippet=(start>0?'…':'')+text.slice(start,end)+(end<text.length?'…':'');
+    var re=new RegExp('('+escapeRegex(q)+')','gi');
+    return escapeHtml(snippet).replace(re,'<mark>$1</mark>');
+  }
+
+  function openAncestorDetails(el){
+    var cur=el.parentNode;
+    while(cur && cur!==document.body){
+      if(cur.tagName==='DETAILS') cur.open=true;
+      cur=cur.parentNode;
+    }
+  }
+
+  function renderResults(){
+    var q=(input.value||'').trim();
+    if(!q){resultsPanel.classList.remove('open');return}
+    var hits=Array.prototype.slice.call(container.querySelectorAll('.search-hit'));
+    if(hits.length===0){
+      resultsList.innerHTML='<div class="search-empty">🔍 找不到「'+escapeHtml(q)+'」相關內容<div class="empty-hint">試試其他關鍵字</div></div>';
+      resultsPanel.classList.add('open');
+      return;
+    }
+    var bySection={};
+    hits.forEach(function(h){
+      var sec=findEnclosingSection(h);
+      if(!sec) return;
+      var id=sec.id;
+      if(!bySection[id]){bySection[id]={section:sec,hits:[],firstHit:h}}
+      bySection[id].hits.push(h);
+    });
+    var ids=Object.keys(bySection).sort();
+    var filtered=ids.filter(function(id){
+      var meta=SECTION_META[id]||{};
+      if(activeFilters.audience!=='all' && meta.audience!=='all' && meta.audience!==activeFilters.audience) return false;
+      if(activeFilters.phase!=='all' && meta.phase!==activeFilters.phase) return false;
+      return true;
+    });
+    if(filtered.length===0){
+      resultsList.innerHTML='<div class="search-empty">🎯 目前篩選條件下沒有結果<div class="empty-hint">調整上方身份或階段篩選</div></div>';
+      resultsPanel.classList.add('open');
+      return;
+    }
+    var html=filtered.map(function(id){
+      var data=bySection[id];
+      var meta=SECTION_META[id]||{title:id,audience:'all',phase:'p1',icon:'📄'};
+      var snippet=buildSnippet(data.firstHit,q);
+      return '<div class="search-result-item" data-section="'+id+'">'+
+        '<div class="search-result-title">'+meta.icon+' 【'+id.replace('sec','')+'】'+escapeHtml(meta.title)+
+        ' <span class="search-result-badge">'+PHASE_LABEL[meta.phase]+'</span>'+
+        ' <span class="search-result-badge">'+AUDIENCE_LABEL[meta.audience]+'</span>'+
+        ' <span class="search-result-badge">'+data.hits.length+' 處</span></div>'+
+        '<div class="search-result-snippet">'+snippet+'</div>'+
+        '</div>';
+    }).join('');
+    resultsList.innerHTML=html;
+    resultsPanel.classList.add('open');
+    resultsList.querySelectorAll('.search-result-item').forEach(function(item){
+      item.addEventListener('click',function(e){
+        e.preventDefault();
+        e.stopPropagation();
+        var secId=item.dataset.section;
+        var sec=document.getElementById(secId);
+        if(!sec) return;
+        var data=bySection[secId];
+        if(data){data.hits.forEach(openAncestorDetails)}
+
+        // Close results panel
+        resultsPanel.classList.remove('open');
+
+        // Use native hash navigation — most reliable way to jump
+        // Force hash change even if already on same hash
+        if(location.hash==='#'+secId){location.hash='';}
+        location.hash='#'+secId;
+
+        // Flash animation after browser completes scroll
+        setTimeout(function(){
+          sec.classList.add('highlight-flash');
+          setTimeout(function(){sec.classList.remove('highlight-flash')},1600);
+        },200);
+      });
+    });
+  }
+
+  // React to input — delayed so existing search has finished highlighting
+  function scheduleRender(){clearTimeout(input._renderT);input._renderT=setTimeout(renderResults,260)}
+  input.addEventListener('input',scheduleRender);
+  input.addEventListener('keyup',function(e){if(e.key==='Enter')scheduleRender()});
+  input.addEventListener('focus',function(){
+    if(input.value.trim()) scheduleRender();
+  });
+  var btn=document.getElementById('searchBtn');
+  if(btn) btn.addEventListener('click',scheduleRender);
+
+  // Filter chip clicks
+  document.querySelectorAll('.filter-chip').forEach(function(chip){
+    chip.addEventListener('click',function(){
+      var f=chip.dataset.filter, v=chip.dataset.value;
+      activeFilters[f]=v;
+      document.querySelectorAll('.filter-chip[data-filter="'+f+'"]').forEach(function(c){
+        c.classList.toggle('active',c.dataset.value===v);
+      });
+      renderResults();
+    });
+  });
+
+  // Close on outside click
+  document.addEventListener('click',function(e){
+    if(!e.target.closest('.search-wrap')) resultsPanel.classList.remove('open');
+  });
+})();
+</script>
+
+<script>
+// Guided Wizard — decision tree leading to relevant sections
+(function(){
+  var fab=document.getElementById('wizardFab');
+  var overlay=document.getElementById('wizardOverlay');
+  var closeBtn=document.getElementById('wizardClose');
+  var body=document.getElementById('wizardBody');
+  var backBtn=document.getElementById('wizardBack');
+  var restartBtn=document.getElementById('wizardRestart');
+  var progressEl=document.getElementById('wizardProgress');
+  if(!fab||!overlay||!body) return;
+
+  var TREE={
+    start:{
+      q:'你現在遇到什麼狀況？',
+      hint:'選一個最接近的情境',
+      options:[
+        {emoji:'🆕',label:'我是新賣家，想開店',desc:'從零開始註冊、上架第一個商品',next:'new_start'},
+        {emoji:'🔄',label:'已有其他站點，要擴展日本',desc:'已熟悉亞馬遜，擴展到日本站',next:'existing_start'},
+        {emoji:'💰',label:'想了解日本站的成本',desc:'月費、傭金、FBA、廣告、促銷',next:'cost'},
+        {emoji:'📦',label:'想了解物流 / FBA',desc:'備貨、包裝、入倉、費用',next:'fba'},
+        {emoji:'🔌',label:'我有合規問題',desc:'PSE、Giteki、商品認證要求',next:'compliance'},
+        {emoji:'🎟️',label:'想做促銷或廣告',desc:'優惠券、積分、Sponsored Ads',next:'promo_ads'},
+        {emoji:'🏢',label:'想做 B2B 企業購',desc:'開通企業購、商品適合度',next:'b2b'},
+        {emoji:'🛠️',label:'後台操作問題',desc:'FBM/FBA 切換、賣家記號、店鋪頁面',next:'backend'}
+      ]
+    },
+    new_start:{
+      q:'你的公司在哪裡註冊？',
+      hint:'用哪家公司來開設帳號',
+      options:[
+        {emoji:'🇹🇼',label:'台灣公司',desc:'最常見，用台灣公司即可',next:'new_tw'},
+        {emoji:'🇯🇵',label:'日本公司',desc:'已在日本設立法人 / 個人事業',next:'new_jp'},
+        {emoji:'🤔',label:'還不確定',desc:'先看優惠和整體流程',next:'new_unsure'}
+      ]
+    },
+    new_tw:{answer:{title:'🇹🇼 新賣家 × 台灣公司路線',text:'準備：公司設立文件、法定代表人身分證明、可支付日幣的信用卡、聯絡方式。先看【01】領福利，再按【02】準備資料找經理開帳號。',links:[{label:'【01】入駐優惠',href:'#sec01'},{label:'【02】開通帳號',href:'#sec02'},{label:'【03】成本預估',href:'#sec03'},{label:'【04】產品合規',href:'#sec04'}]}},
+    new_jp:{answer:{title:'🇯🇵 新賣家 × 日本公司路線',text:'用日本法人註冊需要：法人編號、履歷事項全部證明書、負責人身分與住址證明、銀行對帳單、信用卡、手機號碼。詳見【02】→ 日本公司面板。',links:[{label:'【02】開通帳號',href:'#sec02'},{label:'【03】成本預估',href:'#sec03'},{label:'【04】產品合規',href:'#sec04'}]}},
+    new_unsure:{answer:{title:'🤔 還不確定？先看整體介紹',text:'建議先看入駐優惠與開帳號章節，了解需要什麼資料、花費、時程。有問題隨時找你的亞馬遜官方經理。',links:[{label:'【01】入駐優惠',href:'#sec01'},{label:'【02】開通帳號',href:'#sec02'}]}},
+    existing_start:{
+      q:'你目前想處理的是？',
+      hint:'擴展日本站的常見起點',
+      options:[
+        {emoji:'📖',label:'開日本站帳號',desc:'從現有帳號擴展',next:'existing_open'},
+        {emoji:'📦',label:'日本站上架第一支商品',desc:'翻譯、合規、物流',next:'existing_listing'},
+        {emoji:'🏢',label:'想做企業購 B2B',desc:'日本 B2B 市場不小',next:'b2b'}
+      ]
+    },
+    existing_open:{answer:{title:'🔄 既有賣家 × 開日本站',text:'從既有帳號擴展通常最快。建議依序：確認合規 → 成本評估 → 開帳號 → 金流設定。',links:[{label:'【02】開通帳號',href:'#sec02'},{label:'【03】成本預估',href:'#sec03'},{label:'【04】產品合規',href:'#sec04'},{label:'【05】金流',href:'#sec05'}]}},
+    existing_listing:{answer:{title:'📦 既有賣家 × 上架日本',text:'重點：翻譯（或用官方翻譯）、合規認證、物流入倉。先確認合規再準備上架資料。',links:[{label:'【04】產品合規',href:'#sec04'},{label:'【07】上架',href:'#sec07'},{label:'【08】物流',href:'#sec08'}]}},
+    cost:{answer:{title:'💰 日本站成本',text:'日本站費用 = 月費 + 銷售傭金 + FBA 物流倉儲 + 廣告費 + 促銷費。這 5 項是亞馬遜對賣家收的全部費用，其他資源如課程、翻譯、經理輔導都免費。',links:[{label:'【03】成本預估',href:'#sec03'},{label:'【08】FBA 費用',href:'#sec08'},{label:'【09】廣告',href:'#sec09'},{label:'【10】促銷',href:'#sec10'}]}},
+    fba:{
+      q:'你想了解 FBA 的哪個部分？',
+      hint:'FBA = 亞馬遜物流',
+      options:[
+        {emoji:'📋',label:'FBA vs FBM 差異',desc:'何時用哪種配送方式',next:'fba_vs_fbm'},
+        {emoji:'📦',label:'備貨與包裝',desc:'怎麼準備貨件送日本倉',next:'fba_prep'},
+        {emoji:'💴',label:'FBA 費用',desc:'倉儲、配送、處置費',next:'fba_cost'},
+        {emoji:'🔧',label:'後台 FBM / FBA 切換',desc:'listing 互相切換',next:'backend'}
+      ]
+    },
+    fba_vs_fbm:{answer:{title:'📋 FBA vs FBM',text:'FBA 由亞馬遜倉儲與配送，適合主力商品、要上 Prime、提升轉換率。FBM 由賣家自發貨，適合大件、低週轉、特殊品。新賣家建議至少有一支 FBA。',links:[{label:'【08】物流',href:'#sec08'}]}},
+    fba_prep:{answer:{title:'📦 FBA 備貨與入倉',text:'流程：後台建貨件 → 準備外箱與標籤 → 預約物流 → 送達日本倉。【08】有階段式教學與官方 PDF。',links:[{label:'【08】物流',href:'#sec08'}]}},
+    fba_cost:{answer:{title:'💴 FBA 費用',text:'主要三塊：倉儲月費、FBA 配送費、退貨/報廢費。2025 年政策有調整。',links:[{label:'【08】FBA 費用',href:'#sec08'}]}},
+    compliance:{
+      q:'你賣的是哪類商品？',
+      hint:'不同商品需要不同認證',
+      options:[
+        {emoji:'🔌',label:'電子 / 電器 / 帶電池',desc:'可能需要 PSE、Giteki',next:'comp_electronic'},
+        {emoji:'🧸',label:'玩具 / 兒童用品',desc:'ST 認證',next:'comp_toys'},
+        {emoji:'🧴',label:'日用品 / 消費品',desc:'SG、食品衛生法',next:'comp_consumer'},
+        {emoji:'📖',label:'不確定 / 看總覽',desc:'全部合規類型對照',next:'comp_overview'}
+      ]
+    },
+    comp_electronic:{answer:{title:'🔌 電子電器類合規',text:'主要兩個：PSE（電氣用品）與 Giteki（無線 / 通訊）。手冊有申請範本 docx 可下載。',links:[{label:'【04】產品合規',href:'#sec04'}]}},
+    comp_toys:{answer:{title:'🧸 玩具類合規',text:'ST 認證是日本玩具業界標準。',links:[{label:'【04】產品合規',href:'#sec04'}]}},
+    comp_consumer:{answer:{title:'🧴 消費品合規',text:'SG 標章常見於日用品、運動用品。食品類涉及食品衛生法，建議先找經理確認。',links:[{label:'【04】產品合規',href:'#sec04'}]}},
+    comp_overview:{answer:{title:'📖 合規類型總覽',text:'【04】列出四大類合規：PSE、Giteki、ST、SG，各有適用商品與要求。',links:[{label:'【04】產品合規',href:'#sec04'}]}},
+    promo_ads:{
+      q:'你想做的是？',
+      options:[
+        {emoji:'📣',label:'廣告（Sponsored Products）',desc:'付費廣告，獲取流量',next:'ads'},
+        {emoji:'🎟️',label:'優惠券（Coupon）',desc:'門檻低，新賣家首選',next:'coupon'},
+        {emoji:'💴',label:'日本站獨有：積分',desc:'1 積分 = 1 日元',next:'points'},
+        {emoji:'📅',label:'大型促銷檔期',desc:'Prime Day、黑五',next:'campaigns'}
+      ]
+    },
+    ads:{answer:{title:'📣 廣告',text:'新賣家建議用回饋先開 Sponsored Products，逐步優化 ACOS 與關鍵字。',links:[{label:'【09】廣告',href:'#sec09'}]}},
+    coupon:{answer:{title:'🎟️ 優惠券（Coupon）',text:'提報門檻低、折扣彈性，搜尋頁有醒目標示。新賣家累積銷量評論的首選。',links:[{label:'【10】促銷',href:'#sec10'}]}},
+    points:{answer:{title:'💴 日本站獨有：積分',text:'為商品設至少 1% 積分，1 積分 = 1 日元，消費者未來購物可現金折抵。建議跟競品設 1-2%。',links:[{label:'【10】促銷',href:'#sec10'}]}},
+    campaigns:{answer:{title:'📅 官方促銷檔期',text:'關注經理發出的官方 mail，亞馬遜會做站外曝光。檔期內調整廣告與促銷預算可以放大效果。',links:[{label:'【10】促銷',href:'#sec10'},{label:'【15】官方消息',href:'#sec15'}]}},
+    b2b:{answer:{title:'🏢 企業購 (B2B)',text:'日本 B2B 市場不小。適合：辦公用品、工業耗材、IT 周邊、清潔實驗室用品等。',links:[{label:'【12】企業購',href:'#sec12'}]}},
+    backend:{answer:{title:'🛠️ 後台常用操作',text:'【08】底部有三個常用操作示意圖：Listing 切換 FBM/FBA、查詢賣家記號 (Merchant Token)、查詢店鋪頁面連結。',links:[{label:'【08】後台操作',href:'#sec08'}]}}
+  };
+
+  var history=['start'];
+
+  function renderNode(id){
+    var node=TREE[id];
+    if(!node){body.innerHTML='<div>找不到此節點</div>';return}
+    var html='';
+    if(node.q){
+      html+='<div class="wizard-question">'+node.q+'</div>';
+      if(node.hint) html+='<div class="wizard-hint">'+node.hint+'</div>';
+      html+='<div class="wizard-options">';
+      node.options.forEach(function(opt){
+        html+='<button class="wizard-option" data-next="'+opt.next+'">'+
+          '<span class="opt-emoji">'+opt.emoji+'</span>'+
+          '<span class="opt-content"><span class="opt-label">'+opt.label+'</span>'+
+          (opt.desc?'<span class="opt-desc">'+opt.desc+'</span>':'')+'</span></button>';
+      });
+      html+='</div>';
+    } else if(node.answer){
+      var a=node.answer;
+      html+='<div class="wizard-answer">'+
+        '<div class="answer-title">💡 '+a.title+'</div>'+
+        '<div class="answer-text">'+a.text+'</div>';
+      if(a.links && a.links.length){
+        html+='<div class="answer-links">'+a.links.map(function(l){
+          return '<a class="answer-link" href="'+l.href+'" data-jump="'+l.href+'">📍 '+l.label+' →</a>';
+        }).join('')+'</div>';
+      }
+      html+='</div>';
+      html+='<div class="wizard-hint">覺得答案不對？按「上一步」或「重新開始」換路徑</div>';
+    }
+    body.innerHTML=html;
+    backBtn.disabled=history.length<=1;
+    progressEl.textContent='第 '+history.length+' 步';
+    body.querySelectorAll('.wizard-option').forEach(function(btn){
+      btn.addEventListener('click',function(){
+        history.push(btn.dataset.next);
+        renderNode(btn.dataset.next);
+      });
+    });
+    body.querySelectorAll('[data-jump]').forEach(function(link){
+      link.addEventListener('click',function(e){
+        var href=link.dataset.jump;
+        if(href && href.indexOf('#')===0){
+          e.preventDefault();
+          closeWizard();
+          var secId=href.slice(1);
+          // Wait for wizard close animation, then navigate
+          setTimeout(function(){
+            var target=document.getElementById(secId);
+            if(!target) return;
+            // Force hash change even if already there
+            if(location.hash===href){location.hash='';}
+            location.hash=href;
+            setTimeout(function(){
+              if(target.classList.contains('sec')){
+                target.classList.add('highlight-flash');
+                setTimeout(function(){target.classList.remove('highlight-flash')},1600);
+              }
+            },200);
+          },200);
+        }
+      });
+    });
+  }
+
+  function openWizard(){
+    history=['start'];
+    renderNode('start');
+    overlay.classList.add('open');
+    document.body.style.overflow='hidden';
+  }
+  function closeWizard(){
+    overlay.classList.remove('open');
+    document.body.style.overflow='';
+  }
+
+  fab.addEventListener('click',openWizard);
+  closeBtn.addEventListener('click',closeWizard);
+  overlay.addEventListener('click',function(e){if(e.target===overlay) closeWizard()});
+  document.addEventListener('keydown',function(e){
+    if(e.key==='Escape' && overlay.classList.contains('open')) closeWizard();
+  });
+  backBtn.addEventListener('click',function(){
+    if(history.length>1){history.pop();renderNode(history[history.length-1])}
+  });
+  restartBtn.addEventListener('click',function(){history=['start'];renderNode('start')});
 })();
 </script>
 </body>
