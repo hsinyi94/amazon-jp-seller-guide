@@ -624,18 +624,54 @@ details[open] summary::before{transform:rotate(90deg)}summary:hover{background:#
 <!-- Panel: Japan company — only shown when new:jp -->
 <div class="path-panel" data-show-when="new:jp">
 <div class="sub-sec"><h4>🇯🇵 日本公司註冊 — 需要準備的資料</h4>
-<ol style="font-size:.84rem;padding-left:20px">
-<li>負責人身分證明（日本政府發行的有臉部照片的身分證明，例：護照或駕照等）</li>
-<li>地址證明（以下文件擇一，文件地址需同註冊帳號的公司或同負責人資訊並為過去 180 天內發行）
-<ul>
-<li><strong>來自企業編號發布網站的螢幕截圖</strong>（首推使用此文件，到 <a href="https://www.houjin-bangou.nta.go.jp/" target="_blank">https://www.houjin-bangou.nta.go.jp/</a> 查詢公司資料下載）</li>
-<li><strong>履歷事項全部證明書</strong>（首推使用此文件）</li>
-<li>水費帳單 / 網路費帳單 / 電費帳單 / 租金收據 / 瓦斯費帳單 / 電話費帳單 / 銀行帳戶或信用卡對帳單</li>
-</ul></li>
-<li>付款信用卡</li>
-<li>聯繫方式</li>
-<li>履歷事項全部證明書</li>
-</ol>
+
+<details class="doc-card" open><summary><span class="doc-num">1</span><span class="doc-title">公司基本資訊</span><span class="doc-hint">登記內容</span></summary><div class="doc-body">
+<ul style="font-size:.84rem;padding-left:20px;margin:0">
+<li><strong>法人編號</strong>（13 位：1 位檢驗編號 + 12 位基本編號）</li>
+<li><strong>登記簿上的法人名稱</strong>（羅馬字 / 日語）</li>
+<li><strong>郵遞區號 / 總公司所在地（地址）</strong><br><span style="font-size:.8rem;color:var(--text-light)">※ 總部設在日本的公司，請填寫法人編號公布網站上發布的地址</span></li>
+<li><strong>公司顯示名稱</strong>（個人事業主也需填寫）</li>
+</ul>
+<p style="font-size:.82rem;color:var(--text-light);margin-top:8px">🔍 法人編號 / 地址查詢：<a href="https://www.houjin-bangou.nta.go.jp/" target="_blank">日本國稅廳 法人編號公表網站</a></p>
+</div></details>
+
+<details class="doc-card"><summary><span class="doc-num">2</span><span class="doc-title">負責人身分證明</span><span class="doc-hint">臉部照片</span></summary><div class="doc-body">
+<p style="font-size:.84rem;margin:0">負責人身分證明（日本政府發行的有臉部照片的身分證明，例：護照或駕照等）。</p>
+</div></details>
+
+<details class="doc-card"><summary><span class="doc-num">3</span><span class="doc-title">公司地址證明文件</span><span class="doc-hint">擇一 / 180 天內</span></summary><div class="doc-body">
+<p style="font-size:.84rem;margin-bottom:6px">以下文件擇一，文件地址需同註冊帳號的公司或同負責人資訊，並為<strong>過去 180 天內發行</strong>：</p>
+<ul style="font-size:.84rem;padding-left:20px;margin:0">
+<li>⭐ <strong>來自企業編號發布網站的螢幕截圖</strong>（首推，到 <a href="https://www.houjin-bangou.nta.go.jp/" target="_blank">國稅廳法人編號網站</a>查詢公司資料下載）</li>
+<li>⭐ <strong>履歷事項全部證明書</strong>（首推）</li>
+<li>公共事業費用帳單（水、電、瓦斯、網路等）</li>
+<li>銀行帳戶或信用卡對帳單</li>
+</ul>
+</div></details>
+
+<details class="doc-card"><summary><span class="doc-num">4</span><span class="doc-title">金融資訊</span><span class="doc-hint">銀行 + 信用卡</span></summary><div class="doc-body">
+<ul style="font-size:.84rem;padding-left:20px;margin:0">
+<li><strong>法人或負責人的銀行對帳單</strong><br><span style="font-size:.8rem;color:var(--text-light)">※ 總部設在日本者，可提交存摺第一頁的照片</span></li>
+<li><strong>法人或負責人的信用卡資訊</strong>（需可支付日幣）</li>
+</ul>
+</div></details>
+
+<details class="doc-card"><summary><span class="doc-num">5</span><span class="doc-title">負責人地址驗證文件</span><span class="doc-hint">擇一</span></summary><div class="doc-body">
+<p style="font-size:.84rem;margin-bottom:6px">記載有<strong>負責人居住地地址</strong>的下列任一文件：</p>
+<ul style="font-size:.84rem;padding-left:20px;margin-bottom:8px">
+<li>信用卡對帳單、銀行交易對帳單</li>
+<li>公共事業費用帳單（水、電、瓦斯、網路等）</li>
+<li>傳統駕照<br><span style="font-size:.8rem;color:var(--text-light)">※ 僅接受正面記載有最新地址的駕照，<strong style="color:var(--red)">不允許使用個人編號（My Number）駕照</strong></span></li>
+<li>住民票（<strong style="color:var(--red)">未記載 My Number / 個人編號</strong>的版本）</li>
+</ul>
+</div></details>
+
+<details class="doc-card"><summary><span class="doc-num">6</span><span class="doc-title">聯繫方式</span><span class="doc-hint">帳號驗證</span></summary><div class="doc-body">
+<ul style="font-size:.84rem;padding-left:20px;margin:0">
+<li>手機號碼（不限國別）（帳號驗證用，註冊完成後可修改）</li>
+</ul>
+</div></details>
+
 </div>
 <div class="cb-checklist-box">
 <div class="cb-title">✅ 本章行動清單</div>
@@ -1035,7 +1071,6 @@ details[open] summary::before{transform:rotate(90deg)}summary:hover{background:#
 <ul>
 <li><a href="https://gs.amazon.com.tw/listing?ld=IRTWSOA30D" target="_blank">Listing 商品詳情頁全介紹</a></li>
 <li><a href="https://m.media-amazon.com/images/G/28/TWGS/Onboarding/Required_attribute_for_your_first_listing.pdf?initialSessionID=355-3002025-1543835&ld=IRTWSOA30D" target="_blank">第一次上架商品必要資訊一覽表</a></li>
-<li>📌 圖片覆蓋其他國家站點，請到針對特定國家/地區的圖片上傳</li>
 </ul></li>
 <li><strong>日文翻譯：</strong>亞馬遜提供免費翻譯協助，📎 <a href="files/(New_Version)_CID-XXXXXXX-seller_店鋪名-hsinyih-原文語言2JP-需要翻譯幾個ASINs.xlsm" download>下載翻譯檔案</a>填寫後回傳給亞馬遜官方經理
 <ul>
@@ -1074,6 +1109,10 @@ details[open] summary::before{transform:rotate(90deg)}summary:hover{background:#
 <details style="margin-top:8px"><summary>📌 其他上架情境</summary><div class="toggle-body">
 <ul>
 <li><a href="https://sellercentral.amazon.co.jp/help/hub/reference/external/G200182190?locale=zh-TW" target="_blank">刊登預購商品</a></li>
+<li><strong>已有其他站點，只想針對特定站點更新圖片：</strong>請到賣家後台的「針對特定國家/地區的圖片上傳」功能進行更新。
+<br><img class="sec-img zoomable" src="手冊圖片素材/上傳特定站點的圖片.webp" alt="針對特定國家/地區的圖片上傳位置示意" style="max-width:520px;margin-top:6px">
+<span class="sec-img-hint">🔍 點擊圖片可放大檢視</span>
+</li>
 </ul>
 </div></details>
 </div>
@@ -1169,12 +1208,41 @@ details[open] summary::before{transform:rotate(90deg)}summary:hover{background:#
 <li><a href="https://sellercentral.amazon.co.jp/help/hub/reference/external/G200685050?locale=zh-TW" target="_blank">FBA 退貨和報廢處置費用</a></li>
 <li>🔴 <a href="https://gs.amazon.com.tw/news/jp-fba-fee-change-241217" target="_blank">重要通知！2025 年亞馬遜日本站亞馬遜物流費用發佈</a></li>
 </ul>
-<p style="font-size:.86rem;font-weight:600;margin-bottom:4px">🖥️ 後台常用操作</p>
-<ul style="font-size:.84rem;padding-left:20px">
-<li>後台 Listing 互相切換 FBM / FBA</li>
-<li>查詢賣家記號 (Merchant Token)</li>
-<li>查詢店鋪頁面</li>
-</ul>
+<p style="font-size:.86rem;font-weight:600;margin:14px 0 6px">🖥️ 後台常用操作</p>
+<p style="font-size:.8rem;color:var(--text-light);margin-bottom:8px">展開下列卡片查看對應的後台操作示意圖</p>
+
+<!-- 操作 1：FBM / FBA 切換 -->
+<details class="doc-card">
+<summary><span class="doc-num">1</span><span class="doc-title">後台 Listing 互相切換 FBM / FBA</span><span class="doc-hint">配送方式</span></summary>
+<div class="doc-body">
+<p style="font-size:.84rem;margin-bottom:8px">在賣家後台的 <strong>「管理庫存」</strong> 頁面，找到欲調整的商品後，可使用下拉選單將配送方式在 <strong>FBM（自發貨）</strong> 與 <strong>FBA（亞馬遜物流）</strong> 之間互相切換。</p>
+<img class="sec-img zoomable" src="手冊圖片素材/後台listing互相切換FBA FBM.webp" alt="後台 Listing 切換 FBA / FBM 示意">
+<div class="sec-img-hint">🔍 點擊圖片可放大檢視</div>
+</div>
+</details>
+
+<!-- 操作 2：查詢賣家記號 -->
+<details class="doc-card">
+<summary><span class="doc-num">2</span><span class="doc-title">查詢賣家記號 (Merchant Token)</span><span class="doc-hint">帳號識別</span></summary>
+<div class="doc-body">
+<p style="font-size:.84rem;margin-bottom:8px">賣家記號（Merchant Token）是您店鋪的唯一識別碼，可於 <strong>「設定 &gt; 帳戶資訊 &gt; 您的商家代號」</strong> 查詢，用於串接 API、建立店鋪連結等用途。</p>
+<img class="sec-img zoomable" src="手冊圖片素材/查詢賣家記號(Merchant Token).webp" alt="查詢賣家記號 Merchant Token 示意">
+<div class="sec-img-hint">🔍 點擊圖片可放大檢視</div>
+</div>
+</details>
+
+<!-- 操作 3：查詢店鋪頁面 -->
+<details class="doc-card">
+<summary><span class="doc-num">3</span><span class="doc-title">查詢店鋪頁面</span><span class="doc-hint">店鋪連結</span></summary>
+<div class="doc-body">
+<p style="font-size:.84rem;margin-bottom:8px">請先查詢您的 <strong>賣家記號（Merchant Token）</strong>，並填入以下網址即可連結到您的店鋪頁面：</p>
+<div style="background:#F7F8FA;border:1px solid var(--border);border-radius:6px;padding:10px 12px;margin:8px 0;font-size:.8rem;font-family:'SFMono-Regular',Consolas,monospace;word-break:break-all;color:var(--text)">
+https://www.amazon.co.jp/sp?marketplaceID=A1VC38T7YXB528&amp;seller=<span style="color:var(--red);font-weight:700">填入您的商家代號</span>
+</div>
+<img class="sec-img zoomable" src="手冊圖片素材/查詢店鋪頁面.png" alt="查詢店鋪頁面示意">
+<div class="sec-img-hint">🔍 點擊圖片可放大檢視</div>
+</div>
+</details>
 </div>
 </div></div>
 
@@ -1264,9 +1332,30 @@ details[open] summary::before{transform:rotate(90deg)}summary:hover{background:#
 <li>📄 <a href="https://m.media-amazon.com/images/G/28/TWGS/SU/GN_GS_Promotions_2.2_Coupons_TW.pdf?initialSessionID=355-3002025-1543835&ld=IRTWSOA30D" target="_blank">優惠券詳細介紹</a></li>
 <li>▶️ <a href="https://www.youtube.com/watch?v=Sae5jgso1Fc" target="_blank">Coupon 優惠券 0-1 手把手短影音</a></li>
 </ul>
-<div class="jp"><strong>⚠️ 日本站獨有 —「積分」(Points)</strong><br>
-一般約設定產品售價的 1~2%，建議跟著競品設定的 %。亞馬遜官方不定期會舉辦積分回饋活動（會有額外曝光機會），再針對活動內容調整 % 設定。<br>
-🔗 <a href="https://m.media-amazon.com/images/G/28/TWGS/SU/GN_GS_Promotions_2.6_Amazon_Points_TW.pdf" target="_blank">亞馬遜積分設置方式 (PDF)</a></div>
+<div class="jp" style="padding:0;background:none;border:none">
+<div style="background:linear-gradient(135deg,#FFF0F0,#FFF8F8);border:1px solid #F5C6CB;border-radius:10px;padding:12px 16px">
+<div style="display:flex;align-items:center;gap:8px;margin-bottom:8px">
+<span style="background:var(--red);color:#fff;font-size:.7rem;font-weight:700;padding:2px 8px;border-radius:10px">日本站獨有</span>
+<strong style="color:var(--red);font-size:.95rem">💴 積分制度 (Points)</strong>
+</div>
+<p style="font-size:.84rem;margin-bottom:10px;line-height:1.7">亞馬遜積分是<strong>日本站賣家特有的促銷手段</strong>，賣家可以為商品設置至少 <strong>1%</strong> 的積分，當消費者購買該商品時，將會獲得該商品對應的積分，消費者在以後購買任何商品時，這些積分均可以用於現金折扣使用。</p>
+
+<!-- 積分換算 & 設定比例 卡片 -->
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:10px">
+<div style="background:#fff;border:1px solid #F5C6CB;border-radius:8px;padding:10px 12px;text-align:center">
+<div style="font-size:.72rem;color:var(--text-light);margin-bottom:4px">💱 積分換算</div>
+<div style="font-size:.95rem;font-weight:700;color:var(--red)">1 積分 = 1 日元</div>
+</div>
+<div style="background:#fff;border:1px solid #F5C6CB;border-radius:8px;padding:10px 12px;text-align:center">
+<div style="font-size:.72rem;color:var(--text-light);margin-bottom:4px">⚙️ 建議設定</div>
+<div style="font-size:.95rem;font-weight:700;color:var(--red)">售價的 1 ~ 2%</div>
+</div>
+</div>
+
+<p style="font-size:.82rem;margin-bottom:8px;color:var(--text)">💡 建議跟著競品設定的 % 調整；亞馬遜官方不定期會舉辦積分回饋活動（會有額外曝光機會），可再針對活動內容調整 % 設定。</p>
+<p style="font-size:.82rem;margin:0">🔗 <a href="https://m.media-amazon.com/images/G/28/TWGS/SU/GN_GS_Promotions_2.6_Amazon_Points_TW.pdf" target="_blank">亞馬遜積分設置方式 (PDF)</a></p>
+</div>
+</div>
 </div>
 
 <!-- Stage 2 -->
@@ -1394,7 +1483,6 @@ details[open] summary::before{transform:rotate(90deg)}summary:hover{background:#
 <li>✅ 工業耗材、五金工具、零配件</li>
 <li>✅ 清潔用品、醫療耗材、實驗室用品</li>
 <li>✅ IT 周邊（USB、網路線、轉接器等大宗採購品）</li>
-<li>❌ 時尚服飾、美妝品等偏消費型商品（效果較有限）</li>
 </ul>
 </div>
 
