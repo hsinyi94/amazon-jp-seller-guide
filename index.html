@@ -906,8 +906,8 @@ details[open] summary::before{transform:rotate(90deg)}summary:hover{background:#
 </div>
 </div></details>
 
-<details class="doc-card"><summary><span class="doc-num">2</span><span class="doc-title">成交手續費（銷售傭金）</span><span class="doc-hint">8~15%</span></summary><div class="doc-body">
-<p style="font-size:.84rem;margin-bottom:6px"><strong>💴 費用：</strong>依<a href="https://sellercentral.amazon.co.jp/help/hub/reference/external/GT23F3ST7FEZKT9A?locale=zh-TW&initialSessionID=356-3357753-9849531&ld=SOTWSOAIGLOGISTICSNULLMKTJPFeeChange251208" target="_blank">商品類別</a>收取成交金額的 <strong>8~15%</strong>。</p>
+<details class="doc-card"><summary><span class="doc-num">2</span><span class="doc-title">成交手續費（銷售傭金）</span><span class="doc-hint">5~15.4%</span></summary><div class="doc-body">
+<p style="font-size:.84rem;margin-bottom:6px"><strong>💴 費用：</strong>依<a href="https://sellercentral.amazon.co.jp/help/hub/reference/external/GT23F3ST7FEZKT9A?locale=zh-TW&initialSessionID=356-3357753-9849531&ld=SOTWSOAIGLOGISTICSNULLMKTJPFeeChange251208" target="_blank">商品類別</a>以及銷售單價收取成交金額的 <strong>5~15.4%</strong>。</p>
 <p style="font-size:.84rem;margin:0"><strong>📅 收費機制：</strong>每筆訂單成交時，依商品類別對應的百分比自動從銷售額中扣除。</p>
 </div></details>
 
@@ -1667,16 +1667,34 @@ https://www.amazon.co.jp/sp?marketplaceID=A1VC38T7YXB528&amp;seller=<span style=
     if(el) sections.push({id:id,el:el,link:a});
   });
 
+  // Dynamic offset: use sticky-top height + small margin so active state aligns
+  // with where the section visually stops after a hash jump (scroll-margin-top).
+  function getProbeOffset(){
+    var stickyTop=document.querySelector('.sticky-top');
+    var stickyH=stickyTop?stickyTop.getBoundingClientRect().height:60;
+    return stickyH+30; // small buffer so it triggers slightly before section top
+  }
+
   function updateActive(){
-    var pos=window.scrollY+120;
-    var active=sections[0];
-    sections.forEach(function(s){
-      if(s.el.offsetTop<=pos) active=s;
-    });
+    var probe=window.scrollY+getProbeOffset();
+    var active=null;
+    // Find the last section whose top is above the probe line
+    for(var i=0;i<sections.length;i++){
+      if(sections[i].el.offsetTop<=probe) active=sections[i];
+      else break;
+    }
+    // If user is near page bottom, force last section active
+    if(window.innerHeight+window.scrollY>=document.body.scrollHeight-10){
+      active=sections[sections.length-1];
+    }
+    // If user is at page top and no match yet, don't highlight anything
     links.forEach(function(a){a.classList.remove('active')});
     if(active) active.link.classList.add('active');
   }
   window.addEventListener('scroll',updateActive,{passive:true});
+  window.addEventListener('resize',updateActive,{passive:true});
+  // Update immediately after a hash jump finishes
+  window.addEventListener('hashchange',function(){setTimeout(updateActive,300)});
   updateActive();
 })();
 </script>
