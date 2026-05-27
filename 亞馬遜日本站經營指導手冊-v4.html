@@ -1724,6 +1724,48 @@ https://www.amazon.co.jp/sp?marketplaceID=A1VC38T7YXB528&amp;seller=<span style=
   // Escape regex special chars
   function escapeRegex(s){return s.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')}
 
+  // Synonym / alias table: user might search → actual terms in the manual
+  var SYNONYMS=[
+    {keys:['信用卡類型','信用卡種類','卡別','哪些卡','接受的卡'],terms:['信用卡','VISA','Mastercard','AMEX']},
+    {keys:['付款方式','怎麼付款','付費方式'],terms:['信用卡','付款']},
+    {keys:['月費','月租費','訂閱費','每月費用'],terms:['月費','¥4,900','4900']},
+    {keys:['傭金','手續費','抽成','佣金比例'],terms:['銷售傭金','成交手續費','15']},
+    {keys:['運費','物流費用','配送費','寄送費'],terms:['FBA','配送費','物流費','倉儲']},
+    {keys:['怎麼註冊','開帳號','開店','申請帳號'],terms:['開通帳號','註冊','帳號']},
+    {keys:['翻譯','日文翻譯','商品翻譯'],terms:['翻譯','原文語言']},
+    {keys:['認證','檢驗','安規'],terms:['合規','PSE','Giteki','ST','SG']},
+    {keys:['電池','鋰電池','帶電'],terms:['PSE','電氣用品','電池']},
+    {keys:['無線','藍牙','wifi','bluetooth'],terms:['Giteki','無線','通訊']},
+    {keys:['退貨','退款','退回'],terms:['退貨','報廢','處置費']},
+    {keys:['品牌','商標','brand'],terms:['品牌註冊','Brand Registry']},
+    {keys:['優惠','折扣','打折'],terms:['優惠券','Coupon','促銷']},
+    {keys:['積分','點數','回饋'],terms:['積分','Points']},
+    {keys:['廣告費','廣告預算','ads'],terms:['廣告','Sponsored','預算']},
+    {keys:['企業客戶','b2b','批發','大量採購'],terms:['企業購','B2B']},
+    {keys:['店鋪連結','商店頁面','我的店'],terms:['店鋪頁面','Merchant Token','賣家記號']},
+    {keys:['切換配送','改fba','改fbm'],terms:['切換','FBM','FBA']},
+    {keys:['收款','提領','匯款','撥款'],terms:['金流','收款','匯率']},
+    {keys:['評論','review','評價'],terms:['評論','VINE','Review']},
+    {keys:['新賣家優惠','開店福利','回饋金'],terms:['入駐','優惠','回饋','福利']},
+    {keys:['稅','jct','消費稅'],terms:['JCT','稅']},
+    {keys:['客服','聯繫亞馬遜','開case'],terms:['客服','Case']},
+    {keys:['驗證','簡訊','otp'],terms:['驗證','Authenticator','簡訊']}
+  ];
+
+  // Expand query using synonyms: if user's input matches a synonym key, return related terms
+  function expandQuery(q){
+    var lower=q.toLowerCase();
+    for(var i=0;i<SYNONYMS.length;i++){
+      var entry=SYNONYMS[i];
+      for(var j=0;j<entry.keys.length;j++){
+        if(lower.indexOf(entry.keys[j].toLowerCase())!==-1 || entry.keys[j].toLowerCase().indexOf(lower)!==-1){
+          return entry.terms;
+        }
+      }
+    }
+    return null;
+  }
+
   // Remove all existing highlights
   function clearHighlights(){
     var marks=container.querySelectorAll('.search-hit');
@@ -1785,6 +1827,22 @@ https://www.amazon.co.jp/sp?marketplaceID=A1VC38T7YXB528&amp;seller=<span style=
     highlightTextNodes(container,regex);
 
     hits=Array.prototype.slice.call(container.querySelectorAll('.search-hit'));
+
+    // If no direct match, try synonym expansion
+    if(hits.length===0){
+      var expanded=expandQuery(q);
+      if(expanded){
+        var pattern=expanded.map(escapeRegex).join('|');
+        var expandedRegex=new RegExp('('+pattern+')','gi');
+        highlightTextNodes(container,expandedRegex);
+        hits=Array.prototype.slice.call(container.querySelectorAll('.search-hit'));
+        if(hits.length>0){
+          info.textContent=hits.length+' 處（相關詞）';
+          info.style.color='var(--text-light)';
+        }
+      }
+    }
+
     if(hits.length===0){
       info.textContent='找不到相符的項目';
       info.style.color='var(--red)';
@@ -1795,7 +1853,10 @@ https://www.amazon.co.jp/sp?marketplaceID=A1VC38T7YXB528&amp;seller=<span style=
     }
     // Open all details containing hits
     hits.forEach(openAncestors);
-    info.style.color='var(--text-light)';
+    if(!info.textContent.includes('相關詞')){
+      info.style.color='var(--text-light)';
+      info.textContent=hits.length+' 處';
+    }
     prevBtn.style.display='inline-block';
     nextBtn.style.display='inline-block';
     clearBtn.style.display='inline-block';
