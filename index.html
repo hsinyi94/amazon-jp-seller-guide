@@ -2197,7 +2197,96 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&lb.classLis
     var q=(input.value||'').trim();
     if(!q){resultsPanel.classList.remove('open');return}
     var hits=Array.prototype.slice.call(container.querySelectorAll('.search-hit'));
+
+    // If no hits found in DOM, the old search script may not have expanded yet.
+    // Do our own synonym check and search the DOM text directly.
     if(hits.length===0){
+      // Check if there's a synonym match we can use
+      var synonymTerms=null;
+      var SYNONYMS_PANEL=[
+        {keys:['信用卡類型','信用卡種類','卡別','哪些卡','接受的卡'],terms:['信用卡','VISA','Mastercard','AMEX']},
+        {keys:['付款方式','怎麼付款','付費方式'],terms:['信用卡','付款']},
+        {keys:['月費','月租費','訂閱費','每月費用'],terms:['月費','4,900','4900']},
+        {keys:['傭金','手續費','抽成','佣金比例'],terms:['銷售傭金','成交手續費']},
+        {keys:['運費','物流費用','配送費','寄送費'],terms:['FBA','配送費','物流費','倉儲']},
+        {keys:['怎麼註冊','開帳號','開店','申請帳號'],terms:['開通帳號','註冊']},
+        {keys:['翻譯','日文翻譯','商品翻譯'],terms:['翻譯','原文語言']},
+        {keys:['認證','檢驗','安規'],terms:['合規','PSE','Giteki']},
+        {keys:['電池','鋰電池','帶電'],terms:['PSE','電氣用品']},
+        {keys:['無線','藍牙','wifi','bluetooth'],terms:['Giteki','無線']},
+        {keys:['退貨','退款','退回'],terms:['退貨','報廢']},
+        {keys:['品牌','商標','brand'],terms:['品牌註冊','Brand Registry']},
+        {keys:['優惠','折扣','打折'],terms:['優惠券','Coupon','促銷']},
+        {keys:['積分','點數','回饋'],terms:['積分','Points']},
+        {keys:['廣告費','廣告預算','ads'],terms:['廣告','Sponsored']},
+        {keys:['企業客戶','b2b','批發','大量採購'],terms:['企業購','B2B']},
+        {keys:['店鋪連結','商店頁面','我的店'],terms:['店鋪頁面','Merchant Token']},
+        {keys:['切換配送','改fba','改fbm'],terms:['切換','FBM','FBA']},
+        {keys:['收款','提領','匯款','撥款'],terms:['金流','收款','匯率']},
+        {keys:['評論','review','評價'],terms:['評論','VINE']},
+        {keys:['新賣家優惠','開店福利','回饋金'],terms:['入駐','優惠','回饋']},
+        {keys:['稅','jct','消費稅'],terms:['JCT','稅']},
+        {keys:['客服','聯繫亞馬遜','開case'],terms:['客服','Case']},
+        {keys:['驗證','簡訊','otp'],terms:['驗證','Authenticator']}
+      ];
+      var lower=q.toLowerCase();
+      for(var i=0;i<SYNONYMS_PANEL.length;i++){
+        var entry=SYNONYMS_PANEL[i];
+        for(var j=0;j<entry.keys.length;j++){
+          if(lower.indexOf(entry.keys[j].toLowerCase())!==-1 || entry.keys[j].toLowerCase().indexOf(lower)!==-1){
+            synonymTerms=entry.terms;
+            break;
+          }
+        }
+        if(synonymTerms) break;
+      }
+
+      if(synonymTerms){
+        // Search the DOM text for these terms and build virtual results
+        var sections=document.querySelectorAll('.sec[id^="sec"]');
+        var bySection={};
+        sections.forEach(function(sec){
+          var text=sec.textContent||'';
+          var found=synonymTerms.some(function(t){return text.indexOf(t)!==-1});
+          if(found){
+            bySection[sec.id]={section:sec,hits:[sec],firstHit:sec};
+          }
+        });
+        var ids=Object.keys(bySection).sort();
+        var filtered=ids.filter(function(id){
+          var meta=SECTION_META[id]||{};
+          if(activeFilters.audience!=='all' && meta.audience!=='all' && meta.audience!==activeFilters.audience) return false;
+          if(activeFilters.phase!=='all' && meta.phase!==activeFilters.phase) return false;
+          return true;
+        });
+        if(filtered.length>0){
+          var html=filtered.map(function(id){
+            var meta=SECTION_META[id]||{title:id,audience:'all',phase:'p1',icon:'📄'};
+            return '<div class="search-result-item" data-section="'+id+'">'+
+              '<div class="search-result-title">'+meta.icon+' 【'+id.replace('sec','')+'】'+escapeHtml(meta.title)+
+              ' <span class="search-result-badge">'+PHASE_LABEL[meta.phase]+'</span>'+
+              ' <span class="search-result-badge">'+AUDIENCE_LABEL[meta.audience]+'</span>'+
+              ' <span class="search-result-badge">相關詞</span></div>'+
+              '<div class="search-result-snippet">包含：'+synonymTerms.join('、')+'</div>'+
+              '</div>';
+          }).join('');
+          resultsList.innerHTML=html;
+          resultsPanel.classList.add('open');
+          resultsList.querySelectorAll('.search-result-item').forEach(function(item){
+            item.addEventListener('click',function(e){
+              e.preventDefault();e.stopPropagation();
+              var secId=item.dataset.section;
+              resultsPanel.classList.remove('open');
+              if(location.hash==='#'+secId){location.hash='';}
+              location.hash='#'+secId;
+              var sec=document.getElementById(secId);
+              if(sec){setTimeout(function(){sec.classList.add('highlight-flash');setTimeout(function(){sec.classList.remove('highlight-flash')},1600)},200)}
+            });
+          });
+          return;
+        }
+      }
+
       resultsList.innerHTML='<div class="search-empty">🔍 找不到「'+escapeHtml(q)+'」相關內容<div class="empty-hint">試試其他關鍵字</div></div>';
       resultsPanel.classList.add('open');
       return;
@@ -2264,7 +2353,7 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&lb.classLis
   }
 
   // React to input — delayed so existing search has finished highlighting
-  function scheduleRender(){clearTimeout(input._renderT);input._renderT=setTimeout(renderResults,260)}
+  function scheduleRender(){clearTimeout(input._renderT);input._renderT=setTimeout(renderResults,400)}
   input.addEventListener('input',scheduleRender);
   input.addEventListener('keyup',function(e){if(e.key==='Enter')scheduleRender()});
   input.addEventListener('focus',function(){
