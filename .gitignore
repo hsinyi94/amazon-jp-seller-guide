@@ -17,4 +17,4 @@ Desktop.ini
 *.bak
 
 # Kiro local
-.kiro/cache/
+.kiro/
